@@ -1,5 +1,8 @@
 body {
-    background: #19222c;
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: #d3d5d8;
 }
 
@@ -48,6 +51,10 @@ body {
     background-color: #222e3c;
 }
 
+.card-dark {
+    background-color: #222e3cb2
+}
+
 /* Bootstrap overrides */
 .table {
     margin-bottom: 0px;
@@ -67,10 +74,4 @@ body {
     background-color: #d3d5d8;
 
 }
-
-/* .card-body {
-    max-height: 455px;
-    min-height: 455px;
-    overflow: auto;
-} */
 
