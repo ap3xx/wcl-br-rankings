@@ -1,0 +1,273 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12 p-3">
+        <div class="card content-dark">
+            <div class="card-header">
+                <h2 class="card-title p-3 text-center">Top 25 DPS por luta</h2>
+                <div class="nav nav-tabs card-header-tabs" id="v-tabs-top25-tab" role="tablist" >
+                    <a class="nav-link active" id="v-tabs-top25-bofn-tab" data-bs-toggle="tab"  href="#v-tabs-top25-bofn" role="tab">Beasts of Northrend</a>
+                    <a class="nav-link" id="v-tabs-top25-lord-tab" data-bs-toggle="tab"  href="#v-tabs-top25-lord" role="tab">Lord Jaraxxus</a>
+                    <a class="nav-link" id="v-tabs-top25-twin-tab" data-bs-toggle="tab"  href="#v-tabs-top25-twin" role="tab">Twin Val'kyr</a>
+                    <a class="nav-link" id="v-tabs-top25-anub-tab" data-bs-toggle="tab"  href="#v-tabs-top25-anub" role="tab">Anub'arak</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab-content" id="v-tabs-top25-tabContent">
+                    <div class="tab-pane active" id="v-tabs-top25-bofn">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_25_bofn %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }}</td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 {{ player.parse_color }}">{{ "%.2f"|format(player.dps) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top25-lord">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_25_lord %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }}</td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 {{ player.parse_color }}">{{ "%.2f"|format(player.dps) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top25-twin">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_25_twin %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }}</td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 {{ player.parse_color }}">{{ "%.2f"|format(player.dps) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top25-anub">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_25_anub %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }}</td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 {{ player.parse_color }}">{{ "%.2f"|format(player.dps) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-12 p-3">
+        <div class="card content-dark">
+            <div class="card-header">
+                <h2 class="card-title p-3 text-center">Top 10 médias de parses por classe</h2>
+                <div class="nav nav-tabs card-header-tabs" id="v-tabs-top10-tab" role="tablist" >
+                    <a class="nav-link active" id="v-tabs-top10-dkni-tab" data-bs-toggle="tab"  href="#v-tabs-top10-dkni" role="tab">DK</a>
+                    <a class="nav-link" id="v-tabs-top10-dudu-tab" data-bs-toggle="tab"  href="#v-tabs-top10-dudu" role="tab">Druid</a>
+                    <a class="nav-link" id="v-tabs-top10-hunt-tab" data-bs-toggle="tab"  href="#v-tabs-top10-hunt" role="tab">Hunter</a>
+                    <a class="nav-link" id="v-tabs-top10-mage-tab" data-bs-toggle="tab"  href="#v-tabs-top10-mage" role="tab">Mage</a>
+                    <a class="nav-link" id="v-tabs-top10-pala-tab" data-bs-toggle="tab"  href="#v-tabs-top10-pala" role="tab">Paladin</a>
+                    <a class="nav-link" id="v-tabs-top10-prst-tab" data-bs-toggle="tab"  href="#v-tabs-top10-prst" role="tab">Priest</a>
+                    <a class="nav-link" id="v-tabs-top10-roge-tab" data-bs-toggle="tab"  href="#v-tabs-top10-roge" role="tab">Rogue</a>
+                    <a class="nav-link" id="v-tabs-top10-sham-tab" data-bs-toggle="tab"  href="#v-tabs-top10-sham" role="tab">Shaman</a>
+                    <a class="nav-link" id="v-tabs-top10-lock-tab" data-bs-toggle="tab"  href="#v-tabs-top10-lock" role="tab">Warlock</a>
+                    <a class="nav-link" id="v-tabs-top10-warr-tab" data-bs-toggle="tab"  href="#v-tabs-top10-warr" role="tab">Warrior</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab-content" id="v-tabs-top10-tabContent">
+                    <div class="tab-pane active" id="v-tabs-top10-dkni">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_dkni %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top10-dudu">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_dudu %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top10-hunt">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_hunt %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top10-mage">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_mage %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top10-pala">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_pala %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top10-prst">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_prst %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top10-roge">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_roge %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top10-sham">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_sham %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top10-lock">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_lock %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="v-tabs-top10-warr">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    {% for player in top_10_warr %}
+                                    <tr >
+                                        <td class="col-md-1">{{ loop.index }} </td>
+                                        <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon"> {{ player.name }}</td>
+                                        <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                                        <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

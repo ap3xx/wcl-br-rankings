@@ -1,0 +1,35 @@
+CLASS_ICON_MAP = {
+    "Death Knight - Blood (DPS)": "icons/deathknight-blood.jpeg",
+    "Death Knight - Frost": "icons/deathknight-frost.jpeg",
+    "Death Knight - Unholy": "icons/deathknight-unholy.jpeg",
+    "Druid - Balance": "icons/druid-balance.jpeg",
+    "Druid - Feral": "icons/druid-feral.jpeg",
+    "Hunter - Beast Mastery": "icons/hunter-beastmastery.jpeg",
+    "Hunter - Marksmanship": "icons/hunter-marksmanship.jpeg",
+    "Hunter - Survival": "icons/hunter-survival.jpeg",
+    "Mage - Arcane": "icons/mage-arcane.jpeg",
+    "Mage - Fire": "icons/mage-fire.jpeg",
+    "Mage - Frost": "icons/mage-frost.jpeg",
+    "Paladin - Retribution": "icons/paladin-retribution.jpeg",
+    "Priest - Shadow": "icons/priest-shadow.jpeg",
+    "Rogue - Assassination": "icons/rogue-assassination.jpeg",
+    "Rogue - Combat": "icons/rogue-combat.jpeg",
+    "Rogue - Subtlety": "icons/rogue-subtlety.jpeg",
+    "Shaman - Elemental": "icons/shaman-elemental.jpeg",
+    "Shaman - Enhancement": "icons/shaman-enhancement.jpeg",
+    "Warlock - Affliction": "icons/warlock-affliction.jpeg",
+    "Warlock - Demonology": "icons/warlock-demonology.jpeg",
+    "Warlock - Destruction": "icons/warlock-destruction.jpeg",
+    "Warrior - Arms": "icons/warrior-arms.jpeg",
+    "Warrior - Fury": "icons/warrior-fury.jpeg",
+}
+
+PARSE_COLOR_MAP = {
+    100: "gold",
+    99: "pink",
+    95: "orange",
+    75: "purple",
+    50: "blue",
+    25: "green",
+    0:  "gray"
+}
