@@ -15,7 +15,7 @@ body {
 }
 
 .parse-gold {
-    color: #e268a8
+    color: #e5cc80
 }
 
 .parse-pink {
@@ -52,7 +52,12 @@ body {
 }
 
 .card-dark {
-    background-color: #222e3cb2
+    background-color: #222e3ccb
+}
+
+.card-compact {
+    max-height: 440px;
+    overflow: auto;
 }
 
 /* Bootstrap overrides */

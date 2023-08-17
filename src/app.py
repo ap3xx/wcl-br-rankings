@@ -25,8 +25,8 @@ def fetch_dps_player_data():
 
     for fight in fights_dps:
         all_dps = fights_dps[fight]
-        top_25 = sorted(all_dps, key=lambda d: d['dps'], reverse=True)[:25]
-        fights_dps[fight] = top_25
+        top_20 = sorted(all_dps, key=lambda d: d['dps'], reverse=True)[:20]
+        fights_dps[fight] = top_20
 
     return fights_dps
 
@@ -44,11 +44,12 @@ def fetch_parse_player_data():
                     row["parse_color"] = color
                     break
             class_parses[cls].append(row)
+            class_parses["All"].append(row)
 
     for cls in class_parses:
         all_parses = class_parses[cls]
-        top_10 = sorted(all_parses, key=lambda d: d['avg_parse'], reverse=True)[:10]
-        class_parses[cls] = top_10
+        top_20 = sorted(all_parses, key=lambda d: d['avg_parse'], reverse=True)[:20]
+        class_parses[cls] = top_20
 
     return class_parses
 
@@ -62,20 +63,21 @@ def index():
     class_parses = fetch_parse_player_data()
     return render_template(
         'index.html',
-        top_25_bofn=bosses_dps["629"],
-        top_25_lord=bosses_dps["633"],
-        top_25_twin=bosses_dps["641"],
-        top_25_anub=bosses_dps["645"],
-        top_10_dkni=class_parses["Death Knight"],
-        top_10_dudu=class_parses["Druid"],
-        top_10_hunt=class_parses["Hunter"],
-        top_10_mage=class_parses["Mage"],
-        top_10_pala=class_parses["Paladin"],
-        top_10_prst=class_parses["Priest"],
-        top_10_roge=class_parses["Rogue"],
-        top_10_sham=class_parses["Shaman"],
-        top_10_lock=class_parses["Warlock"],
-        top_10_warr=class_parses["Warrior"]
+        top_20_bofn=bosses_dps["629"],
+        top_20_lord=bosses_dps["633"],
+        top_20_twin=bosses_dps["641"],
+        top_20_anub=bosses_dps["645"],
+        top_20_allc=class_parses["All"],
+        top_20_dkni=class_parses["Death Knight"],
+        top_20_dudu=class_parses["Druid"],
+        top_20_hunt=class_parses["Hunter"],
+        top_20_mage=class_parses["Mage"],
+        top_20_pala=class_parses["Paladin"],
+        top_20_prst=class_parses["Priest"],
+        top_20_roge=class_parses["Rogue"],
+        top_20_sham=class_parses["Shaman"],
+        top_20_lock=class_parses["Warlock"],
+        top_20_warr=class_parses["Warrior"]
     )
 
 if __name__ == '__main__':
