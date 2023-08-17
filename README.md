@@ -10,11 +10,11 @@ TBD
 
 Based on Python, requests and PostgreSQL
 
-## How to build
+### How to build
 
 Run `make build-ingestor`.
 
-## How to run
+### How to run
 
 Make sure you have the necessary `.env` file at the root of the project and run `make run-ingestor`.  \
 The required env variables are:
