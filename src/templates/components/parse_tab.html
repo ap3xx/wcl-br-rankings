@@ -1,0 +1,16 @@
+<div class="tab-pane {{ 'active' if active else ''  }}" id="v-tabs-top_parses-{{ class }}">
+    <div class="table-responsive">
+        <table class="table table-borderless">
+            <tbody>
+                {% for player in players %}
+                <tr >
+                    <td class="col-md-1">{{ loop.index }} </td>
+                    <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon">&nbsp;&nbsp; {{ player.name }}</td>
+                    <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                    <td class="col-md-1 parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

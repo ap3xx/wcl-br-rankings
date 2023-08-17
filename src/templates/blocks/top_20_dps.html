@@ -1,0 +1,22 @@
+<div class="col-12 p-3">
+    <div class="card card-dark">
+        <div class="card-header">
+            <h2 class="card-title p-3 text-center">Top 20 - DPS por luta</h2>
+            <div class="nav nav-tabs card-header-tabs" id="v-tabs-top_dps-tab" role="tablist" >
+                {% for fight in fights %}
+                <a class="nav-link {{ 'active' if loop.index == 1 else '' }}" id="v-tabs-top_dps-{{ fight }}-tab" data-bs-toggle="tab"  href="#v-tabs-top_dps-{{ fight }}" role="tab">{{ top_dps[fight].label }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="card-body card-compact">
+            <div class="tab-content" id="v-tabs-top_dps-tabContent">
+                {% for fight in fights %}
+                    {% with fight=fight, players=top_dps[fight].rows, active=true if loop.index == 1 else false %}
+                        {% include "components/dps_tab.html" %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>

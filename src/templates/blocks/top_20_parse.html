@@ -1,0 +1,21 @@
+<div class="col-12 p-3">
+    <div class="card card-dark">
+        <div class="card-header">
+            <h2 class="card-title p-3 text-center">Top 20 - Médias de parses por classe</h2>
+            <div class="nav nav-tabs card-header-tabs" id="v-tabs-top_parses-tab" role="tablist" >
+                {% for class in classes %}
+                <a class="nav-link {{ 'active' if loop.index == 1 else '' }}" id="v-tabs-top_parses-{{ class }}-tab" data-bs-toggle="tab"  href="#v-tabs-top_parses-{{ class }}" role="tab">{{ top_parses[class].label }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="card-body card-compact">
+            <div class="tab-content" id="v-tabs-top_parses-tabContent">
+                {% for class in classes %}
+                    {% with class=class, players=top_parses[class].rows, active=true if loop.index == 1 else false %}
+                        {% include "components/parse_tab.html" %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
