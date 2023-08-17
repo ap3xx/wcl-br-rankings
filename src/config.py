@@ -24,6 +24,72 @@ CLASS_ICON_MAP = {
     "Warrior - Fury": "icons/warrior-fury.jpeg",
 }
 
+FIGHT_ID_MAP = {
+    "629": {
+        "code": "bofn",
+        "label": "Beasts of Northrend"
+    },
+    "633": {
+        "code": "lord",
+        "label": "Lord Jaraxxus"
+    },
+    "641": {
+        "code": "twin",
+        "label": "Twin Val'kyr"
+    },
+    "645": {
+        "code": "anub",
+        "label": "Anub'arak"
+    },
+}
+
+CLASS_ID_MAP = {
+    "All": {
+        "code": "allc",
+        "label": "All"
+    },
+    "Death Knight": {
+        "code": "dkni",
+        "label": "DK"
+    },
+    "Druid": {
+        "code": "dudu",
+        "label": "Druid"
+    },
+    "Hunter": {
+        "code": "hunt",
+        "label": "Hunter"
+    },
+    "Mage": {
+        "code": "mage",
+        "label": "Mage"
+    },
+    "Paladin": {
+        "code": "pala",
+        "label": "Paladin"
+    },
+    "Priest": {
+        "code": "prst",
+        "label": "Priest"
+    },
+    "Rogue": {
+        "code": "roge",
+        "label": "Rogue"
+    },
+    "Shaman": {
+        "code": "sham",
+        "label": "Shaman"
+    },
+    "Warlock": {
+        "code": "lock",
+        "label": "Warlock"
+    },
+    "Warrior": {
+        "code": "warr",
+        "label": "Warrior"
+    },
+}
+
 PARSE_COLOR_MAP = {
     100: "gold",
     99: "pink",
