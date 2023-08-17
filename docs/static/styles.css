@@ -1,0 +1,77 @@
+body {
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #d3d5d8;
+}
+
+.faction-alliance {
+    color: #6699ff;
+}
+
+.faction-horde {
+    color: red;
+}
+
+.parse-gold {
+    color: #e268a8
+}
+
+.parse-pink {
+    color: #e268a8
+}
+
+.parse-orange {
+    color: #ff8000
+}
+
+.parse-purple {
+    color: #a335ee
+}
+
+.parse-blue {
+    color: #0070ff
+}
+
+.parse-green {
+    color: #1eff00
+}
+
+.parse-gray {
+    color: #666
+}
+
+.class-icon {
+    width: 25px;
+    border-radius: 5px;
+}
+
+.content-dark {
+    background-color: #222e3c;
+}
+
+.card-dark {
+    background-color: #222e3cb2
+}
+
+/* Bootstrap overrides */
+.table {
+    margin-bottom: 0px;
+    color: inherit;
+    font-weight: bold;
+}
+
+.nav-tabs {
+    border-bottom: 0px solid transparent;
+}
+
+.nav-tabs .nav-link {
+    color: #d3d5d8;
+}
+
+.nav-tabs .nav-item.show .nav-link .nav-tabs .nav-link.active {
+    background-color: #d3d5d8;
+
+}
+

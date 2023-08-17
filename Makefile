@@ -1,9 +1,9 @@
 clear:
 	rm -rf docs
 
-
 publish:
 	@echo "Moving to gh-docs branch"
+	git fetch -p
 	git checkout gh-docs
 	@echo "Updating code"
 	git merge main --no-commit --no-ff
