@@ -21,34 +21,22 @@ class PGClient:
 
     def list_top_dps_by_encounter(self, encounter_id):
         query = f"""
-        WITH CTE AS (
-            SELECT *, ROW_NUMBER() OVER (PARTITION BY character_id, encounter_id, spec ORDER BY value DESC) AS rn
-            FROM data_parses
-            WHERE encounter_id = {encounter_id}
-        )
         SELECT
-            "character_id", "name", guild, realm, region, faction, "class", spec, encounter_id, value as dps, duration
-        FROM CTE
-        WHERE rn=1;
+            "character_id", "name", guild, realm, region, faction, "class", spec, encounter_id, dps, duration
+        FROM data_parses
+        WHERE encounter_id = {encounter_id}
         """
         response = self.__run_select_query(query)
         return [parse_row for parse_row in response]
 
     def list_top_parses_by_class(self, player_class):
         query = f"""
-        WITH CTE AS (
-            SELECT *, ROW_NUMBER() OVER (PARTITION BY character_id, encounter_id, spec ORDER BY percentile DESC) AS rn
-            FROM data_parses
-            WHERE "class" = '{player_class}'
-        )
         SELECT
             character_id, "name", guild, realm, region, faction, "class", spec, SUM(percentile)/4 AS avg_parse
-        FROM CTE
-        WHERE rn = 1
+        FROM data_parses
         GROUP BY
             character_id, "name", guild, realm, region, faction, "class", spec
-        ORDER BY
-            avg_parse DESC;
+        WHERE  "class" = {player_class}
         """
         response = self.__run_select_query(query)
         return [parse_row for parse_row in response]
