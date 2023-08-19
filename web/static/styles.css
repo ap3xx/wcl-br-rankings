@@ -48,10 +48,6 @@ body {
 }
 
 .content-dark {
-    background-color: #222e3c;
-}
-
-.card-dark {
     background-color: #222e3ccb
 }
 
@@ -60,7 +56,16 @@ body {
     overflow: auto;
 }
 
+.safe-width {
+    min-width: 750px;
+}
+
 /* Bootstrap overrides */
+.btn {
+    width: 45px;
+    padding: .5rem;
+}
+
 .table {
     margin-bottom: 0px;
     color: inherit;

@@ -2,19 +2,19 @@ import hashlib
 from datetime import datetime, timedelta
 
 from api import WCLApiClient
-from cfg import ReportConfig
-from db import DBClient
+from cfg import IngestionConfig
+from db import PGClient
 from log import get_logger
 
 RAID_SIZE = 25
 METRICS_CHECKED = ["dps"]
 
-class WCLBrazilReport:
+class WCLBrazilIngestor:
 
-    def __init__(self):
-        self.__cfg = ReportConfig()
-        self.__api_client = WCLApiClient()
-        self.__db = DBClient()
+    def __init__(self, cfg: IngestionConfig, api_client: WCLApiClient, db: PGClient):
+        self.__cfg = cfg
+        self.__api_client = api_client
+        self.__db = db
 
     def __fetch_character_parses(self, character: dict, metric="dps"):
         get_logger().debug(
@@ -30,7 +30,7 @@ class WCLBrazilReport:
                     parse_id = hashlib.md5(
                         f"{ranking['reportID']}.{ranking['fightID']}.{ranking['characterID']}.{metric}".encode()
                     ).hexdigest()
-                    if parse_id in self.__cfg.processed_parses:
+                    if parse_id in self.__cfg.processed_parses_ids:
                         get_logger().debug("Parse already processed...")
                         continue
 
@@ -155,7 +155,7 @@ class WCLBrazilReport:
             guild["name"], guild["realm"], guild["region"], params={"start": start_date}
         )
         for report_entry in late_guild_reports:
-            if report_entry["id"] not in self.__cfg.processed_reports:
+            if report_entry["id"] not in self.__cfg.processed_reports_ids:
                 self.__fetch_report(report_entry["id"], guild)
 
     def __load_reports(self):
@@ -186,43 +186,39 @@ class WCLBrazilReport:
 
     def __save_reports(self):
         get_logger().info("Preparing to save reports...")
-        reports_to_save = list()
+        self.new_reports = list()
         for guild_name, reports in self.__reports.items():
             for report_id, report in reports.items():
-                if report_id not in self.__cfg.processed_reports:
-                    reports_to_save.append(report)
-        get_logger().info(f"Saving {len(reports_to_save)} reports")
-        self.__db.insert_reports(reports_to_save)
+                if report_id not in self.__cfg.processed_reports_ids:
+                    self.new_reports.append(report)
+        get_logger().info(f"Saving {len(self.new_reports)} reports")
+        self.__db.insert_reports(self.new_reports)
 
     def __save_parses(self):
         get_logger().info("Preparing to save parses...")
         for metric, parses in self.__parses.items():
-            parses_to_save = [parse for parse in parses if parse["id"] not in self.__cfg.processed_parses]
+            self.new_parses = [parse for parse in parses if parse["id"] not in self.__cfg.processed_parses_ids]
             get_logger().info(f"Saving {len(parses)} parses for metric {metric}...")
-            self.__db.insert_parses(parses_to_save)
+            self.__db.insert_parses(self.new_parses)
 
     def __save_characters(self):
         get_logger().info("Preparing to save characters...")
-        characters_to_save = list()
+        self.new_characters = list()
         for character_id, character in self.__characters.items():
             if character_id not in self.__cfg.known_characters:
-                characters_to_save.append(character)
-        get_logger().info(f"Saving {len(characters_to_save)} characters...")
-        self.__db.insert_characters(characters_to_save)
+                self.new_characters.append(character)
+        get_logger().info(f"Saving {len(self.new_characters)} characters...")
+        self.__db.insert_characters(self.new_characters)
 
-    def load(self):
-        get_logger().info("Loading data...")
+    def extract_and_transform(self):
+        get_logger().info("Extracting and transforming data...")
         self.__load_reports()
         self.__load_characters()
         self.__load_parses()
         return self
 
-    def calculate_rankings(self):
-        get_logger().info("Generating rankings...")
-        # do report logic
-        return self
-
-    def save(self):
+    def load(self):
+        get_logger().info("Loading data...")
         self.__save_reports()
         self.__save_parses()
         self.__save_characters()

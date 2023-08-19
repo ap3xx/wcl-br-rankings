@@ -2,20 +2,20 @@
 
 import yaml
 
-from db import DBClient
+from db import PGClient
 from log import get_logger
 
-class ReportConfig:
+class IngestionConfig:
 
     def __init__(self):
         get_logger().info("Initializing configurations...")
-        self.__db = DBClient()
+        self.__db = PGClient()
         self.__load_encounters_conf()
         self.__load_specs_conf()
         self.__load_guilds_database()
         self.__load_characters_database()
-        self.__load_processed_reports_ids()
-        self.__load_processed_parses_ids()
+        self.__load_processed_reports()
+        self.__load_processed_parses()
         get_logger().info("Configurations loaded!")
 
     def __load_encounters_conf(self):
@@ -38,7 +38,7 @@ class ReportConfig:
             self.classes[s["class"]]["specs"][s["role"]].append(s["name"])
 
     def __load_guilds_database(self):
-        get_logger().debug("Loading guilds database...")
+        get_logger().debug("Loading guilds conf...")
         self.__guilds_conf = self.__db.list_guilds()
         self.guilds = {
             g["name"]: g
@@ -53,11 +53,11 @@ class ReportConfig:
             for c in self.__characters_conf
         }
 
-    def __load_processed_reports_ids(self):
+    def __load_processed_reports(self):
         get_logger().debug("Loading already processed reports...")
-        self.processed_reports = self.__db.list_report_ids()
+        self.processed_reports_ids = self.__db.list_report_ids()
 
-    def __load_processed_parses_ids(self):
+    def __load_processed_parses(self):
         get_logger().debug("Loading already processed parses...")
-        self.processed_parses = self.__db.list_parse_ids()
+        self.processed_parses_ids = self.__db.list_parse_ids()
 

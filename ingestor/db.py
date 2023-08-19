@@ -4,7 +4,7 @@ import psycopg2
 import psycopg2.extras
 
 
-class DBClient:
+class PGClient:
 
     def __init__(self):
         self.__conn_string = f"host={os.getenv('DB_HOST')} dbname={os.getenv('DB_DATABASE')} " \
@@ -26,45 +26,45 @@ class DBClient:
             conn.commit()
 
     def list_guilds(self):
-        query = "SELECT * FROM guilds"
+        query = "SELECT * FROM cfg_guilds"
         response = self.__run_select_query(query)
         return [guild_row for guild_row in response]
 
     def list_encounters(self):
-        query = "SELECT * FROM encounters"
+        query = "SELECT * FROM cfg_encounters"
         response = self.__run_select_query(query)
         return [encounter_row for encounter_row in response]
 
     def list_specs(self):
-        query = "SELECT * FROM specs"
+        query = "SELECT * FROM cfg_specs"
         response = self.__run_select_query(query)
         return [spec_row for spec_row in response]
 
     def list_characters(self):
-        query = "SELECT * FROM characters"
+        query = "SELECT * FROM data_characters"
         response = self.__run_select_query(query)
         return [char_row for char_row in response]
 
     def list_report_ids(self):
-        query = "SELECT id FROM reports"
+        query = "SELECT id FROM data_reports"
         response = self.__run_select_query(query)
         return [report_row["id"] for report_row in response]
 
     def list_parse_ids(self):
-        query = "SELECT id FROM parses"
+        query = "SELECT id FROM data_parses"
         response = self.__run_select_query(query)
         return [parse_row["id"] for parse_row in response]
 
     def insert_reports(self, reports):
         query = """
-        INSERT INTO reports(id, guild, title, "date", realm, region, faction)
+        INSERT INTO data_reports(id, guild, title, "date", realm, region, faction)
         VALUES (%(id)s, %(guild)s, %(title)s, %(date)s, %(realm)s, %(region)s, %(faction)s)
         """
         self.__run_batch_insert_query(query, reports)
 
     def insert_parses(self, parses):
         query = """
-        INSERT INTO parses(id, character_id, name, "class", spec, guild, realm, region, faction, zone, zone_id,
+        INSERT INTO data_parses(id, character_id, name, "class", spec, guild, realm, region, faction, zone, zone_id,
                            encounter, encounter_id, duration, percentile, metric, value, ilvl, "date")
         VALUES (%(id)s, %(character_id)s, %(name)s, %(class)s, %(spec)s, %(guild)s, %(realm)s, %(region)s,
                 %(faction)s, %(zone)s, %(zone_id)s, %(encounter)s, %(encounter_id)s, %(duration)s, %(percentile)s,
@@ -74,7 +74,7 @@ class DBClient:
 
     def insert_characters(self, characters):
         query = """
-        INSERT INTO characters(id, name, guild, realm, region, faction, "class", is_blacklisted)
+        INSERT INTO data_characters(id, name, guild, realm, region, faction, "class", is_blacklisted)
         VALUES (%(id)s, %(name)s, %(guild)s, %(realm)s, %(region)s, %(faction)s, %(class)s, %(is_blacklisted)s)
         """
         self.__run_batch_insert_query(query, characters)

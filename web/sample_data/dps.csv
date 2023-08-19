@@ -17,7 +17,7 @@ classettere,horde,Matsoft,Pagle-US,Shaman - Elemental,633,13573.16
 telphinstonef,horde,Otcom,Arugal-US,Druid - Balance,629,13280.26
 tseag,horde,Regrant,Whitemane-US,Rogue - Subtlety,645,14581.1
 raskhamh,alliance,Wrapsafe,Arugal-US,Hunter - Beast Mastery,629,13569.87
-jkaufmani,horde,Veribet,Arugal-US,Death Knight - Blood (DPS),633,12268.19
+jkaufmani,horde,Veribet,Arugal-US,DeathKnight - Blood (DPS),633,12268.19
 lrainsdenj,alliance,Tampflex,Grobbulus-US,Hunter - Survival,629,14332.42
 sabercrombyk,alliance,Duobam,Benediction-US,Warlock - Demonology,629,13850.39
 djansel,horde,Ventosanzap,Pagle-US,Rogue - Subtlety,633,12716.14
@@ -36,14 +36,14 @@ gfarlhamx,horde,Zamit,Whitemane-US,Paladin - Retribution,641,14280.1
 tgenneyy,horde,Tin,Faerlina-US,Mage - Frost,633,13849.57
 hkeerz,alliance,Wrapsafe,Pagle-US,Druid - Feral,633,13824.48
 ldeavin10,horde,Asoka,Mankrik-US,Druid - Balance,629,13970.17
-okewzick11,alliance,Greenlam,Pagle-US,Death Knight - Frost,629,14154.28
+okewzick11,alliance,Greenlam,Pagle-US,DeathKnight - Frost,629,14154.28
 mgriffey12,alliance,Cardify,Grobbulus-US,Druid - Balance,633,12033.29
 cruppelin13,horde,Sonsing,Faerlina-US,Hunter - Survival,641,12938.07
 dcrowcroft14,alliance,Stringtough,Arugal-US,Druid - Feral,645,13149.66
 vnyles15,alliance,Prodder,Mankrik-US,Paladin - Retribution,629,13252.39
 apycock16,alliance,Tampflex,Faerlina-US,Warlock - Affliction,629,12615.36
 iyeoland17,horde,Mat Lam Tam,Arugal-US,Mage - Frost,633,14423.22
-sgabbatt18,horde,Rank,Whitemane-US,Death Knight - Blood (DPS),645,13949.22
+sgabbatt18,horde,Rank,Whitemane-US,DeathKnight - Blood (DPS),645,13949.22
 ltungay19,horde,Fix San,Benediction-US,Rogue - Assassination,633,14665.6
 cmcelory1a,horde,Holdlamis,Whitemane-US,Shaman - Elemental,645,12468.56
 coliphant1b,horde,Duobam,Benediction-US,Warrior - Fury,633,14511.48
@@ -52,10 +52,10 @@ eceely1d,alliance,Lotlux,Whitemane-US,Rogue - Combat,633,14974.88
 lphilippeaux1e,alliance,Fix San,Benediction-US,Priest - Shadow,641,13043.94
 hsheerin1f,alliance,Matsoft,Whitemane-US,Rogue - Assassination,629,13784.11
 sdawson1g,horde,Flexidy,Pagle-US,Mage - Arcane,629,13944.18
-anation1h,horde,Gembucket,Grobbulus-US,Death Knight - Frost,641,13025.35
-bhaskell1i,alliance,Stringtough,Faerlina-US,Death Knight - Blood (DPS),633,12367.13
+anation1h,horde,Gembucket,Grobbulus-US,DeathKnight - Frost,641,13025.35
+bhaskell1i,alliance,Stringtough,Faerlina-US,DeathKnight - Blood (DPS),633,12367.13
 dglamart1j,horde,Holdlamis,Grobbulus-US,Warrior - Arms,629,13481.88
-vhebden1k,alliance,Solarbreeze,Faerlina-US,Death Knight - Unholy,645,14765.62
+vhebden1k,alliance,Solarbreeze,Faerlina-US,DeathKnight - Unholy,645,14765.62
 msynder1l,alliance,Rank,Faerlina-US,Mage - Frost,629,14861.38
 vmehaffey1m,alliance,Home Ing,Whitemane-US,Rogue - Combat,633,14154.77
 usissens1n,horde,Tres-Zap,Pagle-US,Warlock - Demonology,629,13304.89
@@ -78,20 +78,20 @@ ucuschieri23,horde,Job,Benediction-US,Mage - Arcane,645,12011.66
 vohagirtie24,alliance,Alpha,Whitemane-US,Shaman - Enhancement,645,13782.81
 scurnow25,horde,Rank,Mankrik-US,Mage - Frost,629,14724.82
 ltuplin26,alliance,Redhold,Faerlina-US,Rogue - Combat,629,14253.02
-colynn27,alliance,Lotlux,Pagle-US,Death Knight - Unholy,629,12066.07
+colynn27,alliance,Lotlux,Pagle-US,DeathKnight - Unholy,629,12066.07
 wivanyushin28,horde,Temp,Benediction-US,Hunter - Beast Mastery,633,14366.16
 kpittle29,alliance,Y-Solowarm,Arugal-US,Rogue - Assassination,641,13293.9
-hgascoyen2a,horde,Konklab,Faerlina-US,Death Knight - Blood (DPS),645,12439.75
+hgascoyen2a,horde,Konklab,Faerlina-US,DeathKnight - Blood (DPS),645,12439.75
 nruffli2b,horde,Alphazap,Faerlina-US,Hunter - Survival,629,12841.22
-kwater2c,horde,Otcom,Whitemane-US,Death Knight - Blood (DPS),645,14261.02
+kwater2c,horde,Otcom,Whitemane-US,DeathKnight - Blood (DPS),645,14261.02
 rbeeze2d,horde,Y-Solowarm,Benediction-US,Priest - Shadow,633,14141.93
 mnoller2e,horde,Treeflex,Pagle-US,Druid - Balance,641,14092.08
 wmothersdale2f,alliance,Voyatouch,Faerlina-US,Shaman - Elemental,633,12920.05
-cdruce2g,alliance,Andalax,Whitemane-US,Death Knight - Unholy,629,13198.07
+cdruce2g,alliance,Andalax,Whitemane-US,DeathKnight - Unholy,629,13198.07
 pletts2h,alliance,Alphazap,Arugal-US,Druid - Balance,641,14844.3
-wmcandrew2i,horde,Cardguard,Whitemane-US,Death Knight - Unholy,633,14144.24
+wmcandrew2i,horde,Cardguard,Whitemane-US,DeathKnight - Unholy,633,14144.24
 gstannus2j,alliance,Gembucket,Whitemane-US,Warlock - Destruction,645,14168.51
-bwurz2k,horde,Duobam,Grobbulus-US,Death Knight - Blood (DPS),641,14442.25
+bwurz2k,horde,Duobam,Grobbulus-US,DeathKnight - Blood (DPS),641,14442.25
 dborrowman2l,alliance,Wrapsafe,Pagle-US,Hunter - Survival,645,14977.78
 rbeagrie2m,horde,Domainer,Pagle-US,Priest - Shadow,633,12566.64
 ddibb2n,horde,Fix San,Whitemane-US,Hunter - Marksmanship,645,13454.14
@@ -112,7 +112,7 @@ esweatman31,horde,Domainer,Faerlina-US,Mage - Fire,629,14240.08
 ddullard32,horde,Biodex,Benediction-US,Shaman - Enhancement,645,14248.67
 bstclair33,alliance,Domainer,Benediction-US,Druid - Balance,629,12109.24
 sfolomin34,horde,Tempsoft,Mankrik-US,Mage - Arcane,641,12796.66
-bmuirden35,horde,Flowdesk,Arugal-US,Death Knight - Frost,641,13624.93
+bmuirden35,horde,Flowdesk,Arugal-US,DeathKnight - Frost,641,13624.93
 epetrelli36,alliance,Y-Solowarm,Faerlina-US,Hunter - Survival,645,14636.6
 sjearum37,alliance,Tresom,Pagle-US,Druid - Balance,633,12885.51
 aanney38,horde,Otcom,Pagle-US,Priest - Shadow,645,14488.24
@@ -126,7 +126,7 @@ ahenricsson3f,alliance,Asoka,Pagle-US,Druid - Feral,641,12021.44
 wwillingale3g,alliance,Lotstring,Grobbulus-US,Warlock - Affliction,633,13459.9
 ghobben3h,alliance,Zontrax,Mankrik-US,Rogue - Combat,641,14494.25
 ehallbord3i,horde,Wrapsafe,Mankrik-US,Shaman - Enhancement,629,13911.01
-ftant3j,horde,Andalax,Pagle-US,Death Knight - Frost,641,14907.21
+ftant3j,horde,Andalax,Pagle-US,DeathKnight - Frost,641,14907.21
 csargint3k,horde,Veribet,Whitemane-US,Warlock - Destruction,641,14920.99
 rdarley3l,horde,Keylex,Faerlina-US,Hunter - Beast Mastery,633,13580.31
 kblevin3m,horde,Veribet,Pagle-US,Druid - Feral,629,14034.63
@@ -140,9 +140,9 @@ bbreinl3t,alliance,Y-Solowarm,Faerlina-US,Shaman - Elemental,645,12482.99
 tbeinke3u,alliance,Prodder,Mankrik-US,Shaman - Elemental,633,14273.3
 rblakiston3v,horde,Tampflex,Arugal-US,Hunter - Marksmanship,645,14847.25
 ghardman3w,horde,Lotlux,Arugal-US,Hunter - Beast Mastery,629,14404.73
-hkarpe3x,alliance,Y-Solowarm,Whitemane-US,Death Knight - Unholy,641,12134.15
+hkarpe3x,alliance,Y-Solowarm,Whitemane-US,DeathKnight - Unholy,641,12134.15
 hchanning3y,alliance,Cookley,Mankrik-US,Mage - Arcane,629,12287.39
-magglio3z,horde,Tempsoft,Pagle-US,Death Knight - Frost,629,12764.02
+magglio3z,horde,Tempsoft,Pagle-US,DeathKnight - Frost,629,12764.02
 kdemke40,horde,Andalax,Mankrik-US,Druid - Balance,641,13570.08
 bcowndley41,horde,Vagram,Faerlina-US,Warlock - Demonology,645,14112.76
 sgilchrist42,alliance,Alphazap,Whitemane-US,Druid - Feral,641,12300.18
@@ -151,10 +151,10 @@ skingzeth44,horde,Ventosanzap,Mankrik-US,Shaman - Enhancement,641,14764.7
 bregitz45,alliance,Zamit,Arugal-US,Warrior - Arms,645,13432.46
 bbridgman46,horde,Alphazap,Mankrik-US,Shaman - Enhancement,641,12981.1
 gbuske47,horde,Redhold,Faerlina-US,Druid - Balance,641,12583.58
-jpimblett48,horde,Stim,Whitemane-US,Death Knight - Unholy,641,13139.99
+jpimblett48,horde,Stim,Whitemane-US,DeathKnight - Unholy,641,13139.99
 sholcroft49,alliance,Zaam-Dox,Grobbulus-US,Hunter - Marksmanship,641,14107.83
 nyelding4a,alliance,Holdlamis,Benediction-US,Rogue - Subtlety,641,13303.78
-egercken4b,horde,Fixflex,Benediction-US,Death Knight - Blood (DPS),629,13878.85
+egercken4b,horde,Fixflex,Benediction-US,DeathKnight - Blood (DPS),629,13878.85
 vdaunay4c,horde,Andalax,Faerlina-US,Druid - Balance,629,14689.58
 fhuttley4d,alliance,Cookley,Benediction-US,Druid - Feral,645,12951.44
 egaythorpe4e,alliance,Alpha,Pagle-US,Rogue - Combat,641,14325.26
@@ -175,13 +175,13 @@ ipankettman4s,alliance,Fintone,Benediction-US,Mage - Arcane,629,14848.67
 tblaxall4t,horde,Tin,Benediction-US,Warlock - Affliction,629,12968.26
 glanphier4u,alliance,Ventosanzap,Benediction-US,Priest - Shadow,629,13076.77
 cwreakes4v,horde,Duobam,Mankrik-US,Hunter - Survival,633,13367.23
-hborland4w,alliance,Sonsing,Benediction-US,Death Knight - Blood (DPS),645,14718.2
-jiacabucci4x,horde,Flexidy,Whitemane-US,Death Knight - Blood (DPS),629,14104.83
+hborland4w,alliance,Sonsing,Benediction-US,DeathKnight - Blood (DPS),645,14718.2
+jiacabucci4x,horde,Flexidy,Whitemane-US,DeathKnight - Blood (DPS),629,14104.83
 schaulk4y,horde,Flowdesk,Mankrik-US,Warrior - Fury,645,14397.12
 battewill4z,alliance,Latlux,Mankrik-US,Hunter - Marksmanship,629,12892.75
 sschollick50,alliance,Konklux,Benediction-US,Druid - Feral,645,12930.79
 mloges51,alliance,Cardguard,Faerlina-US,Hunter - Marksmanship,633,12409.76
-dshevelin52,alliance,Redhold,Pagle-US,Death Knight - Unholy,629,14371.0
+dshevelin52,alliance,Redhold,Pagle-US,DeathKnight - Unholy,629,14371.0
 jdillingstone53,horde,Mat Lam Tam,Mankrik-US,Mage - Arcane,641,12473.49
 astigell54,alliance,Y-find,Benediction-US,Mage - Frost,633,14184.32
 qstailey55,horde,Mat Lam Tam,Whitemane-US,Shaman - Enhancement,629,13517.18
@@ -194,12 +194,12 @@ emccreery5b,horde,Alphazap,Pagle-US,Mage - Fire,645,12880.57
 lcumberledge5c,alliance,Veribet,Whitemane-US,Shaman - Elemental,641,12634.43
 paylmore5d,alliance,Bitwolf,Benediction-US,Mage - Fire,641,14481.77
 cyeowell5e,alliance,Fintone,Pagle-US,Rogue - Combat,633,12022.29
-hobrogan5f,horde,Stim,Pagle-US,Death Knight - Blood (DPS),641,14487.99
+hobrogan5f,horde,Stim,Pagle-US,DeathKnight - Blood (DPS),641,14487.99
 pcongreave5g,alliance,Ronstring,Pagle-US,Rogue - Subtlety,633,14046.7
-bcorkett5h,alliance,Toughjoyfax,Mankrik-US,Death Knight - Blood (DPS),633,12607.49
+bcorkett5h,alliance,Toughjoyfax,Mankrik-US,DeathKnight - Blood (DPS),633,12607.49
 plempertz5i,horde,Holdlamis,Whitemane-US,Hunter - Survival,641,13150.14
 udayer5j,horde,Bytecard,Faerlina-US,Warlock - Demonology,629,13744.03
-mjellybrand5k,horde,Job,Faerlina-US,Death Knight - Unholy,645,14467.75
+mjellybrand5k,horde,Job,Faerlina-US,DeathKnight - Unholy,645,14467.75
 gveare5l,alliance,Domainer,Benediction-US,Hunter - Survival,641,13901.85
 pcuthbert5m,horde,Span,Grobbulus-US,Hunter - Survival,645,12993.03
 bprendeguest5n,alliance,Regrant,Arugal-US,Mage - Arcane,641,13404.34
@@ -209,7 +209,7 @@ enormavill5q,alliance,Stronghold,Faerlina-US,Warlock - Demonology,633,12182.49
 nheintz5r,horde,Daltfresh,Arugal-US,Rogue - Combat,629,14944.0
 dandryunin5s,alliance,Voyatouch,Grobbulus-US,Warlock - Demonology,645,12201.43
 adougary5t,alliance,Y-find,Pagle-US,Paladin - Retribution,629,13739.32
-drentenbeck5u,horde,Y-Solowarm,Mankrik-US,Death Knight - Blood (DPS),633,14367.69
+drentenbeck5u,horde,Y-Solowarm,Mankrik-US,DeathKnight - Blood (DPS),633,14367.69
 emacgahy5v,horde,Keylex,Mankrik-US,Shaman - Elemental,645,12117.5
 tfagan5w,horde,Subin,Grobbulus-US,Shaman - Elemental,629,14818.46
 dchavrin5x,horde,Sub-Ex,Pagle-US,Warlock - Demonology,629,12691.36
@@ -250,12 +250,12 @@ jcloney6v,alliance,Keylex,Arugal-US,Warlock - Destruction,633,14800.59
 amelmeth6w,alliance,Bytecard,Whitemane-US,Hunter - Beast Mastery,645,12103.71
 cwastie6x,horde,Zaam-Dox,Pagle-US,Warrior - Fury,645,14166.27
 kcowin6y,alliance,Transcof,Faerlina-US,Rogue - Assassination,629,14667.39
-ehaggett6z,alliance,Quo Lux,Mankrik-US,Death Knight - Blood (DPS),629,12329.95
+ehaggett6z,alliance,Quo Lux,Mankrik-US,DeathKnight - Blood (DPS),629,12329.95
 csmeal70,alliance,Sub-Ex,Pagle-US,Druid - Feral,629,13949.82
-dandrews71,horde,Domainer,Benediction-US,Death Knight - Blood (DPS),629,13603.19
+dandrews71,horde,Domainer,Benediction-US,DeathKnight - Blood (DPS),629,13603.19
 imascall72,alliance,Veribet,Mankrik-US,Mage - Fire,633,13995.44
-kjeffers73,horde,Opela,Benediction-US,Death Knight - Blood (DPS),629,12180.34
-gburstow74,horde,It,Whitemane-US,Death Knight - Frost,645,12210.12
+kjeffers73,horde,Opela,Benediction-US,DeathKnight - Blood (DPS),629,12180.34
+gburstow74,horde,It,Whitemane-US,DeathKnight - Frost,645,12210.12
 aclarage75,horde,Cardify,Mankrik-US,Mage - Arcane,629,14050.94
 grideout76,horde,Job,Mankrik-US,Mage - Fire,645,13972.12
 wtowler77,alliance,Transcof,Pagle-US,Mage - Frost,641,14433.76
@@ -267,7 +267,7 @@ reilers7c,horde,Temp,Arugal-US,Hunter - Beast Mastery,629,13210.13
 rfordyce7d,alliance,Biodex,Arugal-US,Warlock - Affliction,629,14301.16
 skeary7e,alliance,Vagram,Faerlina-US,Druid - Balance,645,14887.82
 smcquarrie7f,alliance,Veribet,Whitemane-US,Rogue - Subtlety,629,12942.55
-tholhouse7g,horde,Zaam-Dox,Whitemane-US,Death Knight - Unholy,629,14186.82
+tholhouse7g,horde,Zaam-Dox,Whitemane-US,DeathKnight - Unholy,629,14186.82
 fbernini7h,horde,Aerified,Mankrik-US,Druid - Balance,641,14376.64
 doscallan7i,alliance,Span,Arugal-US,Warrior - Arms,633,12303.83
 fkeach7j,alliance,Wrapsafe,Faerlina-US,Shaman - Elemental,641,13369.43
@@ -290,12 +290,12 @@ adragoe7z,alliance,Greenlam,Arugal-US,Hunter - Survival,633,14044.84
 yfiddiman80,alliance,Tres-Zap,Faerlina-US,Warlock - Affliction,629,12532.93
 wgiron81,alliance,Voyatouch,Pagle-US,Druid - Balance,641,12728.94
 mblenkiron82,alliance,Y-Solowarm,Whitemane-US,Rogue - Combat,645,12906.2
-aingon83,alliance,Job,Mankrik-US,Death Knight - Frost,629,14180.97
+aingon83,alliance,Job,Mankrik-US,DeathKnight - Frost,629,14180.97
 aattle84,horde,Daltfresh,Benediction-US,Rogue - Assassination,641,14108.67
 shorrigan85,horde,Job,Pagle-US,Druid - Balance,633,14141.04
 gllorente86,alliance,Zaam-Dox,Mankrik-US,Warrior - Arms,629,14390.57
 lscardifeild87,alliance,Fintone,Faerlina-US,Shaman - Elemental,633,12437.78
-jhounsham88,alliance,Overhold,Faerlina-US,Death Knight - Blood (DPS),633,14870.56
+jhounsham88,alliance,Overhold,Faerlina-US,DeathKnight - Blood (DPS),633,14870.56
 ckinsett89,alliance,Veribet,Whitemane-US,Mage - Fire,645,12640.24
 bedgerton8a,horde,Tresom,Faerlina-US,Hunter - Beast Mastery,629,13748.22
 gmassie8b,alliance,Mat Lam Tam,Whitemane-US,Priest - Shadow,645,13706.68
@@ -331,26 +331,26 @@ ecourvert94,horde,Overhold,Benediction-US,Hunter - Marksmanship,645,12194.06
 chovel95,horde,Y-Solowarm,Benediction-US,Paladin - Retribution,633,12613.29
 feastgate96,alliance,Wrapsafe,Whitemane-US,Priest - Shadow,645,13641.24
 kemblow97,horde,Flexidy,Arugal-US,Warrior - Fury,645,12033.77
-thammerstone98,alliance,Domainer,Whitemane-US,Death Knight - Unholy,629,13951.64
+thammerstone98,alliance,Domainer,Whitemane-US,DeathKnight - Unholy,629,13951.64
 khentze99,horde,Alpha,Arugal-US,Paladin - Retribution,629,13473.14
 akubala9a,alliance,Trippledex,Arugal-US,Druid - Balance,645,13431.79
 mpiddick9b,alliance,Lotlux,Grobbulus-US,Shaman - Enhancement,633,12986.5
-ichattington9c,horde,Regrant,Arugal-US,Death Knight - Unholy,629,12730.72
-bbottomer9d,horde,Redhold,Whitemane-US,Death Knight - Blood (DPS),645,13347.11
+ichattington9c,horde,Regrant,Arugal-US,DeathKnight - Unholy,629,12730.72
+bbottomer9d,horde,Redhold,Whitemane-US,DeathKnight - Blood (DPS),645,13347.11
 mhowton9e,alliance,Alpha,Mankrik-US,Mage - Fire,645,12751.34
-lweatherhogg9f,alliance,Cardify,Pagle-US,Death Knight - Unholy,645,14392.34
+lweatherhogg9f,alliance,Cardify,Pagle-US,DeathKnight - Unholy,645,14392.34
 zcoates9g,horde,Daltfresh,Pagle-US,Warrior - Arms,641,12356.05
 ybrisset9h,horde,Asoka,Arugal-US,Warlock - Affliction,633,12701.01
 tnanuccioi9i,horde,Treeflex,Faerlina-US,Mage - Frost,645,13472.53
 ereek9j,horde,Fix San,Arugal-US,Priest - Shadow,641,13102.45
 zsallan9k,horde,Transcof,Grobbulus-US,Warlock - Destruction,645,12792.68
 hhibling9l,horde,Y-find,Benediction-US,Rogue - Assassination,645,13063.43
-mgantzman9m,alliance,Zontrax,Whitemane-US,Death Knight - Unholy,629,12026.14
+mgantzman9m,alliance,Zontrax,Whitemane-US,DeathKnight - Unholy,629,12026.14
 fschops9n,horde,Fintone,Arugal-US,Paladin - Retribution,629,13935.48
 wiaduccelli9o,horde,Lotlux,Pagle-US,Warlock - Destruction,633,14759.2
 apenniall9p,horde,Cardguard,Arugal-US,Warrior - Arms,633,14285.06
 efowle9q,horde,Namfix,Arugal-US,Warrior - Arms,645,13838.93
-gkemball9r,horde,Biodex,Mankrik-US,Death Knight - Frost,645,12828.88
+gkemball9r,horde,Biodex,Mankrik-US,DeathKnight - Frost,645,12828.88
 dmaine9s,alliance,Flowdesk,Benediction-US,Mage - Arcane,645,13552.15
 kurion9t,horde,Kanlam,Pagle-US,Shaman - Enhancement,641,12278.47
 chardeman9u,horde,Wrapsafe,Benediction-US,Paladin - Retribution,645,13441.02
@@ -365,7 +365,7 @@ edobrowolskia2,horde,Konklab,Mankrik-US,Warlock - Demonology,633,14459.46
 pjusticea3,horde,It,Benediction-US,Paladin - Retribution,641,14887.68
 wrontscha4,horde,Andalax,Mankrik-US,Warrior - Fury,641,14342.23
 ksausmana5,horde,Cardify,Grobbulus-US,Rogue - Combat,629,14198.65
-ccoonihana6,horde,Gembucket,Mankrik-US,Death Knight - Frost,645,13286.86
+ccoonihana6,horde,Gembucket,Mankrik-US,DeathKnight - Frost,645,13286.86
 hcogdona7,horde,Veribet,Benediction-US,Warlock - Demonology,629,14976.06
 afippa8,alliance,Zathin,Mankrik-US,Mage - Fire,645,14154.24
 xsivessa9,alliance,Trippledex,Mankrik-US,Warlock - Affliction,641,12353.51
@@ -384,7 +384,7 @@ bpatisal,alliance,Cardguard,Arugal-US,Mage - Fire,629,12170.58
 gshepherdam,horde,Fintone,Whitemane-US,Hunter - Survival,641,13174.36
 ccamfieldan,alliance,Transcof,Pagle-US,Warlock - Affliction,629,13719.27
 dschultao,horde,Otcom,Whitemane-US,Druid - Balance,641,14487.51
-rcattrollap,alliance,Stringtough,Benediction-US,Death Knight - Unholy,641,14478.85
+rcattrollap,alliance,Stringtough,Benediction-US,DeathKnight - Unholy,641,14478.85
 smaymondaq,alliance,Zontrax,Arugal-US,Mage - Arcane,633,12293.16
 vbreensar,alliance,Bitchip,Faerlina-US,Mage - Frost,641,12906.72
 sdoggerellas,alliance,Aerified,Benediction-US,Hunter - Survival,645,12511.41
@@ -402,13 +402,13 @@ esandallb3,alliance,Veribet,Whitemane-US,Druid - Balance,633,12405.36
 sbeckleyb4,alliance,Flexidy,Arugal-US,Druid - Balance,641,13256.24
 asutehallb5,alliance,Alphazap,Grobbulus-US,Rogue - Combat,629,12976.74
 rmacwhanb6,horde,Viva,Whitemane-US,Hunter - Survival,629,13066.79
-cgreiserb7,alliance,Bitchip,Benediction-US,Death Knight - Frost,633,13062.11
+cgreiserb7,alliance,Bitchip,Benediction-US,DeathKnight - Frost,633,13062.11
 teddieb8,horde,Aerified,Faerlina-US,Shaman - Elemental,633,14156.51
-jskillingb9,horde,Zaam-Dox,Arugal-US,Death Knight - Frost,629,13043.04
+jskillingb9,horde,Zaam-Dox,Arugal-US,DeathKnight - Frost,629,13043.04
 godomba,horde,Opela,Benediction-US,Warrior - Fury,629,14321.37
 lblockeybb,horde,Domainer,Mankrik-US,Warlock - Demonology,629,13456.84
 gcolreinbc,horde,Ventosanzap,Pagle-US,Shaman - Enhancement,629,13720.05
-dminichillobd,horde,Daltfresh,Whitemane-US,Death Knight - Unholy,629,12763.97
+dminichillobd,horde,Daltfresh,Whitemane-US,DeathKnight - Unholy,629,12763.97
 gjulienbe,alliance,It,Whitemane-US,Druid - Feral,645,13922.4
 esandbatchbf,horde,Fix San,Faerlina-US,Hunter - Beast Mastery,645,12201.91
 rhampebg,horde,Namfix,Grobbulus-US,Warrior - Fury,629,14442.97
@@ -419,18 +419,18 @@ aspradberybk,alliance,Voltsillam,Grobbulus-US,Priest - Shadow,633,13938.18
 ececerebl,horde,Stronghold,Faerlina-US,Mage - Fire,633,13506.38
 ocostellowbm,alliance,Redhold,Benediction-US,Druid - Feral,641,12786.73
 rbarstowbn,alliance,Overhold,Faerlina-US,Hunter - Survival,645,14119.5
-gmartinsonbo,horde,Zaam-Dox,Faerlina-US,Death Knight - Blood (DPS),629,12851.09
+gmartinsonbo,horde,Zaam-Dox,Faerlina-US,DeathKnight - Blood (DPS),629,12851.09
 lellsburybp,horde,Alphazap,Grobbulus-US,Warrior - Fury,629,12281.09
 ksoughtonbq,alliance,Andalax,Benediction-US,Paladin - Retribution,629,14647.84
 delsburybr,horde,Pannier,Whitemane-US,Mage - Arcane,629,14510.52
 clouisetbs,horde,Overhold,Pagle-US,Paladin - Retribution,641,12231.42
 mrozanskibt,alliance,Fintone,Faerlina-US,Mage - Fire,633,13188.05
-epenningbu,horde,Wrapsafe,Arugal-US,Death Knight - Frost,633,13081.46
+epenningbu,horde,Wrapsafe,Arugal-US,DeathKnight - Frost,633,13081.46
 vwattinghambv,horde,Stim,Grobbulus-US,Warrior - Fury,629,14186.35
 agamellbw,alliance,Zoolab,Mankrik-US,Warlock - Demonology,633,14525.39
 hdoumerquebx,alliance,Treeflex,Benediction-US,Hunter - Marksmanship,641,13341.57
 jgallifordby,horde,Span,Mankrik-US,Mage - Arcane,641,13745.66
-msclaterbz,horde,Cardguard,Pagle-US,Death Knight - Blood (DPS),633,13606.09
+msclaterbz,horde,Cardguard,Pagle-US,DeathKnight - Blood (DPS),633,13606.09
 vmacksteadc0,alliance,Ronstring,Arugal-US,Hunter - Beast Mastery,645,12795.5
 efilippelloc1,alliance,Cardguard,Arugal-US,Warrior - Fury,633,13255.86
 bmeac2,alliance,Keylex,Faerlina-US,Mage - Frost,645,13456.1
@@ -459,21 +459,21 @@ rlammertzco,horde,Tresom,Faerlina-US,Shaman - Elemental,633,14266.1
 jscarcecp,horde,Alpha,Whitemane-US,Rogue - Subtlety,641,14287.68
 dburgotcq,alliance,Flowdesk,Arugal-US,Shaman - Elemental,629,13979.63
 afeakscr,horde,Zontrax,Whitemane-US,Druid - Balance,629,14480.62
-mwhitmellcs,alliance,Mat Lam Tam,Whitemane-US,Death Knight - Frost,641,13112.44
+mwhitmellcs,alliance,Mat Lam Tam,Whitemane-US,DeathKnight - Frost,641,13112.44
 dsaterthwaitct,horde,Temp,Arugal-US,Paladin - Retribution,629,13839.26
 gspencookcu,alliance,Domainer,Pagle-US,Hunter - Beast Mastery,645,12384.74
 dgarlingecv,alliance,Lotlux,Benediction-US,Druid - Balance,645,14357.3
 nvibertcw,horde,Andalax,Pagle-US,Priest - Shadow,629,13993.54
 binglesoncx,horde,Gembucket,Pagle-US,Paladin - Retribution,645,12786.17
 lscatchercy,horde,Keylex,Pagle-US,Druid - Balance,645,14805.4
-smacklincz,alliance,Job,Pagle-US,Death Knight - Unholy,641,14337.22
+smacklincz,alliance,Job,Pagle-US,DeathKnight - Unholy,641,14337.22
 bgurwoodd0,horde,Alphazap,Pagle-US,Mage - Arcane,633,13087.86
-msamesd1,alliance,Viva,Faerlina-US,Death Knight - Unholy,629,13725.36
-ireederd2,alliance,Konklab,Pagle-US,Death Knight - Blood (DPS),641,12064.59
+msamesd1,alliance,Viva,Faerlina-US,DeathKnight - Unholy,629,13725.36
+ireederd2,alliance,Konklab,Pagle-US,DeathKnight - Blood (DPS),641,12064.59
 efriesed3,horde,Andalax,Arugal-US,Hunter - Marksmanship,645,12243.76
 svialsd4,horde,Temp,Benediction-US,Warlock - Affliction,641,14483.33
 gwellingd5,alliance,Transcof,Pagle-US,Warlock - Affliction,641,12299.76
-gdennyd6,alliance,Cardguard,Whitemane-US,Death Knight - Blood (DPS),633,14511.55
+gdennyd6,alliance,Cardguard,Whitemane-US,DeathKnight - Blood (DPS),633,14511.55
 enotherd7,alliance,Solarbreeze,Pagle-US,Warlock - Affliction,641,12630.16
 kfisbburned8,horde,Voltsillam,Grobbulus-US,Warlock - Affliction,629,14186.54
 jbonteind9,alliance,Hatity,Mankrik-US,Mage - Fire,645,13733.41
@@ -486,7 +486,7 @@ gmcilherrandf,alliance,Asoka,Arugal-US,Warlock - Affliction,629,13849.25
 lbeartdg,horde,Asoka,Pagle-US,Hunter - Survival,645,13185.16
 lchezierdh,alliance,Voltsillam,Faerlina-US,Rogue - Subtlety,629,14084.17
 lstarsmearedi,alliance,Home Ing,Faerlina-US,Warlock - Destruction,633,12490.84
-bantyshevdj,horde,Namfix,Arugal-US,Death Knight - Frost,641,14587.79
+bantyshevdj,horde,Namfix,Arugal-US,DeathKnight - Frost,641,14587.79
 tnarramoredk,horde,Zontrax,Whitemane-US,Warrior - Arms,633,13345.94
 ziacoviellodl,horde,Stronghold,Arugal-US,Rogue - Assassination,641,12051.35
 gmcginneydm,alliance,Holdlamis,Pagle-US,Warlock - Demonology,641,13527.92
@@ -504,8 +504,8 @@ bgowrydx,horde,Bitwolf,Arugal-US,Shaman - Elemental,629,13050.42
 mjackettdy,alliance,Lotlux,Mankrik-US,Mage - Frost,641,12732.96
 dlovelacedz,horde,Prodder,Benediction-US,Hunter - Survival,633,13012.08
 showate0,horde,Sonair,Grobbulus-US,Shaman - Enhancement,629,13983.21
-aspeeke1,alliance,Cardguard,Benediction-US,Death Knight - Frost,645,14266.32
-tciobotarue2,horde,Alphazap,Benediction-US,Death Knight - Unholy,633,14208.77
+aspeeke1,alliance,Cardguard,Benediction-US,DeathKnight - Frost,645,14266.32
+tciobotarue2,horde,Alphazap,Benediction-US,DeathKnight - Unholy,633,14208.77
 kgurkoe3,horde,Keylex,Whitemane-US,Mage - Frost,633,12280.1
 mmerfine4,horde,Span,Pagle-US,Warrior - Arms,633,13952.31
 brupertoe5,horde,Y-find,Grobbulus-US,Paladin - Retribution,633,14641.71
@@ -514,11 +514,11 @@ sgreensitee7,horde,Daltfresh,Benediction-US,Rogue - Subtlety,633,13889.27
 krelphe8,horde,Tres-Zap,Arugal-US,Hunter - Beast Mastery,633,14352.09
 livchenkoe9,horde,Latlux,Benediction-US,Rogue - Assassination,645,13951.87
 pnoellea,alliance,Greenlam,Mankrik-US,Warlock - Affliction,629,12292.96
-bmurricaneseb,alliance,Zathin,Pagle-US,Death Knight - Unholy,645,14867.83
+bmurricaneseb,alliance,Zathin,Pagle-US,DeathKnight - Unholy,645,14867.83
 ylasseterec,alliance,Tampflex,Whitemane-US,Mage - Fire,633,12073.57
-ekenchingtoned,alliance,Biodex,Arugal-US,Death Knight - Blood (DPS),645,14498.44
+ekenchingtoned,alliance,Biodex,Arugal-US,DeathKnight - Blood (DPS),645,14498.44
 dsimonassiee,horde,Pannier,Faerlina-US,Shaman - Elemental,633,14044.33
-tmeldrumef,horde,Konklux,Mankrik-US,Death Knight - Frost,645,14671.64
+tmeldrumef,horde,Konklux,Mankrik-US,DeathKnight - Frost,645,14671.64
 skrolleg,horde,Bigtax,Faerlina-US,Druid - Feral,633,14805.97
 rsloyaneh,alliance,Job,Grobbulus-US,Druid - Feral,641,14676.6
 ilaityei,alliance,Sonsing,Arugal-US,Rogue - Subtlety,629,13106.08
@@ -526,7 +526,7 @@ tnorsterej,horde,Lotstring,Faerlina-US,Hunter - Beast Mastery,641,12249.79
 ahaithek,horde,Duobam,Faerlina-US,Druid - Feral,629,14446.93
 bspurgeel,horde,Bytecard,Faerlina-US,Hunter - Survival,629,13249.06
 srackem,alliance,Namfix,Grobbulus-US,Mage - Frost,645,12508.27
-amckeneyen,alliance,Y-find,Benediction-US,Death Knight - Unholy,633,14698.05
+amckeneyen,alliance,Y-find,Benediction-US,DeathKnight - Unholy,633,14698.05
 klukereo,alliance,Tresom,Pagle-US,Warlock - Demonology,629,14106.2
 ngreiswoodep,horde,Namfix,Arugal-US,Hunter - Marksmanship,645,12718.67
 pphilpotteq,horde,Wrapsafe,Benediction-US,Shaman - Enhancement,633,14368.45
@@ -543,7 +543,7 @@ hcolquhounf0,horde,Andalax,Grobbulus-US,Paladin - Retribution,645,12371.0
 shaffnerf1,alliance,Konklab,Grobbulus-US,Shaman - Enhancement,629,13981.64
 blonsbroughf2,alliance,Cookley,Whitemane-US,Hunter - Beast Mastery,633,12542.58
 gbagnallf3,horde,Y-find,Benediction-US,Paladin - Retribution,641,14976.3
-qkyngef4,horde,Cardify,Grobbulus-US,Death Knight - Unholy,629,14888.4
+qkyngef4,horde,Cardify,Grobbulus-US,DeathKnight - Unholy,629,14888.4
 sflatleyf5,alliance,Solarbreeze,Grobbulus-US,Warlock - Destruction,641,13822.64
 agiovanif6,horde,Cardguard,Whitemane-US,Mage - Arcane,645,13718.18
 cmichinf7,alliance,Lotstring,Whitemane-US,Hunter - Beast Mastery,645,12025.95
@@ -566,27 +566,27 @@ nhuncotefn,alliance,Cookley,Whitemane-US,Mage - Fire,629,12062.34
 bmoorcroftfo,alliance,Bytecard,Faerlina-US,Mage - Fire,633,12426.71
 rtickfp,alliance,Prodder,Arugal-US,Rogue - Assassination,633,14172.39
 ghowlingfq,alliance,Latlux,Benediction-US,Mage - Fire,645,14089.92
-hmooganfr,horde,Tin,Mankrik-US,Death Knight - Blood (DPS),645,13647.82
+hmooganfr,horde,Tin,Mankrik-US,DeathKnight - Blood (DPS),645,13647.82
 spanasfs,horde,Cookley,Benediction-US,Rogue - Combat,641,13150.88
 cmaiseyft,alliance,Viva,Faerlina-US,Rogue - Combat,633,14988.01
 blunafu,alliance,Greenlam,Benediction-US,Warlock - Demonology,629,13714.56
 lrighyfv,horde,Tresom,Grobbulus-US,Rogue - Combat,633,14030.64
-jpetzoltfw,alliance,Sub-Ex,Arugal-US,Death Knight - Blood (DPS),641,13165.58
+jpetzoltfw,alliance,Sub-Ex,Arugal-US,DeathKnight - Blood (DPS),641,13165.58
 rlinefx,horde,Holdlamis,Faerlina-US,Warlock - Demonology,641,12130.91
 alinggoodfy,alliance,Bitwolf,Faerlina-US,Hunter - Marksmanship,645,12419.55
 himbreyfz,horde,Voyatouch,Arugal-US,Rogue - Assassination,645,12241.99
 fnannizzig0,alliance,Overhold,Pagle-US,Shaman - Enhancement,633,13918.71
-spirdueg1,horde,Namfix,Faerlina-US,Death Knight - Unholy,633,14304.93
-wlawfulg2,alliance,Voltsillam,Faerlina-US,Death Knight - Unholy,633,12205.46
+spirdueg1,horde,Namfix,Faerlina-US,DeathKnight - Unholy,633,14304.93
+wlawfulg2,alliance,Voltsillam,Faerlina-US,DeathKnight - Unholy,633,12205.46
 bchataing3,horde,Overhold,Arugal-US,Shaman - Elemental,629,13846.47
 jtabertg4,horde,Gembucket,Benediction-US,Hunter - Beast Mastery,641,12162.5
-gwatshamg5,horde,Tampflex,Grobbulus-US,Death Knight - Unholy,645,14851.87
+gwatshamg5,horde,Tampflex,Grobbulus-US,DeathKnight - Unholy,645,14851.87
 laxstong6,alliance,Transcof,Pagle-US,Warrior - Fury,641,13058.03
 ascamwellg7,alliance,Aerified,Arugal-US,Shaman - Elemental,633,13749.57
 gvassbenderg8,alliance,Tin,Arugal-US,Warlock - Demonology,629,12471.86
 gseresg9,horde,Tampflex,Arugal-US,Hunter - Beast Mastery,633,12449.93
 kminterga,horde,Latlux,Pagle-US,Warrior - Fury,633,14550.2
-mteasellgb,alliance,Opela,Mankrik-US,Death Knight - Unholy,641,12530.74
+mteasellgb,alliance,Opela,Mankrik-US,DeathKnight - Unholy,641,12530.74
 grawlsgc,horde,Fixflex,Whitemane-US,Rogue - Assassination,645,13912.9
 bmcgladegd,alliance,Span,Arugal-US,Rogue - Subtlety,641,14218.33
 skilligrewge,horde,Tampflex,Benediction-US,Mage - Arcane,633,14684.01
@@ -603,7 +603,7 @@ omassowgo,horde,Sonair,Pagle-US,Mage - Arcane,633,12179.93
 srennockgp,alliance,Fixflex,Arugal-US,Hunter - Marksmanship,641,12044.2
 rstampegq,alliance,Latlux,Benediction-US,Rogue - Combat,633,13707.18
 nposchelgr,horde,Mat Lam Tam,Benediction-US,Warlock - Affliction,629,12342.48
-jlaurencegs,alliance,Namfix,Mankrik-US,Death Knight - Frost,633,12764.17
+jlaurencegs,alliance,Namfix,Mankrik-US,DeathKnight - Frost,633,12764.17
 vraffangt,alliance,Bytecard,Pagle-US,Rogue - Combat,629,12078.22
 rmervyngu,alliance,Aerified,Faerlina-US,Rogue - Combat,629,13543.57
 ibreffittgv,alliance,Konklux,Pagle-US,Warrior - Fury,645,13711.75
@@ -612,11 +612,11 @@ kbehnekegx,alliance,Cookley,Grobbulus-US,Hunter - Beast Mastery,645,13212.53
 jlygogy,alliance,Lotlux,Mankrik-US,Warrior - Fury,645,13165.77
 sadnettgz,horde,Solarbreeze,Benediction-US,Druid - Feral,641,13742.51
 tgetshamh0,horde,Toughjoyfax,Mankrik-US,Rogue - Assassination,633,14154.52
-dnewensh1,horde,Fix San,Arugal-US,Death Knight - Blood (DPS),633,12239.09
+dnewensh1,horde,Fix San,Arugal-US,DeathKnight - Blood (DPS),633,12239.09
 wodlinh2,alliance,Domainer,Pagle-US,Warlock - Affliction,641,13905.49
 wdedomenicoh3,horde,Regrant,Mankrik-US,Druid - Feral,641,13693.23
 dderuelh4,alliance,Prodder,Whitemane-US,Mage - Arcane,645,13771.81
-epandeyh5,horde,Zathin,Mankrik-US,Death Knight - Unholy,633,12195.64
+epandeyh5,horde,Zathin,Mankrik-US,DeathKnight - Unholy,633,12195.64
 hbellringerh6,horde,Voyatouch,Pagle-US,Mage - Arcane,641,13247.29
 bephsonh7,horde,Opela,Whitemane-US,Warlock - Destruction,629,13126.83
 mbernaldezh8,alliance,Holdlamis,Grobbulus-US,Paladin - Retribution,645,12228.31
@@ -624,12 +624,12 @@ spaxfordeh9,alliance,Zathin,Benediction-US,Paladin - Retribution,629,13992.04
 barzuha,alliance,Toughjoyfax,Pagle-US,Druid - Balance,645,12445.5
 bborlandhb,alliance,Lotlux,Pagle-US,Mage - Frost,641,12895.49
 afilipsonhc,horde,Konklux,Whitemane-US,Shaman - Enhancement,641,14753.36
-kmacpeicehd,alliance,Subin,Pagle-US,Death Knight - Frost,645,13531.32
+kmacpeicehd,alliance,Subin,Pagle-US,DeathKnight - Frost,645,13531.32
 bszymanekhe,horde,Wrapsafe,Benediction-US,Mage - Fire,645,12395.01
 glearoydehf,horde,Asoka,Pagle-US,Warlock - Destruction,641,13288.95
 aflanaghanhg,alliance,Ronstring,Pagle-US,Mage - Fire,633,13422.14
 scablehh,alliance,Lotlux,Mankrik-US,Priest - Shadow,633,12002.79
-cboomehi,alliance,Fixflex,Pagle-US,Death Knight - Blood (DPS),641,14258.95
+cboomehi,alliance,Fixflex,Pagle-US,DeathKnight - Blood (DPS),641,14258.95
 pbeddiehj,horde,Sonair,Grobbulus-US,Shaman - Elemental,641,13744.1
 ogianullihk,horde,Latlux,Pagle-US,Warlock - Affliction,629,13147.55
 tloisihl,alliance,Solarbreeze,Mankrik-US,Warrior - Fury,645,14643.46
@@ -642,7 +642,7 @@ agatrellhr,alliance,Andalax,Benediction-US,Paladin - Retribution,633,12202.24
 pmattenhs,alliance,Biodex,Arugal-US,Hunter - Marksmanship,633,13679.79
 bpeterht,horde,Tres-Zap,Arugal-US,Hunter - Beast Mastery,633,13723.14
 imiddashu,alliance,Alpha,Benediction-US,Mage - Arcane,633,13814.3
-kewbankehv,alliance,Prodder,Pagle-US,Death Knight - Unholy,645,14576.47
+kewbankehv,alliance,Prodder,Pagle-US,DeathKnight - Unholy,645,14576.47
 sellinorhw,alliance,Zaam-Dox,Whitemane-US,Warlock - Destruction,641,14392.41
 frohmerhx,horde,Kanlam,Grobbulus-US,Shaman - Enhancement,645,13944.95
 ebaalhamhy,horde,Namfix,Pagle-US,Warlock - Destruction,645,14103.19
@@ -651,11 +651,11 @@ bforsdykei0,horde,Voltsillam,Benediction-US,Shaman - Elemental,633,13887.29
 ggosenelli1,alliance,Stringtough,Whitemane-US,Warlock - Affliction,645,14053.18
 mburfieldi2,alliance,Tampflex,Pagle-US,Warrior - Fury,629,12017.31
 dgottelieri3,alliance,Pannier,Arugal-US,Shaman - Enhancement,645,13097.07
-tcoxhelli4,alliance,Holdlamis,Pagle-US,Death Knight - Frost,641,13753.23
+tcoxhelli4,alliance,Holdlamis,Pagle-US,DeathKnight - Frost,641,13753.23
 xsarginsoni5,horde,Solarbreeze,Whitemane-US,Rogue - Subtlety,633,14908.23
-hbullochi6,alliance,Konklab,Faerlina-US,Death Knight - Unholy,633,14056.14
+hbullochi6,alliance,Konklab,Faerlina-US,DeathKnight - Unholy,633,14056.14
 bheckneyi7,alliance,Toughjoyfax,Grobbulus-US,Priest - Shadow,641,14835.12
-mtolertoni8,alliance,Stim,Mankrik-US,Death Knight - Frost,641,13035.24
+mtolertoni8,alliance,Stim,Mankrik-US,DeathKnight - Frost,641,13035.24
 hraymenti9,horde,Opela,Grobbulus-US,Druid - Balance,641,13062.48
 tbridatia,alliance,Hatity,Pagle-US,Shaman - Elemental,633,12837.65
 nrumpib,alliance,Opela,Faerlina-US,Hunter - Survival,629,14785.36
@@ -664,7 +664,7 @@ dcapelleid,horde,Cardguard,Benediction-US,Rogue - Combat,645,13811.36
 imendenhallie,alliance,Andalax,Benediction-US,Mage - Fire,633,14482.63
 mpearsallif,alliance,Otcom,Pagle-US,Shaman - Enhancement,645,13560.12
 vspicerig,horde,Transcof,Pagle-US,Rogue - Combat,641,14779.25
-ebreckonih,horde,Voyatouch,Pagle-US,Death Knight - Blood (DPS),629,12180.21
+ebreckonih,horde,Voyatouch,Pagle-US,DeathKnight - Blood (DPS),629,12180.21
 rgregorinii,alliance,Bitwolf,Faerlina-US,Warlock - Destruction,629,12019.77
 mcroucherij,horde,Daltfresh,Faerlina-US,Hunter - Beast Mastery,641,14768.34
 rbursnellik,alliance,Bitwolf,Benediction-US,Mage - Frost,629,13967.08
@@ -673,7 +673,7 @@ tjepensenim,horde,Sub-Ex,Pagle-US,Hunter - Beast Mastery,633,13618.75
 sbriersin,alliance,It,Benediction-US,Rogue - Subtlety,629,14374.55
 slaybourneio,alliance,Stringtough,Pagle-US,Shaman - Elemental,641,13122.22
 mfreynip,horde,Wrapsafe,Whitemane-US,Rogue - Combat,629,12141.05
-amiddlebrookiq,alliance,Bytecard,Benediction-US,Death Knight - Blood (DPS),641,13109.17
+amiddlebrookiq,alliance,Bytecard,Benediction-US,DeathKnight - Blood (DPS),641,13109.17
 gblakeboroughir,horde,Duobam,Mankrik-US,Paladin - Retribution,629,12730.82
 rhempelis,alliance,Stronghold,Pagle-US,Rogue - Combat,645,13816.52
 bmoggachit,alliance,Treeflex,Pagle-US,Mage - Arcane,641,14901.27
@@ -685,7 +685,7 @@ rmanuelliiy,horde,Sub-Ex,Whitemane-US,Druid - Balance,645,12722.92
 vhurleriz,horde,Tampflex,Benediction-US,Mage - Arcane,633,14838.55
 rlathburyj0,alliance,Flowdesk,Mankrik-US,Warlock - Destruction,633,14686.6
 pdiblingj1,horde,Transcof,Pagle-US,Hunter - Marksmanship,633,14725.48
-rvazj2,horde,Stronghold,Faerlina-US,Death Knight - Frost,641,13188.3
+rvazj2,horde,Stronghold,Faerlina-US,DeathKnight - Frost,641,13188.3
 bwetternj3,horde,Subin,Grobbulus-US,Shaman - Enhancement,633,13149.96
 jdreusj4,horde,Sonsing,Mankrik-US,Hunter - Survival,645,14911.81
 laynoldj5,alliance,Prodder,Benediction-US,Warrior - Fury,645,13291.16
@@ -701,13 +701,13 @@ jhorriganje,horde,Vagram,Mankrik-US,Hunter - Beast Mastery,641,13816.11
 tgriolijf,alliance,Treeflex,Benediction-US,Priest - Shadow,629,14277.81
 bgrinikhinjg,horde,Alpha,Grobbulus-US,Rogue - Combat,633,13635.95
 lhuntalljh,alliance,Keylex,Arugal-US,Warlock - Affliction,629,13563.33
-pallabartonji,horde,Voltsillam,Grobbulus-US,Death Knight - Unholy,641,12384.65
+pallabartonji,horde,Voltsillam,Grobbulus-US,DeathKnight - Unholy,641,12384.65
 lsailejj,alliance,Domainer,Faerlina-US,Warlock - Destruction,645,13281.89
 rscrivensjk,horde,Prodder,Mankrik-US,Paladin - Retribution,633,12656.7
 ocowansjl,alliance,It,Faerlina-US,Mage - Arcane,645,12003.61
 vtwiddyjm,alliance,Bitwolf,Faerlina-US,Druid - Balance,641,12564.28
 jgallimorejn,horde,Alpha,Mankrik-US,Warrior - Fury,629,12754.15
-ecradduckjo,horde,Alphazap,Benediction-US,Death Knight - Blood (DPS),645,13916.71
+ecradduckjo,horde,Alphazap,Benediction-US,DeathKnight - Blood (DPS),645,13916.71
 hcoombejp,alliance,Zathin,Benediction-US,Hunter - Survival,641,13267.2
 nellensjq,alliance,Gembucket,Pagle-US,Hunter - Beast Mastery,641,14622.15
 mpardonjr,alliance,Veribet,Mankrik-US,Warrior - Fury,633,13531.86
@@ -724,19 +724,19 @@ mtaytk1,alliance,Flexidy,Mankrik-US,Warlock - Demonology,633,13331.6
 fgallandersk2,alliance,Veribet,Grobbulus-US,Mage - Frost,641,12865.02
 gwyattk3,horde,Greenlam,Grobbulus-US,Hunter - Beast Mastery,633,14779.45
 lberstonk4,alliance,Toughjoyfax,Grobbulus-US,Mage - Fire,629,12320.8
-mpalkk5,horde,Cardify,Whitemane-US,Death Knight - Unholy,645,14334.8
+mpalkk5,horde,Cardify,Whitemane-US,DeathKnight - Unholy,645,14334.8
 ktilleyk6,alliance,Zontrax,Arugal-US,Shaman - Enhancement,629,14786.34
 lwakeleyk7,alliance,Overhold,Arugal-US,Warlock - Demonology,629,13717.5
 gfarahark8,alliance,Span,Mankrik-US,Hunter - Survival,629,14962.45
 dgammellk9,alliance,Tampflex,Faerlina-US,Druid - Feral,633,13614.4
 wmeasureska,alliance,Subin,Grobbulus-US,Shaman - Elemental,633,13885.98
 tramshawkb,horde,Y-Solowarm,Grobbulus-US,Warrior - Arms,633,14827.13
-sbachskc,horde,Alpha,Arugal-US,Death Knight - Blood (DPS),629,12941.86
+sbachskc,horde,Alpha,Arugal-US,DeathKnight - Blood (DPS),629,12941.86
 rproctorkd,horde,Holdlamis,Pagle-US,Mage - Frost,641,13621.24
 lpinelke,alliance,Vagram,Arugal-US,Priest - Shadow,641,13456.61
 sbirrelkf,horde,Job,Whitemane-US,Warlock - Demonology,633,14686.89
 medworthyekg,alliance,Sonsing,Pagle-US,Mage - Frost,629,12736.19
-gtreslerkh,horde,Sonair,Pagle-US,Death Knight - Blood (DPS),633,12313.77
+gtreslerkh,horde,Sonair,Pagle-US,DeathKnight - Blood (DPS),633,12313.77
 saxellki,alliance,Wrapsafe,Pagle-US,Shaman - Elemental,645,14678.83
 cpresleykj,alliance,Ronstring,Benediction-US,Shaman - Enhancement,633,12027.99
 bnoonankk,alliance,Viva,Arugal-US,Mage - Arcane,645,13991.35
@@ -753,14 +753,14 @@ ewiltshireku,alliance,Subin,Benediction-US,Shaman - Enhancement,633,14201.88
 croisenkv,alliance,Andalax,Pagle-US,Priest - Shadow,645,12295.87
 fcosinskw,alliance,Viva,Pagle-US,Paladin - Retribution,641,13975.45
 relleringtonkx,alliance,Span,Pagle-US,Rogue - Combat,645,13207.15
-ncoilsky,horde,Solarbreeze,Whitemane-US,Death Knight - Blood (DPS),629,14652.7
+ncoilsky,horde,Solarbreeze,Whitemane-US,DeathKnight - Blood (DPS),629,14652.7
 iwickeykz,alliance,Fixflex,Whitemane-US,Priest - Shadow,645,14127.09
 doldroydel0,horde,Home Ing,Mankrik-US,Rogue - Subtlety,641,12959.2
 dfreschil1,horde,Cookley,Mankrik-US,Mage - Frost,633,13352.65
 sgeneryl2,horde,Toughjoyfax,Faerlina-US,Hunter - Survival,629,12932.74
 mbinnelll3,horde,Prodder,Pagle-US,Warlock - Destruction,641,14525.65
-ecapaldil4,horde,Asoka,Pagle-US,Death Knight - Unholy,633,14992.46
-aanwelll5,horde,Tresom,Mankrik-US,Death Knight - Blood (DPS),645,14708.12
+ecapaldil4,horde,Asoka,Pagle-US,DeathKnight - Unholy,633,14992.46
+aanwelll5,horde,Tresom,Mankrik-US,DeathKnight - Blood (DPS),645,14708.12
 schristoffel6,alliance,Konklab,Whitemane-US,Druid - Balance,629,13198.74
 tselbyl7,horde,Fintone,Pagle-US,Mage - Frost,641,12122.25
 mmacnabl8,alliance,Toughjoyfax,Arugal-US,Warlock - Destruction,629,12859.01
@@ -773,7 +773,7 @@ blavignele,alliance,Lotlux,Grobbulus-US,Priest - Shadow,641,13947.32
 lhabbeslf,alliance,Andalax,Mankrik-US,Druid - Feral,633,12429.28
 fstammirslg,alliance,Ventosanzap,Pagle-US,Rogue - Assassination,645,14426.56
 tocheltreelh,alliance,Opela,Grobbulus-US,Shaman - Enhancement,645,12163.38
-bhorlickli,alliance,Bytecard,Faerlina-US,Death Knight - Unholy,645,13420.64
+bhorlickli,alliance,Bytecard,Faerlina-US,DeathKnight - Unholy,645,13420.64
 tpeytolj,alliance,Y-find,Pagle-US,Rogue - Subtlety,641,13251.97
 molnerlk,alliance,Keylex,Grobbulus-US,Warrior - Arms,641,14100.57
 rshieldonll,horde,It,Arugal-US,Druid - Feral,641,12215.23
@@ -789,12 +789,12 @@ lstubbinlu,alliance,Cardguard,Whitemane-US,Warrior - Fury,633,14533.78
 oholhouselv,alliance,Regrant,Mankrik-US,Druid - Feral,633,12422.96
 wlipscomblw,alliance,Toughjoyfax,Faerlina-US,Hunter - Survival,633,12456.21
 wsabatinilx,horde,Cardguard,Mankrik-US,Warlock - Demonology,641,14163.05
-wtirely,alliance,Gembucket,Arugal-US,Death Knight - Unholy,645,14955.56
+wtirely,alliance,Gembucket,Arugal-US,DeathKnight - Unholy,645,14955.56
 cmacdonelllz,horde,It,Grobbulus-US,Druid - Feral,629,13954.86
 rtwentymanm0,horde,Duobam,Pagle-US,Rogue - Assassination,633,12176.46
 mstutherm1,alliance,Rank,Grobbulus-US,Hunter - Marksmanship,633,13816.73
 mdrewcliftonm2,alliance,Tin,Pagle-US,Druid - Feral,641,12334.41
-twealleansm3,alliance,Bitwolf,Benediction-US,Death Knight - Frost,629,12996.92
+twealleansm3,alliance,Bitwolf,Benediction-US,DeathKnight - Frost,629,12996.92
 bwrigleym4,alliance,Fixflex,Grobbulus-US,Hunter - Marksmanship,629,12910.17
 mhowtonm5,alliance,Ronstring,Benediction-US,Rogue - Combat,633,13390.5
 dbatkinm6,horde,Daltfresh,Benediction-US,Mage - Fire,629,14167.84
@@ -814,40 +814,40 @@ cpirellimj,horde,Bitchip,Benediction-US,Rogue - Combat,633,13282.9
 awimpeneymk,horde,Tres-Zap,Faerlina-US,Warlock - Demonology,645,13647.65
 btrulockml,alliance,Zathin,Benediction-US,Paladin - Retribution,641,13508.22
 esansburymm,alliance,Flowdesk,Arugal-US,Hunter - Beast Mastery,629,14671.58
-jtyghtmn,horde,Subin,Arugal-US,Death Knight - Blood (DPS),645,13853.02
+jtyghtmn,horde,Subin,Arugal-US,DeathKnight - Blood (DPS),645,13853.02
 ssmoutmo,alliance,Flowdesk,Pagle-US,Priest - Shadow,641,14759.84
 bpawellekmp,horde,Alphazap,Mankrik-US,Hunter - Survival,645,13397.01
 sgianellimq,alliance,Tin,Grobbulus-US,Rogue - Combat,641,14999.31
 kileymr,alliance,Stronghold,Whitemane-US,Warlock - Affliction,633,13564.27
 gchidlerms,alliance,Sonsing,Arugal-US,Mage - Arcane,641,14395.52
-bbaszkiewiczmt,alliance,Vagram,Whitemane-US,Death Knight - Blood (DPS),641,12521.92
+bbaszkiewiczmt,alliance,Vagram,Whitemane-US,DeathKnight - Blood (DPS),641,12521.92
 mnavarijomu,alliance,Lotstring,Mankrik-US,Warrior - Arms,633,13250.76
-dfontesmv,alliance,Zoolab,Whitemane-US,Death Knight - Unholy,633,12478.57
+dfontesmv,alliance,Zoolab,Whitemane-US,DeathKnight - Unholy,633,12478.57
 vspottswoodmw,horde,Tampflex,Pagle-US,Rogue - Assassination,641,12023.98
 jlivermx,horde,Stringtough,Pagle-US,Rogue - Assassination,645,13645.43
 bmcgookinmy,horde,Zoolab,Benediction-US,Rogue - Combat,629,12299.04
 rrubanenkomz,horde,Holdlamis,Faerlina-US,Rogue - Combat,633,13989.14
 jfarnonn0,horde,Treeflex,Grobbulus-US,Warrior - Arms,641,13674.14
 tsaketn1,alliance,Regrant,Pagle-US,Paladin - Retribution,641,14680.71
-mtamplingn2,alliance,Hatity,Whitemane-US,Death Knight - Blood (DPS),633,13395.77
-chancen3,alliance,Cardify,Arugal-US,Death Knight - Frost,645,12977.7
+mtamplingn2,alliance,Hatity,Whitemane-US,DeathKnight - Blood (DPS),633,13395.77
+chancen3,alliance,Cardify,Arugal-US,DeathKnight - Frost,645,12977.7
 wirnisn4,alliance,Job,Mankrik-US,Rogue - Assassination,641,13492.08
 hbaconn5,alliance,Matsoft,Whitemane-US,Paladin - Retribution,645,12005.23
 lsmalingn6,alliance,Flowdesk,Whitemane-US,Hunter - Marksmanship,641,13292.33
 rvaynen7,alliance,Latlux,Faerlina-US,Warlock - Affliction,629,12823.47
 mallmondn8,horde,Ronstring,Whitemane-US,Warlock - Demonology,645,12250.52
-cluetchfordn9,alliance,Duobam,Benediction-US,Death Knight - Frost,629,14834.37
+cluetchfordn9,alliance,Duobam,Benediction-US,DeathKnight - Frost,629,14834.37
 kmaccleodna,alliance,Bitwolf,Arugal-US,Paladin - Retribution,645,14767.69
-mcoupmannb,horde,Sonair,Pagle-US,Death Knight - Blood (DPS),641,13180.71
+mcoupmannb,horde,Sonair,Pagle-US,DeathKnight - Blood (DPS),641,13180.71
 ateresianc,horde,Ventosanzap,Mankrik-US,Warlock - Affliction,629,12217.36
-hvanderbruggend,alliance,Pannier,Arugal-US,Death Knight - Blood (DPS),645,14475.84
+hvanderbruggend,alliance,Pannier,Arugal-US,DeathKnight - Blood (DPS),645,14475.84
 ecollynsne,alliance,Aerified,Benediction-US,Warlock - Affliction,641,12456.52
 sdaenennf,horde,Pannier,Mankrik-US,Mage - Frost,629,13199.02
 gwortng,horde,Stringtough,Mankrik-US,Rogue - Combat,633,12984.64
 tcommuccinh,horde,Biodex,Pagle-US,Warlock - Destruction,633,14429.58
-jleveneni,horde,Prodder,Mankrik-US,Death Knight - Blood (DPS),645,12887.08
+jleveneni,horde,Prodder,Mankrik-US,DeathKnight - Blood (DPS),645,12887.08
 hmiskennj,horde,Toughjoyfax,Arugal-US,Warlock - Destruction,633,12876.34
-caaronnk,alliance,Gembucket,Benediction-US,Death Knight - Frost,641,14430.34
+caaronnk,alliance,Gembucket,Benediction-US,DeathKnight - Frost,641,14430.34
 gbromenl,alliance,Regrant,Whitemane-US,Priest - Shadow,633,14061.56
 hleandernm,horde,Gembucket,Whitemane-US,Rogue - Assassination,629,14818.58
 bstermannn,horde,Treeflex,Faerlina-US,Druid - Balance,641,13225.03
@@ -874,7 +874,7 @@ bpattingtono7,alliance,Transcof,Pagle-US,Hunter - Survival,629,12899.18
 cdunkerlyo8,alliance,Redhold,Faerlina-US,Rogue - Subtlety,629,12659.94
 hquixleyo9,horde,Transcof,Whitemane-US,Priest - Shadow,645,13688.08
 zhillborneoa,alliance,Hatity,Grobbulus-US,Priest - Shadow,641,14289.95
-amershob,alliance,Solarbreeze,Arugal-US,Death Knight - Frost,629,14006.52
+amershob,alliance,Solarbreeze,Arugal-US,DeathKnight - Frost,629,14006.52
 amchughoc,horde,Stim,Mankrik-US,Mage - Frost,641,12957.03
 kplunketod,alliance,Sub-Ex,Whitemane-US,Rogue - Combat,645,14349.1
 cpeekoe,alliance,Bytecard,Whitemane-US,Shaman - Enhancement,641,14193.63
@@ -882,10 +882,10 @@ bfrazerof,alliance,Domainer,Pagle-US,Hunter - Marksmanship,641,12018.56
 lvynardeog,horde,Bytecard,Mankrik-US,Shaman - Enhancement,645,13487.41
 yisaakoh,alliance,Alpha,Benediction-US,Warrior - Arms,633,13749.81
 asawardoi,alliance,Sonsing,Pagle-US,Warrior - Fury,641,14065.88
-bscardefieldoj,alliance,Stim,Grobbulus-US,Death Knight - Unholy,645,12317.19
+bscardefieldoj,alliance,Stim,Grobbulus-US,DeathKnight - Unholy,645,12317.19
 mbruntonok,alliance,Stim,Whitemane-US,Mage - Frost,633,12817.76
 krodenburghol,horde,Greenlam,Arugal-US,Shaman - Enhancement,629,13797.84
-lclemettom,alliance,Zaam-Dox,Mankrik-US,Death Knight - Frost,645,14899.01
+lclemettom,alliance,Zaam-Dox,Mankrik-US,DeathKnight - Frost,645,14899.01
 dgerrietson,horde,Redhold,Whitemane-US,Hunter - Marksmanship,641,14168.62
 rmarcqoo,alliance,Asoka,Whitemane-US,Rogue - Subtlety,633,12034.95
 hogleyop,horde,Lotstring,Pagle-US,Mage - Arcane,645,12058.72
@@ -894,7 +894,7 @@ tyakubovor,alliance,Vagram,Mankrik-US,Warlock - Destruction,633,14842.89
 fbandeyos,horde,Gembucket,Pagle-US,Druid - Balance,645,12693.25
 nhuzzeyot,alliance,Voyatouch,Benediction-US,Shaman - Elemental,645,13039.05
 kroarkou,alliance,Andalax,Arugal-US,Shaman - Enhancement,629,13449.23
-rkyntonov,alliance,Aerified,Mankrik-US,Death Knight - Frost,645,13069.8
+rkyntonov,alliance,Aerified,Mankrik-US,DeathKnight - Frost,645,13069.8
 lprobbinow,horde,Treeflex,Faerlina-US,Rogue - Subtlety,629,14329.14
 saxelox,horde,Cardify,Mankrik-US,Rogue - Subtlety,629,13568.53
 cpeascodoy,horde,Cardify,Faerlina-US,Warrior - Arms,633,12716.35
@@ -905,7 +905,7 @@ lsillep2,horde,Tresom,Pagle-US,Druid - Feral,641,12337.97
 bmephanp3,horde,Vagram,Whitemane-US,Rogue - Subtlety,641,14200.82
 hhubbardp4,horde,Sonair,Arugal-US,Warrior - Fury,645,14101.73
 ldepportp5,alliance,Asoka,Grobbulus-US,Warlock - Affliction,641,14710.53
-mbindonp6,horde,Wrapsafe,Whitemane-US,Death Knight - Unholy,629,14826.43
+mbindonp6,horde,Wrapsafe,Whitemane-US,DeathKnight - Unholy,629,14826.43
 rlambp7,horde,Namfix,Faerlina-US,Druid - Balance,629,14144.9
 mromeip8,horde,Cardify,Whitemane-US,Priest - Shadow,633,14169.77
 fmaccarranep9,horde,Zoolab,Arugal-US,Rogue - Assassination,633,14130.3
@@ -919,7 +919,7 @@ foronanpg,alliance,Sonair,Benediction-US,Warrior - Arms,641,14323.9
 byvensph,horde,Sub-Ex,Mankrik-US,Mage - Frost,633,14568.76
 ssommerpi,alliance,Gembucket,Benediction-US,Paladin - Retribution,629,13822.32
 mwestwaterpj,horde,Tresom,Pagle-US,Warrior - Fury,633,13871.35
-bdalgleishpk,alliance,Bytecard,Benediction-US,Death Knight - Frost,641,12197.72
+bdalgleishpk,alliance,Bytecard,Benediction-US,DeathKnight - Frost,641,12197.72
 gmalinowskipl,alliance,Zaam-Dox,Grobbulus-US,Mage - Fire,645,13251.19
 jbasellipm,alliance,Regrant,Grobbulus-US,Priest - Shadow,629,13353.92
 rgreenoughpn,horde,Andalax,Benediction-US,Mage - Fire,633,13288.3
@@ -932,7 +932,7 @@ gdanihelpt,horde,Zontrax,Arugal-US,Paladin - Retribution,633,14595.44
 shassettpu,horde,Vagram,Arugal-US,Rogue - Assassination,641,14406.39
 dheedpv,horde,Job,Benediction-US,Warrior - Arms,641,12609.23
 deakepw,alliance,Namfix,Pagle-US,Warlock - Affliction,629,12889.89
-btatherpx,horde,Zamit,Faerlina-US,Death Knight - Frost,633,13939.88
+btatherpx,horde,Zamit,Faerlina-US,DeathKnight - Frost,633,13939.88
 hgorthypy,horde,Temp,Benediction-US,Druid - Balance,633,12924.85
 wwindresspz,horde,Sonsing,Faerlina-US,Mage - Frost,641,12630.28
 hmcettrickq0,alliance,Zoolab,Whitemane-US,Mage - Arcane,629,12179.48
@@ -942,14 +942,14 @@ daldhousq3,horde,Veribet,Mankrik-US,Rogue - Subtlety,645,14895.59
 mdemariaq4,horde,Kanlam,Benediction-US,Rogue - Subtlety,633,13486.87
 cvuittetq5,alliance,Flexidy,Arugal-US,Warrior - Fury,641,12200.86
 glacotteq6,horde,Zoolab,Whitemane-US,Mage - Fire,641,13485.39
-fcawsbyq7,horde,Latlux,Benediction-US,Death Knight - Unholy,633,12517.21
+fcawsbyq7,horde,Latlux,Benediction-US,DeathKnight - Unholy,633,12517.21
 dboothroydq8,alliance,Overhold,Arugal-US,Mage - Arcane,629,13616.33
 vcunradiq9,alliance,Greenlam,Faerlina-US,Priest - Shadow,645,14917.09
 koleshuninqa,horde,Voyatouch,Whitemane-US,Rogue - Subtlety,645,12637.61
-kperellqb,horde,Span,Whitemane-US,Death Knight - Blood (DPS),633,14442.17
+kperellqb,horde,Span,Whitemane-US,DeathKnight - Blood (DPS),633,14442.17
 aeddinsqc,alliance,Rank,Whitemane-US,Rogue - Subtlety,629,13658.21
 gmargrieqd,horde,Tresom,Faerlina-US,Rogue - Assassination,641,14212.29
-lbendtsenqe,horde,Alphazap,Pagle-US,Death Knight - Unholy,633,13222.13
+lbendtsenqe,horde,Alphazap,Pagle-US,DeathKnight - Unholy,633,13222.13
 jcuttleqf,alliance,Regrant,Mankrik-US,Mage - Arcane,641,13011.83
 vscandrettqg,horde,Treeflex,Grobbulus-US,Rogue - Combat,641,14063.33
 teddisqh,alliance,Treeflex,Whitemane-US,Warlock - Destruction,629,12145.42
@@ -964,7 +964,7 @@ zspiringqp,horde,Solarbreeze,Pagle-US,Shaman - Elemental,641,14987.25
 vswinyardqq,alliance,Quo Lux,Pagle-US,Mage - Fire,641,12430.85
 podriscollqr,horde,Lotlux,Grobbulus-US,Shaman - Elemental,641,14782.79
 rjosilowskiqs,alliance,Latlux,Grobbulus-US,Rogue - Assassination,633,14751.39
-rsiseyqt,alliance,Zontrax,Benediction-US,Death Knight - Blood (DPS),645,12702.46
+rsiseyqt,alliance,Zontrax,Benediction-US,DeathKnight - Blood (DPS),645,12702.46
 upadrickqu,horde,Opela,Grobbulus-US,Mage - Fire,633,13219.62
 drichleyqv,alliance,Bitchip,Faerlina-US,Shaman - Enhancement,645,14564.57
 aolinqw,horde,Zaam-Dox,Faerlina-US,Warlock - Demonology,629,13152.78
@@ -975,7 +975,7 @@ tcrannyr0,alliance,Bytecard,Benediction-US,Warlock - Demonology,629,13376.46
 gphillippsr1,horde,Zamit,Grobbulus-US,Shaman - Enhancement,633,12754.07
 aadranr2,horde,Wrapsafe,Mankrik-US,Rogue - Combat,645,12090.75
 againforthr3,alliance,Quo Lux,Grobbulus-US,Shaman - Enhancement,629,12844.74
-maldrichr4,alliance,Toughjoyfax,Benediction-US,Death Knight - Blood (DPS),633,13551.06
+maldrichr4,alliance,Toughjoyfax,Benediction-US,DeathKnight - Blood (DPS),633,13551.06
 nsunderlandr5,alliance,Home Ing,Whitemane-US,Rogue - Combat,641,14794.44
 stronir6,alliance,Transcof,Mankrik-US,Warlock - Demonology,645,13907.38
 pshrigleyr7,horde,Y-find,Benediction-US,Warrior - Fury,629,12825.91
@@ -991,9 +991,9 @@ mjefferysrg,horde,Trippledex,Faerlina-US,Warrior - Fury,629,12515.11
 estockleyrh,alliance,Solarbreeze,Faerlina-US,Rogue - Subtlety,629,12800.24
 clinnockri,alliance,Duobam,Faerlina-US,Rogue - Subtlety,641,13133.21
 hgowthorperj,horde,Latlux,Whitemane-US,Mage - Fire,629,13985.83
-akinnachrk,horde,Subin,Grobbulus-US,Death Knight - Unholy,641,12983.35
-ahaggardrl,alliance,Ventosanzap,Whitemane-US,Death Knight - Frost,641,14132.92
-clettrm,alliance,Namfix,Faerlina-US,Death Knight - Blood (DPS),645,12513.88
+akinnachrk,horde,Subin,Grobbulus-US,DeathKnight - Unholy,641,12983.35
+ahaggardrl,alliance,Ventosanzap,Whitemane-US,DeathKnight - Frost,641,14132.92
+clettrm,alliance,Namfix,Faerlina-US,DeathKnight - Blood (DPS),645,12513.88
 jbrockiern,horde,Stronghold,Grobbulus-US,Warrior - Arms,645,14187.99
 fgooldro,horde,Prodder,Whitemane-US,Druid - Balance,641,12031.91
 ksmeedrp,alliance,Alpha,Pagle-US,Mage - Fire,629,12996.78

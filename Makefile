@@ -17,6 +17,9 @@ clean-web:
 build-web:
 	python3 web/app.py build
 
+build-web-fake:
+	python3 web/app.py build fake
+
 publish-web:
 	@echo "Moving to gh-docs branch"
 	git fetch -p

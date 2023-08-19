@@ -1,13 +1,13 @@
 <div class="tab-pane {{ 'active' if active else ''  }}" id="v-tabs-top_dps-{{ fight }}">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 {% for player in players %}
                 <tr >
                     <td class="col-md-1">{{ loop.index }}</td>
-                    <td class="col-md-5"><img src="./static/{{ player.class_icon }}" class="class-icon">&nbsp;&nbsp; {{ player.name }}</td>
-                    <td class="col-md-5 faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
-                    <td class="col-md-1 {{ player.parse_color }}">{{ "%.2f"|format(player.dps) }}</td>
+                    <td class="col-md-4"><img src="./static/{{ player.class_icon }}" class="class-icon">&nbsp;&nbsp; {{ player.name }}</td>
+                    <td class="col-md-4 text-end faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
+                    <td class="col-md-3 text-end mono">{{ "%.2f"|format(player.dps) }} <i class="fa-solid fa-clock"></i> {{ player.duration_formated }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
