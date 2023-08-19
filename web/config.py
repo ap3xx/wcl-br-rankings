@@ -1,7 +1,7 @@
 CLASS_ICON_MAP = {
-    "Death Knight - Blood (DPS)": "icons/deathknight-blood.jpeg",
-    "Death Knight - Frost": "icons/deathknight-frost.jpeg",
-    "Death Knight - Unholy": "icons/deathknight-unholy.jpeg",
+    "DeathKnight - Blood (DPS)": "icons/deathknight-blood.jpeg",
+    "DeathKnight - Frost": "icons/deathknight-frost.jpeg",
+    "DeathKnight - Unholy": "icons/deathknight-unholy.jpeg",
     "Druid - Balance": "icons/druid-balance.jpeg",
     "Druid - Feral": "icons/druid-feral.jpeg",
     "Hunter - Beast Mastery": "icons/hunter-beastmastery.jpeg",
@@ -25,19 +25,19 @@ CLASS_ICON_MAP = {
 }
 
 FIGHT_ID_MAP = {
-    "629": {
+    629: {
         "code": "bofn",
         "label": "Beasts of Northrend"
     },
-    "633": {
+    633: {
         "code": "lord",
         "label": "Lord Jaraxxus"
     },
-    "641": {
+    641: {
         "code": "twin",
         "label": "Twin Val'kyr"
     },
-    "645": {
+    645: {
         "code": "anub",
         "label": "Anub'arak"
     },
@@ -48,9 +48,9 @@ CLASS_ID_MAP = {
         "code": "allc",
         "label": "All"
     },
-    "Death Knight": {
+    "DeathKnight": {
         "code": "dkni",
-        "label": "DK"
+        "label": "Death Knight"
     },
     "Druid": {
         "code": "dudu",

@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./static/styles.css">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warcraft Logs - Rankings do Brasil</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Ranking Brasileiro - WOTLK P3</title>
 </head>
-<body>
-    <nav class="navbar content-dark p-3">
-        <span class="navbar-brand mb-0 h1">Warcraft Logs - Rankings do Brasil - WOTLK - Phase 3</span>
-        <span class="navbar-text">
-            Feito e mantido por Khalmýr-Benediction (É Foda Bê)
-        </span>
+<body >
+    <nav class="navbar navbar-expand content-dark p-1 safe-width">
+        <span class="navbar-brand mb-0 h1 p-2">Ranking Brasileiro - WOTLK P3</span>
+        <div class="container-fluid justify-content-end">
+            <div class="text-end p-2 ">
+                Atualizado diariamente! Dados podem divergir do WCL um pouco. Data da primeira carga: 18/07/23</br>
+                Para inclusão da sua guilda, contate diretamente via Discord.
+
+            </div>
+            <div>
+                <a class="btn btn-primary btn-floating" style="background-color: #0082ca" target="_blank" href="https://www.linkedin.com/in/fm-teixeira/" role="button"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-primary btn-floating" style="background-color: #333333" target="_blank" href="https://github.com/ap3xx" role="button"><i class="fab fa-github"></i></a>
+                <a class="btn btn-primary btn-floating" style="background-color: #7289da" target="_blank" href="https://discordapp.com/users/149312554353688576" role="button"><i class="fab fa-discord"></i></a>
+            </div>
+
+        </div>
+
     </nav>
-    <!-- <header>
-        <h1>Warcraft Logs - Rankings do Brasil</h1>
-    </header> -->
-    <main class="w-50 p-5 mx-auto">
+    <main class="w-50 p-5 mx-auto safe-width">
         
 
 <div class="row">
     <div class="col-12 p-3">
-    <div class="card card-dark">
+    <div class="card content-dark">
         <div class="card-header">
             <h2 class="card-title p-3 text-center">Top 20 - Médias de parses por classe</h2>
             <div class="nav nav-tabs card-header-tabs" id="v-tabs-top_parses-tab" role="tablist" >
                 
                 <a class="nav-link active" id="v-tabs-top_parses-allc-tab" data-bs-toggle="tab"  href="#v-tabs-top_parses-allc" role="tab">All</a>
                 
-                <a class="nav-link " id="v-tabs-top_parses-dkni-tab" data-bs-toggle="tab"  href="#v-tabs-top_parses-dkni" role="tab">DK</a>
+                <a class="nav-link " id="v-tabs-top_parses-dkni-tab" data-bs-toggle="tab"  href="#v-tabs-top_parses-dkni" role="tab">Death Knight</a>
                 
                 <a class="nav-link " id="v-tabs-top_parses-dudu-tab" data-bs-toggle="tab"  href="#v-tabs-top_parses-dudu" role="tab">Druid</a>
                 
@@ -59,147 +69,147 @@
                     
                         <div class="tab-pane active" id="v-tabs-top_parses-allc">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; kcurryerz</td>
-                    <td class="col-md-5 faction-alliance">Voyatouch (Arugal-US)</td>
-                    <td class="col-md-1 parse-gold">100.00</td>
+                    <td class="col-md-4"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; Húrinn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-pink">99.38 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; ecruikshanksdc</td>
-                    <td class="col-md-5 faction-horde">Asoka (Benediction-US)</td>
-                    <td class="col-md-1 parse-pink">99.80</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; Shaÿera</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-orange">96.95 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; hkernari5</td>
-                    <td class="col-md-5 faction-horde">Voltsillam (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-pink">99.80</td>
+                    <td class="col-md-4"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; Reikki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">93.03 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; rsaterthwaitlx</td>
-                    <td class="col-md-5 faction-horde">Y-Solowarm (Arugal-US)</td>
-                    <td class="col-md-1 parse-pink">99.80</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Huntergilmar</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">92.98 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; chightown97</td>
-                    <td class="col-md-5 faction-horde">Daltfresh (Pagle-US)</td>
-                    <td class="col-md-1 parse-pink">99.60</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; Nerotinha</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">92.64 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; fgraveyfo</td>
-                    <td class="col-md-5 faction-horde">Voltsillam (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-pink">99.60</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Monstrø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">91.99 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; mmilhammt</td>
-                    <td class="col-md-5 faction-horde">Y-find (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-pink">99.60</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Multkill</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">91.49 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; snewlove9e</td>
-                    <td class="col-md-5 faction-horde">Y-Solowarm (Mankrik-US)</td>
-                    <td class="col-md-1 parse-pink">99.50</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; Märcøs</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">90.99 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; mdreesro</td>
-                    <td class="col-md-5 faction-horde">Subin (Whitemane-US)</td>
-                    <td class="col-md-1 parse-pink">99.40</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Desordeira</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">90.30 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; mboller1l</td>
-                    <td class="col-md-5 faction-horde">Alphazap (Arugal-US)</td>
-                    <td class="col-md-1 parse-pink">99.30</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; Vemtranquilø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">89.64 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; apeasegod8n</td>
-                    <td class="col-md-5 faction-horde">Wrapsafe (Arugal-US)</td>
-                    <td class="col-md-1 parse-pink">99.20</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Panzola</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">89.21 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; cmanjot98</td>
-                    <td class="col-md-5 faction-horde">Daltfresh (Benediction-US)</td>
-                    <td class="col-md-1 parse-pink">99.20</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Kiyohime</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">89.07 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; tsalvinjp</td>
-                    <td class="col-md-5 faction-horde">Viva (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-pink">99.20</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; Dhelta</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">87.62 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; ccassel12</td>
-                    <td class="col-md-5 faction-alliance">Fintone (Arugal-US)</td>
-                    <td class="col-md-1 parse-pink">99.00</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Zaramaki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">84.29 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; dstonaryde</td>
-                    <td class="col-md-5 faction-horde">Rank (Mankrik-US)</td>
-                    <td class="col-md-1 parse-pink">99.00</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Blackspot</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">81.97 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; trehnjw</td>
-                    <td class="col-md-5 faction-alliance">Fix San (Faerlina-US)</td>
-                    <td class="col-md-1 parse-pink">99.00</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Yenifear</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">81.91 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; hmcglonept</td>
-                    <td class="col-md-5 faction-horde">Tin (Faerlina-US)</td>
-                    <td class="col-md-1 parse-pink">99.00</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; Dihminino</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">78.37 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; gdebrick1f</td>
-                    <td class="col-md-5 faction-horde">Fixflex (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">98.90</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; Cavalo</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-blue">74.48 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; fgaliak</td>
-                    <td class="col-md-5 faction-horde">Voltsillam (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">98.80</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Messiahdk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-blue">73.90 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; kknivettil</td>
-                    <td class="col-md-5 faction-alliance">Voltsillam (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">98.70</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Nway</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-blue">72.92 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -211,147 +221,63 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-dkni">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; ebeninil9</td>
-                    <td class="col-md-5 faction-horde">Zoolab (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">98.60</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Monstrø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">91.99 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-blood.jpeg" class="class-icon">&nbsp;&nbsp; mweadickgr</td>
-                    <td class="col-md-5 faction-alliance">Lotlux (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">98.50</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Multkill</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">91.49 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-blood.jpeg" class="class-icon">&nbsp;&nbsp; cdodworth62</td>
-                    <td class="col-md-5 faction-alliance">Andalax (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">98.30</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Kiyohime</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">89.07 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; wtomblesonll</td>
-                    <td class="col-md-5 faction-alliance">Latlux (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">97.90</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Messiahdk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-blue">73.90 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; mcreechfg</td>
-                    <td class="col-md-5 faction-alliance">Greenlam (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">97.70</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Nway</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-blue">72.92 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; mbouchardgp</td>
-                    <td class="col-md-5 faction-alliance">Zontrax (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">97.50</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Givanildo</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">48.09 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; cpandyaj8</td>
-                    <td class="col-md-5 faction-horde">Lotstring (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">97.10</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Djøy</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">27.00 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; cgumme3i</td>
-                    <td class="col-md-5 faction-alliance">Daltfresh (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">96.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-blood.jpeg" class="class-icon">&nbsp;&nbsp; mmartinello5o</td>
-                    <td class="col-md-5 faction-alliance">Stim (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">96.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; dthurby7y</td>
-                    <td class="col-md-5 faction-horde">Gembucket (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">95.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; mleschelle4p</td>
-                    <td class="col-md-5 faction-alliance">Greenlam (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">95.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; nemmettof</td>
-                    <td class="col-md-5 faction-alliance">Subin (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">95.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-blood.jpeg" class="class-icon">&nbsp;&nbsp; cmcallesterj</td>
-                    <td class="col-md-5 faction-alliance">Toughjoyfax (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">95.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-blood.jpeg" class="class-icon">&nbsp;&nbsp; mlebarreea7</td>
-                    <td class="col-md-5 faction-alliance">Hatity (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">94.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; mcuppittdf</td>
-                    <td class="col-md-5 faction-alliance">Zoolab (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">94.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; wduffusm1</td>
-                    <td class="col-md-5 faction-horde">Bytecard (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">94.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; dcridlanf9</td>
-                    <td class="col-md-5 faction-alliance">Andalax (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">93.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; adeppenp</td>
-                    <td class="col-md-5 faction-horde">Voyatouch (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">93.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-blood.jpeg" class="class-icon">&nbsp;&nbsp; vbasinigazzibg</td>
-                    <td class="col-md-5 faction-horde">Wrapsafe (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">92.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; fgreedyer17</td>
-                    <td class="col-md-5 faction-horde">Fix San (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">92.50</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Wladk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">19.17 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -363,147 +289,49 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-dudu">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; dstonaryde</td>
-                    <td class="col-md-5 faction-horde">Rank (Mankrik-US)</td>
-                    <td class="col-md-1 parse-pink">99.00</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; Märcøs</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">90.99 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; kdavyskw</td>
-                    <td class="col-md-5 faction-horde">Flexidy (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">98.40</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; Dihminino</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">78.37 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; wsmalls73</td>
-                    <td class="col-md-5 faction-horde">Voyatouch (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">97.00</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; Mandz</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">38.35 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; fglastonburycb</td>
-                    <td class="col-md-5 faction-horde">Y-find (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">95.70</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; Dheltaf</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">22.69 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; alashamhq</td>
-                    <td class="col-md-5 faction-alliance">Zaam-Dox (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">95.70</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; Hotgiver</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">20.71 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; ethrower2v</td>
-                    <td class="col-md-5 faction-horde">Trippledex (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">95.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; rfaierow</td>
-                    <td class="col-md-5 faction-alliance">Domainer (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">95.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; gwynessi7</td>
-                    <td class="col-md-5 faction-horde">Ronstring (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">94.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; awurstax</td>
-                    <td class="col-md-5 faction-alliance">Aerified (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">94.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; mlaffan7k</td>
-                    <td class="col-md-5 faction-alliance">Vagram (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">93.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; togilvyaq</td>
-                    <td class="col-md-5 faction-alliance">Namfix (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">93.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; eroxbee2t</td>
-                    <td class="col-md-5 faction-horde">Tin (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">93.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; wscorerfm</td>
-                    <td class="col-md-5 faction-alliance">Rank (Pagle-US)</td>
-                    <td class="col-md-1 parse-purple">92.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; mfetherston9d</td>
-                    <td class="col-md-5 faction-alliance">Fixflex (Whitemane-US)</td>
-                    <td class="col-md-1 parse-purple">91.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; hmaynardaz</td>
-                    <td class="col-md-5 faction-alliance">Konklab (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">91.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; dvolker5u</td>
-                    <td class="col-md-5 faction-alliance">Fintone (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">90.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; jbergenma</td>
-                    <td class="col-md-5 faction-horde">Y-find (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">90.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; hhollingbylh</td>
-                    <td class="col-md-5 faction-horde">Tres-Zap (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">90.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; lkettkt</td>
-                    <td class="col-md-5 faction-alliance">Trippledex (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">89.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; tcharityat</td>
-                    <td class="col-md-5 faction-horde">Toughjoyfax (Whitemane-US)</td>
-                    <td class="col-md-1 parse-purple">89.30</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; Cãodebriga</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">6.94 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -515,147 +343,42 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-hunt">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; ecruikshanksdc</td>
-                    <td class="col-md-5 faction-horde">Asoka (Benediction-US)</td>
-                    <td class="col-md-1 parse-pink">99.80</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Huntergilmar</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">92.98 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; rsaterthwaitlx</td>
-                    <td class="col-md-5 faction-horde">Y-Solowarm (Arugal-US)</td>
-                    <td class="col-md-1 parse-pink">99.80</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Panzola</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">89.21 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; apeasegod8n</td>
-                    <td class="col-md-5 faction-horde">Wrapsafe (Arugal-US)</td>
-                    <td class="col-md-1 parse-pink">99.20</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Blackspot</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">81.97 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; tsalvinjp</td>
-                    <td class="col-md-5 faction-horde">Viva (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-pink">99.20</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; Láele</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">43.07 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; ccassel12</td>
-                    <td class="col-md-5 faction-alliance">Fintone (Arugal-US)</td>
-                    <td class="col-md-1 parse-pink">99.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; gdebrick1f</td>
-                    <td class="col-md-5 faction-horde">Fixflex (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">98.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; khosburnhk</td>
-                    <td class="col-md-5 faction-alliance">Quo Lux (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">98.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; rscarffehf</td>
-                    <td class="col-md-5 faction-horde">Solarbreeze (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">97.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; ssimmansri</td>
-                    <td class="col-md-5 faction-horde">Flexidy (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">97.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; hfenlonia</td>
-                    <td class="col-md-5 faction-horde">Konklab (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">96.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; htixier45</td>
-                    <td class="col-md-5 faction-alliance">Aerified (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">96.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; rkinder77</td>
-                    <td class="col-md-5 faction-alliance">Fix San (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">96.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; aconrartgw</td>
-                    <td class="col-md-5 faction-alliance">Cardguard (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">96.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; lgarratty3j</td>
-                    <td class="col-md-5 faction-alliance">Ventosanzap (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">96.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; mcudihynq</td>
-                    <td class="col-md-5 faction-horde">Redhold (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">95.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; leagan1a</td>
-                    <td class="col-md-5 faction-alliance">Tres-Zap (Pagle-US)</td>
-                    <td class="col-md-1 parse-purple">94.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; vlawtonjj</td>
-                    <td class="col-md-5 faction-horde">Transcof (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">94.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; pleechmanit</td>
-                    <td class="col-md-5 faction-alliance">Tresom (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">94.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; aleatherlandmi</td>
-                    <td class="col-md-5 faction-horde">Tempsoft (Whitemane-US)</td>
-                    <td class="col-md-1 parse-purple">94.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; mgetch4b</td>
-                    <td class="col-md-5 faction-alliance">Prodder (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">93.70</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; Zays</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">28.21 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -667,147 +390,42 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-mage">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; fgraveyfo</td>
-                    <td class="col-md-5 faction-horde">Voltsillam (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-pink">99.60</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Zaramaki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">84.29 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; hmcglonept</td>
-                    <td class="col-md-5 faction-horde">Tin (Faerlina-US)</td>
-                    <td class="col-md-1 parse-pink">99.00</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Deziire</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-blue">50.11 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; kknivettil</td>
-                    <td class="col-md-5 faction-alliance">Voltsillam (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">98.70</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; Netø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">38.73 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; hmacvaghor</td>
-                    <td class="col-md-5 faction-alliance">Domainer (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">98.70</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Diwk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">35.38 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; apoulson8t</td>
-                    <td class="col-md-5 faction-alliance">Tampflex (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">98.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; sskeetemb</td>
-                    <td class="col-md-5 faction-horde">Bitchip (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">98.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; astoffler50</td>
-                    <td class="col-md-5 faction-horde">Regrant (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">97.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; agoodanewht</td>
-                    <td class="col-md-5 faction-alliance">Bitchip (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">97.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; laldiss7w</td>
-                    <td class="col-md-5 faction-alliance">Y-Solowarm (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">97.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; jhackworthy7n</td>
-                    <td class="col-md-5 faction-alliance">Overhold (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">97.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; lbrahams9s</td>
-                    <td class="col-md-5 faction-alliance">Andalax (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">96.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; mahrennb</td>
-                    <td class="col-md-5 faction-alliance">Gembucket (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">96.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; kaudiss8k</td>
-                    <td class="col-md-5 faction-alliance">Bitchip (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">96.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; ldarnboroughgq</td>
-                    <td class="col-md-5 faction-horde">Matsoft (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">96.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; bbroadleyd</td>
-                    <td class="col-md-5 faction-alliance">Overhold (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">95.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; cpapena0</td>
-                    <td class="col-md-5 faction-alliance">Sub-Ex (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">95.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; apicknettip</td>
-                    <td class="col-md-5 faction-horde">Wrapsafe (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">95.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; pwordesworth8j</td>
-                    <td class="col-md-5 faction-horde">Kanlam (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">95.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; jmccowaniq</td>
-                    <td class="col-md-5 faction-horde">Fixflex (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">95.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; jwinsborrow7i</td>
-                    <td class="col-md-5 faction-horde">Vagram (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">94.90</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Pitoquinha</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">21.57 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -819,147 +437,21 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-pala">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; isetchfieldqu</td>
-                    <td class="col-md-5 faction-alliance">Latlux (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">98.20</td>
+                    <td class="col-md-4"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; Húrinn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-pink">99.38 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; kcamilio3y</td>
-                    <td class="col-md-5 faction-horde">Biodex (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">98.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; sonslowpd</td>
-                    <td class="col-md-5 faction-alliance">Duobam (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">96.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; dfreebernem2</td>
-                    <td class="col-md-5 faction-horde">Stim (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">95.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; slewsleyr</td>
-                    <td class="col-md-5 faction-horde">Tin (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">95.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; mspenslyke</td>
-                    <td class="col-md-5 faction-horde">Lotstring (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">95.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; sjevong</td>
-                    <td class="col-md-5 faction-alliance">Namfix (Pagle-US)</td>
-                    <td class="col-md-1 parse-purple">94.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; nollier95</td>
-                    <td class="col-md-5 faction-alliance">Mat Lam Tam (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">93.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; hpicton7b</td>
-                    <td class="col-md-5 faction-alliance">Ronstring (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">93.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; ttreweke3c</td>
-                    <td class="col-md-5 faction-alliance">Zaam-Dox (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">92.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; bdallanby</td>
-                    <td class="col-md-5 faction-horde">Lotlux (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">92.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; mdesmondb7</td>
-                    <td class="col-md-5 faction-horde">Tampflex (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">90.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; rskittles6j</td>
-                    <td class="col-md-5 faction-alliance">Prodder (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">89.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; nhildrewjk</td>
-                    <td class="col-md-5 faction-alliance">Stim (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">87.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; bmaccollqt</td>
-                    <td class="col-md-5 faction-alliance">Otcom (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">86.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; gtwycrossne</td>
-                    <td class="col-md-5 faction-alliance">Cookley (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">85.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; lpomfretho</td>
-                    <td class="col-md-5 faction-alliance">Greenlam (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">85.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; totoole44</td>
-                    <td class="col-md-5 faction-horde">Tempsoft (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">85.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; aprydect</td>
-                    <td class="col-md-5 faction-alliance">Stronghold (Pagle-US)</td>
-                    <td class="col-md-1 parse-purple">84.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; thews1p</td>
-                    <td class="col-md-5 faction-horde">Biodex (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">84.20</td>
+                    <td class="col-md-4"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; Loski</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">14.90 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -971,147 +463,21 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-prst">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; cmanjot98</td>
-                    <td class="col-md-5 faction-horde">Daltfresh (Benediction-US)</td>
-                    <td class="col-md-1 parse-pink">99.20</td>
+                    <td class="col-md-4"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; Reikki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">93.03 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; eglasscz</td>
-                    <td class="col-md-5 faction-horde">Bamity (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">97.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; rbrichamv</td>
-                    <td class="col-md-5 faction-alliance">Flowdesk (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">94.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; jvereganq1</td>
-                    <td class="col-md-5 faction-horde">Voltsillam (Pagle-US)</td>
-                    <td class="col-md-1 parse-purple">94.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; mmccallister33</td>
-                    <td class="col-md-5 faction-alliance">Zoolab (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">93.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; hnovic7e</td>
-                    <td class="col-md-5 faction-alliance">Lotstring (Whitemane-US)</td>
-                    <td class="col-md-1 parse-purple">93.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; cscrivenbc</td>
-                    <td class="col-md-5 faction-alliance">Matsoft (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">93.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; trangelles</td>
-                    <td class="col-md-5 faction-horde">Flexidy (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">92.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; aavramowmg</td>
-                    <td class="col-md-5 faction-alliance">Sonsing (Whitemane-US)</td>
-                    <td class="col-md-1 parse-purple">91.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; ijindacek69</td>
-                    <td class="col-md-5 faction-alliance">It (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">89.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; ejosilowski72</td>
-                    <td class="col-md-5 faction-alliance">Lotstring (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">89.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; acottuae</td>
-                    <td class="col-md-5 faction-horde">Prodder (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">89.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; rlawey22</td>
-                    <td class="col-md-5 faction-horde">Aerified (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">88.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; gcowperthwaite7g</td>
-                    <td class="col-md-5 faction-horde">Bitchip (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">87.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; lklasenbs</td>
-                    <td class="col-md-5 faction-alliance">Ventosanzap (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">85.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; lberfootbn</td>
-                    <td class="col-md-5 faction-alliance">Ventosanzap (Pagle-US)</td>
-                    <td class="col-md-1 parse-purple">84.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; kmanleyn5</td>
-                    <td class="col-md-5 faction-horde">Stronghold (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">84.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; pcowindy</td>
-                    <td class="col-md-5 faction-alliance">Zoolab (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">84.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; bhicksgi</td>
-                    <td class="col-md-5 faction-horde">Latlux (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">84.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; efarnall1m</td>
-                    <td class="col-md-5 faction-horde">Wrapsafe (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">84.00</td>
+                    <td class="col-md-4"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; Asn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">28.77 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -1123,147 +489,28 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-roge">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; kcurryerz</td>
-                    <td class="col-md-5 faction-alliance">Voyatouch (Arugal-US)</td>
-                    <td class="col-md-1 parse-gold">100.00</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; Nerotinha</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">92.64 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; hkernari5</td>
-                    <td class="col-md-5 faction-horde">Voltsillam (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-pink">99.80</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; Dhelta</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">87.62 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; chightown97</td>
-                    <td class="col-md-5 faction-horde">Daltfresh (Pagle-US)</td>
-                    <td class="col-md-1 parse-pink">99.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; snewlove9e</td>
-                    <td class="col-md-5 faction-horde">Y-Solowarm (Mankrik-US)</td>
-                    <td class="col-md-1 parse-pink">99.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; trehnjw</td>
-                    <td class="col-md-5 faction-alliance">Fix San (Faerlina-US)</td>
-                    <td class="col-md-1 parse-pink">99.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; kkettlestringefl</td>
-                    <td class="col-md-5 faction-horde">Flowdesk (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">97.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; arosenthaler6v</td>
-                    <td class="col-md-5 faction-alliance">Prodder (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">97.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; wmuslabe</td>
-                    <td class="col-md-5 faction-alliance">Flowdesk (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">97.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; fkermittfk</td>
-                    <td class="col-md-5 faction-horde">Flowdesk (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">96.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; dbenedettiee</td>
-                    <td class="col-md-5 faction-horde">Stim (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">95.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; lliberok0</td>
-                    <td class="col-md-5 faction-alliance">Zoolab (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">95.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; kpeabodyjx</td>
-                    <td class="col-md-5 faction-alliance">Hatity (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">95.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; craiman6m</td>
-                    <td class="col-md-5 faction-alliance">Treeflex (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">95.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; kcurringtone9</td>
-                    <td class="col-md-5 faction-alliance">Mat Lam Tam (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">94.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; togdahlrb</td>
-                    <td class="col-md-5 faction-horde">Toughjoyfax (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">94.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; bknightslg</td>
-                    <td class="col-md-5 faction-alliance">Flexidy (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">93.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; jwheaton3w</td>
-                    <td class="col-md-5 faction-horde">Bamity (Pagle-US)</td>
-                    <td class="col-md-1 parse-purple">92.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; droswarneli</td>
-                    <td class="col-md-5 faction-horde">Tin (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">92.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; sderuelot</td>
-                    <td class="col-md-5 faction-horde">Alpha (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">92.70</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; adomico60</td>
-                    <td class="col-md-5 faction-alliance">Fintone (Pagle-US)</td>
-                    <td class="col-md-1 parse-purple">92.50</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; Vintemata</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">23.45 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -1275,147 +522,49 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-sham">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; mmilhammt</td>
-                    <td class="col-md-5 faction-horde">Y-find (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-pink">99.60</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; Shaÿera</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-orange">96.95 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; mdreesro</td>
-                    <td class="col-md-5 faction-horde">Subin (Whitemane-US)</td>
-                    <td class="col-md-1 parse-pink">99.40</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; Cavalo</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-blue">74.48 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; mboller1l</td>
-                    <td class="col-md-5 faction-horde">Alphazap (Arugal-US)</td>
-                    <td class="col-md-1 parse-pink">99.30</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; Inxøk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">44.27 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; fgaliak</td>
-                    <td class="col-md-5 faction-horde">Voltsillam (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">98.80</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; Caera</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">34.03 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; aszretere3</td>
-                    <td class="col-md-5 faction-alliance">Latlux (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">98.60</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; Dheltas</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">21.80 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; aartrickh8</td>
-                    <td class="col-md-5 faction-horde">Solarbreeze (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">98.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; equoganb3</td>
-                    <td class="col-md-5 faction-alliance">Stringtough (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">98.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; btreadgerla</td>
-                    <td class="col-md-5 faction-horde">Lotstring (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">97.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; arasend</td>
-                    <td class="col-md-5 faction-horde">Fixflex (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">97.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; kscogginsf0</td>
-                    <td class="col-md-5 faction-horde">Trippledex (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">96.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; mpavlov76</td>
-                    <td class="col-md-5 faction-alliance">Keylex (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">95.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; klackhamdp</td>
-                    <td class="col-md-5 faction-alliance">Sonair (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">94.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; darmatidge29</td>
-                    <td class="col-md-5 faction-alliance">Fix San (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">94.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; ccranmore2h</td>
-                    <td class="col-md-5 faction-horde">Gembucket (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">94.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; cadinh3</td>
-                    <td class="col-md-5 faction-horde">Y-find (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">93.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; ygowanson2b</td>
-                    <td class="col-md-5 faction-alliance">Sub-Ex (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">91.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; tmcglonejb</td>
-                    <td class="col-md-5 faction-horde">Greenlam (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">90.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; ssummerskilljh</td>
-                    <td class="col-md-5 faction-horde">Bamity (Whitemane-US)</td>
-                    <td class="col-md-1 parse-purple">90.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; kborrelllm</td>
-                    <td class="col-md-5 faction-alliance">It (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">90.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; rdysartkp</td>
-                    <td class="col-md-5 faction-horde">Treeflex (Pagle-US)</td>
-                    <td class="col-md-1 parse-purple">90.00</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; Tizbo</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">18.07 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -1427,147 +576,63 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-lock">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; atrevenup4</td>
-                    <td class="col-md-5 faction-alliance">Trippledex (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">98.50</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Desordeira</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">90.30 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-destruction.jpeg" class="class-icon">&nbsp;&nbsp; ckeaseydq</td>
-                    <td class="col-md-5 faction-alliance">Mat Lam Tam (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">98.00</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; Vemtranquilø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">89.64 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; chindrichoz</td>
-                    <td class="col-md-5 faction-alliance">Span (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">97.80</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Yenifear</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-purple">81.91 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; mapplewhite4u</td>
-                    <td class="col-md-5 faction-horde">Treeflex (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">97.70</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; Fullgorina</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">48.45 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; bshollp0</td>
-                    <td class="col-md-5 faction-horde">Sonsing (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">97.70</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; Daumasl</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">42.57 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-destruction.jpeg" class="class-icon">&nbsp;&nbsp; minkpenm6</td>
-                    <td class="col-md-5 faction-alliance">Subin (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">97.40</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Shamtie</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">34.11 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; dpetrik54</td>
-                    <td class="col-md-5 faction-alliance">Tampflex (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">97.10</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Tobruxaomeno</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">17.81 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; whaddintonap</td>
-                    <td class="col-md-5 faction-alliance">Subin (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">97.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; sschooleye4</td>
-                    <td class="col-md-5 faction-alliance">Tresom (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">96.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-destruction.jpeg" class="class-icon">&nbsp;&nbsp; lmallalieu2y</td>
-                    <td class="col-md-5 faction-alliance">It (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">96.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; rhassin3t</td>
-                    <td class="col-md-5 faction-alliance">Lotstring (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">96.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; pmackartank1</td>
-                    <td class="col-md-5 faction-alliance">Zamit (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">96.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; cgoudy1r</td>
-                    <td class="col-md-5 faction-horde">Temp (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">96.20</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; dpenburtonen</td>
-                    <td class="col-md-5 faction-horde">Zontrax (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">96.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-destruction.jpeg" class="class-icon">&nbsp;&nbsp; lcarderolk</td>
-                    <td class="col-md-5 faction-horde">Asoka (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">95.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; twinchurch8m</td>
-                    <td class="col-md-5 faction-horde">Wrapsafe (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">95.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; srubinowicza2</td>
-                    <td class="col-md-5 faction-horde">Span (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">94.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-destruction.jpeg" class="class-icon">&nbsp;&nbsp; kspaduccife</td>
-                    <td class="col-md-5 faction-horde">Ventosanzap (Benediction-US)</td>
-                    <td class="col-md-1 parse-purple">94.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-destruction.jpeg" class="class-icon">&nbsp;&nbsp; jgreenless8r</td>
-                    <td class="col-md-5 faction-alliance">Redhold (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">94.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; laxstonim</td>
-                    <td class="col-md-5 faction-alliance">Konklab (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">93.90</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Seucoco</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">11.99 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -1579,147 +644,35 @@
                     
                         <div class="tab-pane " id="v-tabs-top_parses-warr">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; blambrechtcn</td>
-                    <td class="col-md-5 faction-horde">Regrant (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">98.50</td>
+                    <td class="col-md-4"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; Jøn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-blue">64.44 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; estockindb</td>
-                    <td class="col-md-5 faction-horde">Lotstring (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">98.50</td>
+                    <td class="col-md-4"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; Marcøs</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-green">36.56 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; ccollick2u</td>
-                    <td class="col-md-5 faction-horde">Veribet (Mankrik-US)</td>
-                    <td class="col-md-1 parse-orange">98.10</td>
+                    <td class="col-md-4"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; Titânia</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">21.90 <i class="fa-percent"></i></td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; labellaau</td>
-                    <td class="col-md-5 faction-alliance">Wrapsafe (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">98.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">5 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; bpavkovic3n</td>
-                    <td class="col-md-5 faction-horde">Fixflex (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">97.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">6 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; acamillou</td>
-                    <td class="col-md-5 faction-alliance">It (Whitemane-US)</td>
-                    <td class="col-md-1 parse-orange">97.40</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">7 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; ebolzmannbh</td>
-                    <td class="col-md-5 faction-alliance">Bytecard (Benediction-US)</td>
-                    <td class="col-md-1 parse-orange">97.30</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">8 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; mschwaigercl</td>
-                    <td class="col-md-5 faction-horde">Duobam (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">97.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">9 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; rstalfkb</td>
-                    <td class="col-md-5 faction-alliance">Zaam-Dox (Pagle-US)</td>
-                    <td class="col-md-1 parse-orange">96.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">10 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; bhelliker19</td>
-                    <td class="col-md-5 faction-alliance">Fintone (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">96.00</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">11 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; lscholey9n</td>
-                    <td class="col-md-5 faction-alliance">Domainer (Faerlina-US)</td>
-                    <td class="col-md-1 parse-orange">95.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">12 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; sfennadz</td>
-                    <td class="col-md-5 faction-horde">Stringtough (Arugal-US)</td>
-                    <td class="col-md-1 parse-orange">95.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">13 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; eellicockpn</td>
-                    <td class="col-md-5 faction-horde">Ventosanzap (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-orange">95.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">14 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; korkneyda</td>
-                    <td class="col-md-5 faction-alliance">Asoka (Faerlina-US)</td>
-                    <td class="col-md-1 parse-purple">94.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">15 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; rtrammelno</td>
-                    <td class="col-md-5 faction-horde">Rank (Whitemane-US)</td>
-                    <td class="col-md-1 parse-purple">94.50</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">16 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; mkubackiy</td>
-                    <td class="col-md-5 faction-horde">Overhold (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">93.80</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">17 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; acrossleypw</td>
-                    <td class="col-md-5 faction-alliance">Greenlam (Mankrik-US)</td>
-                    <td class="col-md-1 parse-purple">93.60</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">18 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; tbartoli31</td>
-                    <td class="col-md-5 faction-alliance">Mat Lam Tam (Arugal-US)</td>
-                    <td class="col-md-1 parse-purple">92.90</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">19 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; omcinnery11</td>
-                    <td class="col-md-5 faction-alliance">Stringtough (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">91.10</td>
-                </tr>
-                
-                <tr >
-                    <td class="col-md-1">20 </td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; slewsonrh</td>
-                    <td class="col-md-5 faction-horde">Ronstring (Grobbulus-US)</td>
-                    <td class="col-md-1 parse-purple">90.90</td>
+                    <td class="col-md-4"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; Deathmask</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono parse-gray">9.82 <i class="fa-percent"></i></td>
                 </tr>
                 
             </tbody>
@@ -1733,7 +686,7 @@
     </div>
 </div>
     <div class="col-12 p-3">
-    <div class="card card-dark">
+    <div class="card content-dark">
         <div class="card-header">
             <h2 class="card-title p-3 text-center">Top 20 - DPS por luta</h2>
             <div class="nav nav-tabs card-header-tabs" id="v-tabs-top_dps-tab" role="tablist" >
@@ -1754,147 +707,147 @@
                     
                         <div class="tab-pane active" id="v-tabs-top_dps-bofn">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1</td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; cjantot7m</td>
-                    <td class="col-md-5 faction-alliance">Holdlamis (Faerlina-US)</td>
-                    <td class="col-md-1 ">14998.83</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; Shaÿera</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">10583.13 <i class="fa-solid fa-clock"></i> 05:08</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2</td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; hcogdona7</td>
-                    <td class="col-md-5 faction-horde">Veribet (Benediction-US)</td>
-                    <td class="col-md-1 ">14976.06</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Yenifear</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">10270.84 <i class="fa-solid fa-clock"></i> 05:13</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; gfarahark8</td>
-                    <td class="col-md-5 faction-alliance">Span (Mankrik-US)</td>
-                    <td class="col-md-1 ">14962.45</td>
+                    <td class="col-md-4"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; Reikki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">10231.81 <i class="fa-solid fa-clock"></i> 05:13</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; rschwandermannc3</td>
-                    <td class="col-md-5 faction-horde">Y-Solowarm (Arugal-US)</td>
-                    <td class="col-md-1 ">14951.75</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Desordeira</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">10102.54 <i class="fa-solid fa-clock"></i> 05:13</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; nheintz5r</td>
-                    <td class="col-md-5 faction-horde">Daltfresh (Arugal-US)</td>
-                    <td class="col-md-1 ">14944.00</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; Nerotinha</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9872.00 <i class="fa-solid fa-clock"></i> 05:08</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">6</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; ekinkade67</td>
-                    <td class="col-md-5 faction-horde">Fixflex (Benediction-US)</td>
-                    <td class="col-md-1 ">14934.08</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Zaramaki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9724.67 <i class="fa-solid fa-clock"></i> 05:08</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">7</td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; mrivitt5y</td>
-                    <td class="col-md-5 faction-alliance">Rank (Arugal-US)</td>
-                    <td class="col-md-1 ">14930.50</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; Märcøs</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9718.04 <i class="fa-solid fa-clock"></i> 05:13</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">8</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; obonnetav</td>
-                    <td class="col-md-5 faction-horde">Lotstring (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14891.99</td>
+                    <td class="col-md-4"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; Húrinn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9709.17 <i class="fa-solid fa-clock"></i> 05:10</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">9</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; qkyngef4</td>
-                    <td class="col-md-5 faction-horde">Cardify (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14888.40</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Monstrø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9690.34 <i class="fa-solid fa-clock"></i> 05:09</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">10</td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; ejeskinca</td>
-                    <td class="col-md-5 faction-horde">Bitchip (Whitemane-US)</td>
-                    <td class="col-md-1 ">14885.02</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Huntergilmar</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9539.09 <i class="fa-solid fa-clock"></i> 05:13</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">11</td>
-                    <td class="col-md-5"><img src="./static/icons/mage-frost.jpeg" class="class-icon">&nbsp;&nbsp; msynder1l</td>
-                    <td class="col-md-5 faction-alliance">Rank (Faerlina-US)</td>
-                    <td class="col-md-1 ">14861.38</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Kiyohime</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9504.59 <i class="fa-solid fa-clock"></i> 05:08</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">12</td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; ipankettman4s</td>
-                    <td class="col-md-5 faction-alliance">Fintone (Benediction-US)</td>
-                    <td class="col-md-1 ">14848.67</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Messiahdk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9481.10 <i class="fa-solid fa-clock"></i> 05:21</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">13</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; cluetchfordn9</td>
-                    <td class="col-md-5 faction-alliance">Duobam (Benediction-US)</td>
-                    <td class="col-md-1 ">14834.37</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Blackspot</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9321.77 <i class="fa-solid fa-clock"></i> 05:08</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">14</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; kholdworth8q</td>
-                    <td class="col-md-5 faction-horde">Tresom (Benediction-US)</td>
-                    <td class="col-md-1 ">14832.19</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Multkill</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9117.49 <i class="fa-solid fa-clock"></i> 05:09</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">15</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; mbindonp6</td>
-                    <td class="col-md-5 faction-horde">Wrapsafe (Whitemane-US)</td>
-                    <td class="col-md-1 ">14826.43</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; Dihminino</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9003.14 <i class="fa-solid fa-clock"></i> 05:10</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">16</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; hleandernm</td>
-                    <td class="col-md-5 faction-horde">Gembucket (Whitemane-US)</td>
-                    <td class="col-md-1 ">14818.58</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; Dhelta</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8992.32 <i class="fa-solid fa-clock"></i> 05:08</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">17</td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; tfagan5w</td>
-                    <td class="col-md-5 faction-horde">Subin (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14818.46</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; Vemtranquilø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8852.76 <i class="fa-solid fa-clock"></i> 05:09</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">18</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; cfoucardm7</td>
-                    <td class="col-md-5 faction-horde">Span (Mankrik-US)</td>
-                    <td class="col-md-1 ">14793.93</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Panzola</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8561.79 <i class="fa-solid fa-clock"></i> 05:10</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">19</td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; ktilleyk6</td>
-                    <td class="col-md-5 faction-alliance">Zontrax (Arugal-US)</td>
-                    <td class="col-md-1 ">14786.34</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Nway</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8379.66 <i class="fa-solid fa-clock"></i> 05:07</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">20</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; nrumpib</td>
-                    <td class="col-md-5 faction-alliance">Opela (Faerlina-US)</td>
-                    <td class="col-md-1 ">14785.36</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; Cavalo</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8378.22 <i class="fa-solid fa-clock"></i> 05:10</td>
                 </tr>
                 
             </tbody>
@@ -1906,147 +859,147 @@
                     
                         <div class="tab-pane " id="v-tabs-top_dps-lord">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; ecapaldil4</td>
-                    <td class="col-md-5 faction-horde">Asoka (Pagle-US)</td>
-                    <td class="col-md-1 ">14992.46</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Zaramaki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">14712.64 <i class="fa-solid fa-clock"></i> 02:23</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; cmaiseyft</td>
-                    <td class="col-md-5 faction-alliance">Viva (Faerlina-US)</td>
-                    <td class="col-md-1 ">14988.01</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Kiyohime</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">13304.48 <i class="fa-solid fa-clock"></i> 02:23</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; wmorlc8</td>
-                    <td class="col-md-5 faction-alliance">Bytecard (Whitemane-US)</td>
-                    <td class="col-md-1 ">14976.50</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; Dhelta</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">12082.08 <i class="fa-solid fa-clock"></i> 02:23</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; eceely1d</td>
-                    <td class="col-md-5 faction-alliance">Lotlux (Whitemane-US)</td>
-                    <td class="col-md-1 ">14974.88</td>
+                    <td class="col-md-4"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; Húrinn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">12036.60 <i class="fa-solid fa-clock"></i> 02:23</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5</td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; gfitzsimonsdd</td>
-                    <td class="col-md-5 faction-horde">Stringtough (Arugal-US)</td>
-                    <td class="col-md-1 ">14938.53</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Messiahdk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11845.78 <i class="fa-solid fa-clock"></i> 02:33</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">6</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; rcardiff63</td>
-                    <td class="col-md-5 faction-horde">Konklab (Mankrik-US)</td>
-                    <td class="col-md-1 ">14929.79</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; Nerotinha</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11790.50 <i class="fa-solid fa-clock"></i> 02:25</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">7</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; mbisphamrf</td>
-                    <td class="col-md-5 faction-horde">Zaam-Dox (Faerlina-US)</td>
-                    <td class="col-md-1 ">14919.50</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Huntergilmar</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11788.77 <i class="fa-solid fa-clock"></i> 02:25</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">8</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; xsarginsoni5</td>
-                    <td class="col-md-5 faction-horde">Solarbreeze (Whitemane-US)</td>
-                    <td class="col-md-1 ">14908.23</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Panzola</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11764.40 <i class="fa-solid fa-clock"></i> 02:28</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">9</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; vwolfarthfi</td>
-                    <td class="col-md-5 faction-horde">Bitchip (Faerlina-US)</td>
-                    <td class="col-md-1 ">14886.38</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; Shaÿera</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11752.58 <i class="fa-solid fa-clock"></i> 02:23</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">10</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-blood.jpeg" class="class-icon">&nbsp;&nbsp; jhounsham88</td>
-                    <td class="col-md-5 faction-alliance">Overhold (Faerlina-US)</td>
-                    <td class="col-md-1 ">14870.56</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Blackspot</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11590.77 <i class="fa-solid fa-clock"></i> 02:23</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">11</td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-destruction.jpeg" class="class-icon">&nbsp;&nbsp; tyakubovor</td>
-                    <td class="col-md-5 faction-alliance">Vagram (Mankrik-US)</td>
-                    <td class="col-md-1 ">14842.89</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Desordeira</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11576.54 <i class="fa-solid fa-clock"></i> 02:25</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">12</td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; vhurleriz</td>
-                    <td class="col-md-5 faction-horde">Tampflex (Benediction-US)</td>
-                    <td class="col-md-1 ">14838.55</td>
+                    <td class="col-md-4"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; Jøn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11273.12 <i class="fa-solid fa-clock"></i> 02:32</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">13</td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-arms.jpeg" class="class-icon">&nbsp;&nbsp; tramshawkb</td>
-                    <td class="col-md-5 faction-horde">Y-Solowarm (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14827.13</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Yenifear</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11224.38 <i class="fa-solid fa-clock"></i> 02:20</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">14</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; bparkinsonda</td>
-                    <td class="col-md-5 faction-alliance">Gembucket (Whitemane-US)</td>
-                    <td class="col-md-1 ">14815.77</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Nway</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11133.65 <i class="fa-solid fa-clock"></i> 02:23</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">15</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; pmckeaveney22</td>
-                    <td class="col-md-5 faction-alliance">Wrapsafe (Arugal-US)</td>
-                    <td class="col-md-1 ">14808.96</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; Dihminino</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11065.04 <i class="fa-solid fa-clock"></i> 02:25</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">16</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; skrolleg</td>
-                    <td class="col-md-5 faction-horde">Bigtax (Faerlina-US)</td>
-                    <td class="col-md-1 ">14805.97</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Monstrø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11040.77 <i class="fa-solid fa-clock"></i> 02:25</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">17</td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-destruction.jpeg" class="class-icon">&nbsp;&nbsp; jcloney6v</td>
-                    <td class="col-md-5 faction-alliance">Keylex (Arugal-US)</td>
-                    <td class="col-md-1 ">14800.59</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Multkill</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">11014.62 <i class="fa-solid fa-clock"></i> 02:28</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">18</td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; krumsby2o</td>
-                    <td class="col-md-5 faction-horde">Trippledex (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14790.59</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Diwk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">10942.43 <i class="fa-solid fa-clock"></i> 03:37</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">19</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; gwyattk3</td>
-                    <td class="col-md-5 faction-horde">Greenlam (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14779.45</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; Cavalo</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">10862.08 <i class="fa-solid fa-clock"></i> 02:28</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">20</td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; sdoonican7k</td>
-                    <td class="col-md-5 faction-alliance">Konklab (Faerlina-US)</td>
-                    <td class="col-md-1 ">14774.85</td>
+                    <td class="col-md-4"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; Reikki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">10680.99 <i class="fa-solid fa-clock"></i> 02:28</td>
                 </tr>
                 
             </tbody>
@@ -2058,147 +1011,147 @@
                     
                         <div class="tab-pane " id="v-tabs-top_dps-twin">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; sgianellimq</td>
-                    <td class="col-md-5 faction-alliance">Tin (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14999.31</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-assassination.jpeg" class="class-icon">&nbsp;&nbsp; Nerotinha</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">18980.63 <i class="fa-solid fa-clock"></i> 02:27</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; ascocroftc7</td>
-                    <td class="col-md-5 faction-alliance">Matsoft (Arugal-US)</td>
-                    <td class="col-md-1 ">14990.11</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; Dhelta</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">17231.93 <i class="fa-solid fa-clock"></i> 02:24</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3</td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; zspiringqp</td>
-                    <td class="col-md-5 faction-horde">Solarbreeze (Pagle-US)</td>
-                    <td class="col-md-1 ">14987.25</td>
+                    <td class="col-md-4"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; Húrinn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">16908.93 <i class="fa-solid fa-clock"></i> 02:26</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4</td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; gbagnallf3</td>
-                    <td class="col-md-5 faction-horde">Y-find (Benediction-US)</td>
-                    <td class="col-md-1 ">14976.30</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Desordeira</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">16041.50 <i class="fa-solid fa-clock"></i> 02:26</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; epenhaleurack3e</td>
-                    <td class="col-md-5 faction-horde">Zontrax (Whitemane-US)</td>
-                    <td class="col-md-1 ">14937.76</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Kiyohime</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">15895.67 <i class="fa-solid fa-clock"></i> 02:24</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">6</td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; sgoodernw</td>
-                    <td class="col-md-5 faction-alliance">Zontrax (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14937.52</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; Shaÿera</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">15615.30 <i class="fa-solid fa-clock"></i> 02:26</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">7</td>
-                    <td class="col-md-5"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; apallinc4</td>
-                    <td class="col-md-5 faction-alliance">Job (Arugal-US)</td>
-                    <td class="col-md-1 ">14921.43</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; Märcøs</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">15594.75 <i class="fa-solid fa-clock"></i> 02:26</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">8</td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-destruction.jpeg" class="class-icon">&nbsp;&nbsp; csargint3k</td>
-                    <td class="col-md-5 faction-horde">Veribet (Whitemane-US)</td>
-                    <td class="col-md-1 ">14920.99</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; Dihminino</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">15349.99 <i class="fa-solid fa-clock"></i> 02:26</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">9</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; ftant3j</td>
-                    <td class="col-md-5 faction-horde">Andalax (Pagle-US)</td>
-                    <td class="col-md-1 ">14907.21</td>
+                    <td class="col-md-4"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; Jøn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">15214.20 <i class="fa-solid fa-clock"></i> 02:27</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">10</td>
-                    <td class="col-md-5"><img src="./static/icons/mage-arcane.jpeg" class="class-icon">&nbsp;&nbsp; bmoggachit</td>
-                    <td class="col-md-5 faction-alliance">Treeflex (Pagle-US)</td>
-                    <td class="col-md-1 ">14901.27</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Multkill</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">15135.79 <i class="fa-solid fa-clock"></i> 02:24</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">11</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; dmaylingp1</td>
-                    <td class="col-md-5 faction-horde">Prodder (Whitemane-US)</td>
-                    <td class="col-md-1 ">14900.34</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; Vemtranquilø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">15110.55 <i class="fa-solid fa-clock"></i> 02:24</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">12</td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; aabramskigl</td>
-                    <td class="col-md-5 faction-horde">Trippledex (Faerlina-US)</td>
-                    <td class="col-md-1 ">14895.85</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Zaramaki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">15086.03 <i class="fa-solid fa-clock"></i> 02:26</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">13</td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; pjusticea3</td>
-                    <td class="col-md-5 faction-horde">It (Benediction-US)</td>
-                    <td class="col-md-1 ">14887.68</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Yenifear</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">14924.57 <i class="fa-solid fa-clock"></i> 02:27</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">14</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; pletts2h</td>
-                    <td class="col-md-5 faction-alliance">Alphazap (Arugal-US)</td>
-                    <td class="col-md-1 ">14844.30</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Monstrø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">14909.50 <i class="fa-solid fa-clock"></i> 02:24</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">15</td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; bheckneyi7</td>
-                    <td class="col-md-5 faction-alliance">Toughjoyfax (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14835.12</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Deziire</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">14810.03 <i class="fa-solid fa-clock"></i> 02:26</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">16</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; nsunderlandr5</td>
-                    <td class="col-md-5 faction-alliance">Home Ing (Whitemane-US)</td>
-                    <td class="col-md-1 ">14794.44</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Nway</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">14686.94 <i class="fa-solid fa-clock"></i> 02:27</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">17</td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; podriscollqr</td>
-                    <td class="col-md-5 faction-horde">Lotlux (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14782.79</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Messiahdk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">14498.75 <i class="fa-solid fa-clock"></i> 02:25</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">18</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; vspicerig</td>
-                    <td class="col-md-5 faction-horde">Transcof (Pagle-US)</td>
-                    <td class="col-md-1 ">14779.25</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; Cavalo</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">14345.42 <i class="fa-solid fa-clock"></i> 02:24</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">19</td>
-                    <td class="col-md-5"><img src="./static/icons/warrior-fury.jpeg" class="class-icon">&nbsp;&nbsp; knoirelc5</td>
-                    <td class="col-md-5 faction-alliance">Quo Lux (Pagle-US)</td>
-                    <td class="col-md-1 ">14770.38</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Daumasl</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">13004.62 <i class="fa-solid fa-clock"></i> 02:24</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">20</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-beastmastery.jpeg" class="class-icon">&nbsp;&nbsp; mcroucherij</td>
-                    <td class="col-md-5 faction-horde">Daltfresh (Faerlina-US)</td>
-                    <td class="col-md-1 ">14768.34</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Diwk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">12767.02 <i class="fa-solid fa-clock"></i> 03:17</td>
                 </tr>
                 
             </tbody>
@@ -2210,147 +1163,147 @@
                     
                         <div class="tab-pane " id="v-tabs-top_dps-anub">
     <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless font-monospace">
             <tbody>
                 
                 <tr >
                     <td class="col-md-1">1</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; dborrowman2l</td>
-                    <td class="col-md-5 faction-alliance">Wrapsafe (Pagle-US)</td>
-                    <td class="col-md-1 ">14977.78</td>
+                    <td class="col-md-4"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; Húrinn</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">10217.92 <i class="fa-solid fa-clock"></i> 04:15</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">2</td>
-                    <td class="col-md-5"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; gjenner2z</td>
-                    <td class="col-md-5 faction-alliance">Bamity (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14974.44</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Nway</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9967.66 <i class="fa-solid fa-clock"></i> 04:17</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">3</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; wtirely</td>
-                    <td class="col-md-5 faction-alliance">Gembucket (Arugal-US)</td>
-                    <td class="col-md-1 ">14955.56</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Kiyohime</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9872.00 <i class="fa-solid fa-clock"></i> 04:15</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">4</td>
-                    <td class="col-md-5"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; vcunradiq9</td>
-                    <td class="col-md-5 faction-alliance">Greenlam (Faerlina-US)</td>
-                    <td class="col-md-1 ">14917.09</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Huntergilmar</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9851.70 <i class="fa-solid fa-clock"></i> 04:15</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">5</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; jdreusj4</td>
-                    <td class="col-md-5 faction-horde">Sonsing (Mankrik-US)</td>
-                    <td class="col-md-1 ">14911.81</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Desordeira</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9772.15 <i class="fa-solid fa-clock"></i> 04:34</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">6</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; lclemettom</td>
-                    <td class="col-md-5 faction-alliance">Zaam-Dox (Mankrik-US)</td>
-                    <td class="col-md-1 ">14899.01</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Panzola</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9726.66 <i class="fa-solid fa-clock"></i> 04:15</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">7</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; minkle4l</td>
-                    <td class="col-md-5 faction-horde">Temp (Benediction-US)</td>
-                    <td class="col-md-1 ">14898.20</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-elemental.jpeg" class="class-icon">&nbsp;&nbsp; Shaÿera</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9345.13 <i class="fa-solid fa-clock"></i> 04:15</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">8</td>
-                    <td class="col-md-5"><img src="./static/icons/rogue-subtlety.jpeg" class="class-icon">&nbsp;&nbsp; daldhousq3</td>
-                    <td class="col-md-5 faction-horde">Veribet (Mankrik-US)</td>
-                    <td class="col-md-1 ">14895.59</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; Dihminino</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9312.92 <i class="fa-solid fa-clock"></i> 04:17</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">9</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; skeary7e</td>
-                    <td class="col-md-5 faction-alliance">Vagram (Faerlina-US)</td>
-                    <td class="col-md-1 ">14887.82</td>
+                    <td class="col-md-4"><img src="./static/icons/mage-fire.jpeg" class="class-icon">&nbsp;&nbsp; Zaramaki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9308.10 <i class="fa-solid fa-clock"></i> 04:15</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">10</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; bmurricaneseb</td>
-                    <td class="col-md-5 faction-alliance">Zathin (Pagle-US)</td>
-                    <td class="col-md-1 ">14867.83</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Messiahdk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9298.33 <i class="fa-solid fa-clock"></i> 04:58</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">11</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; gwatshamg5</td>
-                    <td class="col-md-5 faction-horde">Tampflex (Grobbulus-US)</td>
-                    <td class="col-md-1 ">14851.87</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Monstrø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9149.38 <i class="fa-solid fa-clock"></i> 04:34</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">12</td>
-                    <td class="col-md-5"><img src="./static/icons/hunter-marksmanship.jpeg" class="class-icon">&nbsp;&nbsp; rblakiston3v</td>
-                    <td class="col-md-5 faction-horde">Tampflex (Arugal-US)</td>
-                    <td class="col-md-1 ">14847.25</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-affliction.jpeg" class="class-icon">&nbsp;&nbsp; Yenifear</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9126.56 <i class="fa-solid fa-clock"></i> 04:17</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">13</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-feral.jpeg" class="class-icon">&nbsp;&nbsp; gwakleyo4</td>
-                    <td class="col-md-5 faction-horde">Trippledex (Pagle-US)</td>
-                    <td class="col-md-1 ">14825.01</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-frost.jpeg" class="class-icon">&nbsp;&nbsp; Multkill</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">9022.86 <i class="fa-solid fa-clock"></i> 04:15</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">14</td>
-                    <td class="col-md-5"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; lscatchercy</td>
-                    <td class="col-md-5 faction-horde">Keylex (Pagle-US)</td>
-                    <td class="col-md-1 ">14805.40</td>
+                    <td class="col-md-4"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; Vemtranquilø</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8961.63 <i class="fa-solid fa-clock"></i> 04:34</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">15</td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; kmaccleodna</td>
-                    <td class="col-md-5 faction-alliance">Bitwolf (Arugal-US)</td>
-                    <td class="col-md-1 ">14767.69</td>
+                    <td class="col-md-4"><img src="./static/icons/hunter-survival.jpeg" class="class-icon">&nbsp;&nbsp; Blackspot</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8918.94 <i class="fa-solid fa-clock"></i> 04:17</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">16</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; vhebden1k</td>
-                    <td class="col-md-5 faction-alliance">Solarbreeze (Faerlina-US)</td>
-                    <td class="col-md-1 ">14765.62</td>
+                    <td class="col-md-4"><img src="./static/icons/rogue-combat.jpeg" class="class-icon">&nbsp;&nbsp; Dhelta</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8700.18 <i class="fa-solid fa-clock"></i> 05:18</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">17</td>
-                    <td class="col-md-5"><img src="./static/icons/paladin-retribution.jpeg" class="class-icon">&nbsp;&nbsp; mmcbridenz</td>
-                    <td class="col-md-5 faction-horde">Cookley (Faerlina-US)</td>
-                    <td class="col-md-1 ">14740.24</td>
+                    <td class="col-md-4"><img src="./static/icons/druid-balance.jpeg" class="class-icon">&nbsp;&nbsp; Märcøs</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8668.49 <i class="fa-solid fa-clock"></i> 04:17</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">18</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-blood.jpeg" class="class-icon">&nbsp;&nbsp; hborland4w</td>
-                    <td class="col-md-5 faction-alliance">Sonsing (Benediction-US)</td>
-                    <td class="col-md-1 ">14718.20</td>
+                    <td class="col-md-4"><img src="./static/icons/shaman-enhancement.jpeg" class="class-icon">&nbsp;&nbsp; Cavalo</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8611.41 <i class="fa-solid fa-clock"></i> 04:15</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">19</td>
-                    <td class="col-md-5"><img src="./static/icons/deathknight-blood.jpeg" class="class-icon">&nbsp;&nbsp; aanwelll5</td>
-                    <td class="col-md-5 faction-horde">Tresom (Mankrik-US)</td>
-                    <td class="col-md-1 ">14708.12</td>
+                    <td class="col-md-4"><img src="./static/icons/priest-shadow.jpeg" class="class-icon">&nbsp;&nbsp; Reikki</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8582.67 <i class="fa-solid fa-clock"></i> 04:17</td>
                 </tr>
                 
                 <tr >
                     <td class="col-md-1">20</td>
-                    <td class="col-md-5"><img src="./static/icons/warlock-demonology.jpeg" class="class-icon">&nbsp;&nbsp; pgloy43</td>
-                    <td class="col-md-5 faction-alliance">Sonair (Pagle-US)</td>
-                    <td class="col-md-1 ">14681.40</td>
+                    <td class="col-md-4"><img src="./static/icons/deathknight-unholy.jpeg" class="class-icon">&nbsp;&nbsp; Wladk</td>
+                    <td class="col-md-4 text-end faction-alliance">É Foda Bê (Benediction-US)</td>
+                    <td class="col-md-3 text-end mono">8389.95 <i class="fa-solid fa-clock"></i> 05:18</td>
                 </tr>
                 
             </tbody>
@@ -2368,5 +1321,15 @@
 
 
     </main>
+    <!-- Footer -->
+    <footer class="safe-width">
+        <div class="p-1 content-dark">
+            <div class="w-50 mx-auto">
+                <div class="text-center footer-right p-2">
+                    Criado e mantido por Flávio Teixeira - Khalmýr-Benediction
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
