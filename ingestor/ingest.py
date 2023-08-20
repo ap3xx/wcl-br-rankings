@@ -50,9 +50,11 @@ class WCLBrazilIngestor:
                         get_logger().debug("Report or fight not in guilds reports list! Skipping ranking...")
                         continue
 
-                    if self.__cfg.processed_parses.get(ranking["encounterID"], dict()) \
+                    current_existing_parse = self.__cfg.processed_parses.get(ranking["encounterID"], dict()) \
                                                   .get(character["id"], dict()) \
-                                                  .get(ranking["spec"], math.inf) == ranking["percentile"]:
+                                                  .get(ranking["spec"], 999999999)
+
+                    if round(current_existing_parse, 2) == round(ranking["percentile"], 2):
                         get_logger().debug("Character ranking already processed and did not change since last run...")
                         continue
 
