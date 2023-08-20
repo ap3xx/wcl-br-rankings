@@ -1,5 +1,6 @@
+import json
 import sys
-from csv import DictReader
+from datetime import datetime
 from pathlib import Path
 
 from flask import Flask, render_template
@@ -104,49 +105,14 @@ def fetch_top_parses():
 
 
 def fetch_fake_top_dps():
-    top_dps = {
-        f["code"]: {"label": f["label"], "rows": list()}
-        for f in FIGHT_ID_MAP.values()
-    }
-    with open(Path(__file__).parent / "sample_data/dps.csv") as f:
-        csv_data = DictReader(f)
-        for row in csv_data:
-            row["dps"] = float(row["dps"])
-            row["class_icon"] = CLASS_ICON_MAP[row["class_spec"]]
-            top_dps[FIGHT_ID_MAP[int(row["fight"])]["code"]]["rows"].append(row)
-
-    for fight in top_dps:
-        all_dps = top_dps[fight]["rows"]
-        top_20 = sorted(all_dps, key=lambda d: d['dps'], reverse=True)[:20]
-        top_dps[fight]["rows"] = top_20
-
-    return top_dps
+    with open(Path(__file__).parent / "sample_data/top_dps.json") as f:
+        data = json.load(f)
+    return data
 
 def fetch_fake_top_parses():
-    top_parses = {
-        c["code"]: {"label": c["label"], "rows": list()}
-        for c in CLASS_ID_MAP.values()
-    }
-    with open(Path(__file__).parent / "sample_data/parse.csv") as f:
-        csv_data = DictReader(f)
-        for row in csv_data:
-            cls = row["class_spec"].split(" - ")[0]
-            row["avg_parse"] = float(row["avg_parse"])
-            row["class_icon"] = CLASS_ICON_MAP[row["class_spec"]]
-            row["parse_color"] = "grey"
-            for rule, color in PARSE_COLOR_MAP.items():
-                if row["avg_parse"] >= rule:
-                    row["parse_color"] = color
-                    break
-            top_parses[CLASS_ID_MAP[cls]["code"]]["rows"].append(row)
-            top_parses[CLASS_ID_MAP["All"]["code"]]["rows"].append(row)
-
-    for cls in top_parses:
-        all_parses = top_parses[cls]["rows"]
-        top_20 = sorted(all_parses, key=lambda d: d['avg_parse'], reverse=True)[:20]
-        top_parses[cls]["rows"] = top_20
-
-    return top_parses
+    with open(Path(__file__).parent / "sample_data/top_parse.json") as f:
+        data = json.load(f)
+    return data
 
 @freezer.register_generator
 def index():
@@ -164,6 +130,7 @@ def index():
     get_logger().info("Rendering website...")
     return render_template(
         'index.html',
+        last_update=datetime.now().strftime("%d/%m/%Y"),
         fights=list(top_dps.keys()),
         top_dps=top_dps,
         classes=list(top_parses.keys()),

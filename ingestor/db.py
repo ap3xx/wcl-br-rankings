@@ -50,10 +50,10 @@ class PGClient:
         response = self.__run_select_query(query)
         return [report_row["id"] for report_row in response]
 
-    def list_parse_ids(self):
-        query = "SELECT id FROM data_parses"
+    def list_processed_parses(self):
+        query = "SELECT encounter_id, character_id, spec, percentile FROM data_parses"
         response = self.__run_select_query(query)
-        return [parse_row["id"] for parse_row in response]
+        return [parse_row for parse_row in response]
 
     def insert_reports(self, reports):
         query = """
@@ -62,13 +62,18 @@ class PGClient:
         """
         self.__run_batch_insert_query(query, reports)
 
-    def insert_parses(self, parses):
+    def upsert_parses(self, parses):
         query = """
-        INSERT INTO data_parses(id, character_id, name, "class", spec, guild, realm, region, faction, zone, zone_id,
-                           encounter, encounter_id, duration, percentile, metric, value, ilvl, "date")
-        VALUES (%(id)s, %(character_id)s, %(name)s, %(class)s, %(spec)s, %(guild)s, %(realm)s, %(region)s,
+        INSERT INTO data_parses(
+            character_id, name, "class", spec, guild, realm, region, faction, zone, zone_id,
+            encounter, encounter_id, duration, percentile, dps, ilvl, "date")
+        VALUES (%(character_id)s, %(name)s, %(class)s, %(spec)s, %(guild)s, %(realm)s, %(region)s,
                 %(faction)s, %(zone)s, %(zone_id)s, %(encounter)s, %(encounter_id)s, %(duration)s, %(percentile)s,
-                %(metric)s, %(value)s, %(ilvl)s, %(date)s)
+                %(dps)s, %(ilvl)s, %(date)s)
+        ON CONFLICT (character_id, encounter_id, spec)
+        DO UPDATE
+        SET duration = EXCLUDED.duration, percentile = EXCLUDED.percentile, dps = EXCLUDED.dps,
+            ilvl = EXCLUDED.ilvl, "date" = EXCLUDED."date"
         """
         self.__run_batch_insert_query(query, parses)
 

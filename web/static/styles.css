@@ -1,8 +1,8 @@
 body {
     background-image: url("img/bg.png");
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
+    background-color: #222e3c;
     color: #d3d5d8;
 }
 
@@ -48,6 +48,10 @@ body {
 }
 
 .content-dark {
+    background-color: #222e3c
+}
+
+.content-dark-translucent {
     background-color: #222e3ccb
 }
 
@@ -58,6 +62,7 @@ body {
 
 .safe-width {
     min-width: 750px;
+    width: 100%;
 }
 
 /* Bootstrap overrides */

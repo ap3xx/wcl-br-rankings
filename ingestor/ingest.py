@@ -1,4 +1,4 @@
-import hashlib
+import math
 from datetime import datetime, timedelta
 
 from api import WCLApiClient
@@ -16,22 +16,23 @@ class WCLBrazilIngestor:
         self.__api_client = api_client
         self.__db = db
 
-    def __fetch_character_parses(self, character: dict, metric="dps"):
+    def __fetch_character_parses(self, character: dict):
         get_logger().debug(
-            f"Fetching {metric} rankings for {character['name']} {character['realm']}-{character['region']}")
+            f"Fetching rankings for {character['name']} {character['realm']}-{character['region']}")
         character_rankings = list()
         try:
             for zone_id, zone in self.__cfg.zones.items():
                 rankings = self.__api_client.get_character_rankings(
                     character["name"], character["realm"],  character["region"],
-                    params={"metric": metric, "zone": zone_id}
+                    params={"metric": "dps", "zone": zone_id}
                 )
                 for ranking in rankings:
-                    parse_id = hashlib.md5(
-                        f"{ranking['reportID']}.{ranking['fightID']}.{ranking['characterID']}.{metric}".encode()
-                    ).hexdigest()
-                    if parse_id in self.__cfg.processed_parses_ids:
-                        get_logger().debug("Parse already processed...")
+                    current_existing_parse = self.__cfg.processed_parses.get(ranking["encounterID"], dict()) \
+                                                  .get(character["id"], dict()) \
+                                                  .get(ranking["spec"], 999999999)
+
+                    if round(current_existing_parse, 2) == round(ranking["percentile"], 2):
+                        get_logger().debug("Character ranking already processed and did not change since last run...")
                         continue
 
                     if ranking["size"] != RAID_SIZE:
@@ -48,19 +49,16 @@ class WCLBrazilIngestor:
                                            f"for encounter {ranking['encounterName']}")
                         continue
 
-                    if metric == "dps":
-                        if ranking["spec"] not in self.__cfg.classes[ranking["class"]]["specs"]["dps"]:
-                            get_logger().debug(f"Not condidering spec {ranking['spec']} "
-                                               f"for class {ranking['class']} in metric {metric}")
-                            continue
+                    if ranking["spec"] not in self.__cfg.classes_and_specs[ranking["class"]]:
+                        get_logger().debug(f"Not condidering spec {ranking['spec']} for class {ranking['class']}")
+                        continue
 
-                    report = self.__fetch_report(ranking["reportID"], self.__cfg.guilds[character["guild"]])
+                    report = self.__fetch_report(ranking["reportID"], self.__cfg.guilds[character["guild"]], True)
                     if not report or ranking["fightID"] not in report["fights"]:
                         get_logger().debug("Report or fight not in guilds reports list! Skipping ranking...")
                         continue
 
                     character_rankings.append({
-                        "id": parse_id,
                         "character_id": character["id"],
                         "name": character["name"],
                         "class": character["class"],
@@ -76,11 +74,12 @@ class WCLBrazilIngestor:
                         "duration": self.__reports[character["guild"]][ranking["reportID"]]["fights"]
                                                         [ranking["fightID"]]["duration"],
                         "percentile": ranking["percentile"],
-                        "metric": metric,
-                        "value": ranking["total"],
+                        "dps": ranking["total"],
                         "ilvl": ranking["ilvlKeyOrPatch"],
                         "date": report["date"],
                     })
+
+
         except Exception as e:
             get_logger().error(f"Something happened: {str(e)}")
 
@@ -92,8 +91,8 @@ class WCLBrazilIngestor:
         get_logger().info(f"Fetching characters from API for guild: {guild_name}")
         guild_characters = dict()
 
-        for report_id, report in self.__reports[guild_name].items():
-            for character_name, character in report["characters"].items():
+        for _, report in self.__reports[guild_name].items():
+            for __, character in report["characters"].items():
                 if character["id"] in self.__cfg.known_characters:
                     continue
                 new_char_obj = {
@@ -111,7 +110,7 @@ class WCLBrazilIngestor:
         get_logger().info(f"Found {len(guild_characters)} new characters for guild {guild_name}")
         return guild_characters
 
-    def __fetch_report(self, report_id: str, guild: dict):
+    def __fetch_report(self, report_id: str, guild: dict, is_old: bool = False):
         if report_id in self.__reports[guild["name"]]:
             return self.__reports[guild["name"]][report_id]
 
@@ -142,7 +141,7 @@ class WCLBrazilIngestor:
                         "duration": (fight["end_time"] - fight["start_time"]) / 1000
                     }
 
-            get_logger().info(f"Found new report {report_id} for guild {guild['name']}")
+            get_logger().info(f"Fetched {'new' if not is_old else 'old'} report {report_id} for guild {guild['name']}")
             self.__reports[guild["name"]][report_id] = report
             return report
         except Exception as e:
@@ -152,7 +151,7 @@ class WCLBrazilIngestor:
     def __fetch_reports_by_guild(self, guild_name: str, guild: dict):
         start_date = (datetime.now() - timedelta(days=5)).timestamp() * 1000
         late_guild_reports = self.__api_client.get_guild_reports(
-            guild["name"], guild["realm"], guild["region"], params={"start": start_date}
+            guild_name, guild["realm"], guild["region"], params={"start": start_date}
         )
         for report_entry in late_guild_reports:
             if report_entry["id"] not in self.__cfg.processed_reports_ids:
@@ -175,14 +174,11 @@ class WCLBrazilIngestor:
 
     def __load_parses(self):
         get_logger().info("Loading characters parses...")
-        self.__parses = dict()
-        for metric in METRICS_CHECKED:
-            get_logger().info(f"Loading characters {metric} parses...")
-            self.__parses[metric] = list()
-            for character_id, character in self.__characters.items():
-                character_parses = self.__fetch_character_parses(character, metric)
-                if character_parses:
-                    self.__parses[metric].extend(character_parses)
+        self.__parses = list()
+        for _, character in self.__characters.items():
+            character_parses = self.__fetch_character_parses(character)
+            if character_parses:
+                self.__parses.extend(character_parses)
 
     def __save_reports(self):
         get_logger().info("Preparing to save reports...")
@@ -195,11 +191,8 @@ class WCLBrazilIngestor:
         self.__db.insert_reports(self.new_reports)
 
     def __save_parses(self):
-        get_logger().info("Preparing to save parses...")
-        for metric, parses in self.__parses.items():
-            self.new_parses = [parse for parse in parses if parse["id"] not in self.__cfg.processed_parses_ids]
-            get_logger().info(f"Saving {len(parses)} parses for metric {metric}...")
-            self.__db.insert_parses(self.new_parses)
+        get_logger().info(f"Saving {len(self.__parses)} parses...")
+        self.__db.upsert_parses(self.__parses)
 
     def __save_characters(self):
         get_logger().info("Preparing to save characters...")
