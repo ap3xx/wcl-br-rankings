@@ -2,7 +2,6 @@ import logging
 import os
 import time
 
-LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 
 def config_log(level: str) -> logging.Logger:
     formatter = logging.Formatter(
@@ -25,4 +24,4 @@ def get_logger():
     return LOGGER
 
 
-LOGGER = config_log(LOG_LEVEL)
+LOGGER = config_log(os.getenv("LOG_LEVEL", "INFO"))

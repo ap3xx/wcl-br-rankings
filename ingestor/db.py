@@ -25,11 +25,6 @@ class PGClient:
             psycopg2.extras.execute_batch(cursor, query, data)
             conn.commit()
 
-    def list_guilds(self):
-        query = "SELECT * FROM cfg_guilds"
-        response = self.__run_select_query(query)
-        return [guild_row for guild_row in response]
-
     def list_encounters(self):
         query = "SELECT * FROM cfg_encounters"
         response = self.__run_select_query(query)
@@ -40,25 +35,41 @@ class PGClient:
         response = self.__run_select_query(query)
         return [spec_row for spec_row in response]
 
-    def list_characters(self):
+    def list_guilds(self, guild_name):
+        query = "SELECT * FROM cfg_guilds"
+        if guild_name:
+            query += f" WHERE name = '{guild_name}'"
+        response = self.__run_select_query(query)
+        return [guild_row for guild_row in response]
+
+    def list_characters(self, guild_name):
         query = "SELECT * FROM data_characters"
+        if guild_name:
+            query += f" WHERE guild = '{guild_name}'"
         response = self.__run_select_query(query)
         return [char_row for char_row in response]
 
-    def list_report_ids(self):
-        query = "SELECT id FROM data_reports"
+    def list_reports(self, guild_name):
+        query = "SELECT * FROM data_reports"
+        if guild_name:
+            query += f" WHERE guild = '{guild_name}'"
         response = self.__run_select_query(query)
-        return [report_row["id"] for report_row in response]
+        return [report_row for report_row in response]
 
-    def list_processed_parses(self):
+    def list_processed_parses(self, guild_name):
         query = "SELECT encounter_id, character_id, spec, percentile FROM data_parses"
+        if guild_name:
+            query += f" WHERE guild = '{guild_name}'"
         response = self.__run_select_query(query)
         return [parse_row for parse_row in response]
 
-    def insert_reports(self, reports):
+    def upsert_reports(self, reports):
         query = """
-        INSERT INTO data_reports(id, guild, title, "date", realm, region, faction)
-        VALUES (%(id)s, %(guild)s, %(title)s, %(date)s, %(realm)s, %(region)s, %(faction)s)
+        INSERT INTO data_reports(id, guild, title, "date", realm, region, faction, fights)
+        VALUES (%(id)s, %(guild)s, %(title)s, %(date)s, %(realm)s, %(region)s, %(faction)s, %(fights)s)
+        ON CONFLICT (id)
+        DO UPDATE
+        SET fights = EXCLUDED.fights
         """
         self.__run_batch_insert_query(query, reports)
 

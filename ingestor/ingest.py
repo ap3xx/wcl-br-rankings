@@ -1,4 +1,4 @@
-import math
+import json
 from datetime import datetime, timedelta
 
 from api import WCLApiClient
@@ -6,8 +6,6 @@ from cfg import IngestionConfig
 from db import PGClient
 from log import get_logger
 
-RAID_SIZE = 25
-METRICS_CHECKED = ["dps"]
 
 class WCLBrazilIngestor:
 
@@ -35,7 +33,7 @@ class WCLBrazilIngestor:
                         get_logger().debug("Character ranking already processed and did not change since last run...")
                         continue
 
-                    if ranking["size"] != RAID_SIZE:
+                    if ranking["size"] != 25:
                         get_logger().debug(f"Not considering raid size {ranking['size']}")
                         continue
 
@@ -53,7 +51,7 @@ class WCLBrazilIngestor:
                         get_logger().debug(f"Not condidering spec {ranking['spec']} for class {ranking['class']}")
                         continue
 
-                    report = self.__fetch_report(ranking["reportID"], self.__cfg.guilds[character["guild"]], True)
+                    report = self.__fetch_report(ranking["reportID"], self.__cfg.guilds[character["guild"]])
                     if not report or ranking["fightID"] not in report["fights"]:
                         get_logger().debug("Report or fight not in guilds reports list! Skipping ranking...")
                         continue
@@ -83,7 +81,7 @@ class WCLBrazilIngestor:
         except Exception as e:
             get_logger().error(f"Something happened: {str(e)}")
 
-        get_logger().info(f"Found {len(character_rankings)} new parses for "
+        get_logger().info(f"Found {len(character_rankings)} parses for "
                           f"character {character['name']} {character['realm']}-{character['region']}")
         return character_rankings
 
@@ -110,9 +108,15 @@ class WCLBrazilIngestor:
         get_logger().info(f"Found {len(guild_characters)} new characters for guild {guild_name}")
         return guild_characters
 
-    def __fetch_report(self, report_id: str, guild: dict, is_old: bool = False):
+    def __fetch_report(self, report_id: str, guild: dict):
         if report_id in self.__reports[guild["name"]]:
             return self.__reports[guild["name"]][report_id]
+
+        if report_id in self.__cfg.processed_reports and \
+           self.__cfg.processed_reports[report_id]["fights"]:
+            report = self.__cfg.processed_reports[report_id]
+            self.__reports[guild["name"]][report_id]
+            return report
 
         try:
             report_info = self.__api_client.get_report_info(report_id)
@@ -136,12 +140,12 @@ class WCLBrazilIngestor:
                 "fights": dict(),
             }
             for fight in report_info["fights"]:
-                if fight.get("kill", False) and fight.get("size") == RAID_SIZE:
+                if fight.get("kill", False) and fight.get("size") == 25:
                     report["fights"][fight["id"]] = {
                         "duration": (fight["end_time"] - fight["start_time"]) / 1000
                     }
 
-            get_logger().info(f"Fetched {'new' if not is_old else 'old'} report {report_id} for guild {guild['name']}")
+            get_logger().info(f"Fetched report {report_id} for guild {guild['name']}")
             self.__reports[guild["name"]][report_id] = report
             return report
         except Exception as e:
@@ -154,7 +158,7 @@ class WCLBrazilIngestor:
             guild_name, guild["realm"], guild["region"], params={"start": start_date}
         )
         for report_entry in late_guild_reports:
-            if report_entry["id"] not in self.__cfg.processed_reports_ids:
+            if report_entry["id"] not in self.__cfg.processed_reports:
                 self.__fetch_report(report_entry["id"], guild)
 
     def __load_reports(self):
@@ -183,12 +187,14 @@ class WCLBrazilIngestor:
     def __save_reports(self):
         get_logger().info("Preparing to save reports...")
         self.new_reports = list()
-        for guild_name, reports in self.__reports.items():
+        for _, reports in self.__reports.items():
             for report_id, report in reports.items():
-                if report_id not in self.__cfg.processed_reports_ids:
+                if report_id not in self.__cfg.processed_reports or \
+                   not self.__cfg.processed_reports[report_id]["fights"]:
+                    report["fights"] = json.dumps(report["fights"])
                     self.new_reports.append(report)
         get_logger().info(f"Saving {len(self.new_reports)} reports")
-        self.__db.insert_reports(self.new_reports)
+        self.__db.upsert_reports(self.new_reports)
 
     def __save_parses(self):
         get_logger().info(f"Saving {len(self.__parses)} parses...")
