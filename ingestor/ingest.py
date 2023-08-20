@@ -53,7 +53,7 @@ class WCLBrazilIngestor:
                         get_logger().debug(f"Not condidering spec {ranking['spec']} for class {ranking['class']}")
                         continue
 
-                    report = self.__fetch_report(ranking["reportID"], self.__cfg.guilds[character["guild"]])
+                    report = self.__fetch_report(ranking["reportID"], self.__cfg.guilds[character["guild"]], True)
                     if not report or ranking["fightID"] not in report["fights"]:
                         get_logger().debug("Report or fight not in guilds reports list! Skipping ranking...")
                         continue
@@ -110,7 +110,7 @@ class WCLBrazilIngestor:
         get_logger().info(f"Found {len(guild_characters)} new characters for guild {guild_name}")
         return guild_characters
 
-    def __fetch_report(self, report_id: str, guild: dict):
+    def __fetch_report(self, report_id: str, guild: dict, is_old: bool = False):
         if report_id in self.__reports[guild["name"]]:
             return self.__reports[guild["name"]][report_id]
 
@@ -141,7 +141,7 @@ class WCLBrazilIngestor:
                         "duration": (fight["end_time"] - fight["start_time"]) / 1000
                     }
 
-            get_logger().info(f"Found new report {report_id} for guild {guild['name']}")
+            get_logger().info(f"Fetched {'new' if not is_old else 'old'} report {report_id} for guild {guild['name']}")
             self.__reports[guild["name"]][report_id] = report
             return report
         except Exception as e:
