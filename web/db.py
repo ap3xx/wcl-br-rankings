@@ -34,9 +34,9 @@ class PGClient:
         SELECT
             character_id, "name", guild, realm, region, faction, "class", spec, SUM(percentile)/4 AS avg_parse
         FROM data_parses
+        WHERE "class" = '{player_class}'
         GROUP BY
             character_id, "name", guild, realm, region, faction, "class", spec
-        WHERE  "class" = {player_class}
         """
         response = self.__run_select_query(query)
         return [parse_row for parse_row in response]

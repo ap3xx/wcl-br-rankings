@@ -1,8 +1,8 @@
 body {
     background-image: url("img/bg.png");
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
+    background-color: #222e3c;
     color: #d3d5d8;
 }
 
@@ -48,16 +48,18 @@ body {
 }
 
 .content-dark {
-    background-color: #222e3ccb
+    background-color: #222e3c
 }
 
 .card-compact {
     max-height: 440px;
     overflow: auto;
+    background-color: #222e3ccb
 }
 
 .safe-width {
     min-width: 750px;
+    width: 100%;
 }
 
 /* Bootstrap overrides */
