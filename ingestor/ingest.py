@@ -27,6 +27,14 @@ class WCLBrazilIngestor:
                     params={"metric": "dps", "zone": zone_id}
                 )
                 for ranking in rankings:
+                    current_existing_parse = self.__cfg.processed_parses.get(ranking["encounterID"], dict()) \
+                                                  .get(character["id"], dict()) \
+                                                  .get(ranking["spec"], 999999999)
+
+                    if round(current_existing_parse, 2) == round(ranking["percentile"], 2):
+                        get_logger().debug("Character ranking already processed and did not change since last run...")
+                        continue
+
                     if ranking["size"] != RAID_SIZE:
                         get_logger().debug(f"Not considering raid size {ranking['size']}")
                         continue
@@ -48,14 +56,6 @@ class WCLBrazilIngestor:
                     report = self.__fetch_report(ranking["reportID"], self.__cfg.guilds[character["guild"]])
                     if not report or ranking["fightID"] not in report["fights"]:
                         get_logger().debug("Report or fight not in guilds reports list! Skipping ranking...")
-                        continue
-
-                    current_existing_parse = self.__cfg.processed_parses.get(ranking["encounterID"], dict()) \
-                                                  .get(character["id"], dict()) \
-                                                  .get(ranking["spec"], 999999999)
-
-                    if round(current_existing_parse, 2) == round(ranking["percentile"], 2):
-                        get_logger().debug("Character ranking already processed and did not change since last run...")
                         continue
 
                     character_rankings.append({
