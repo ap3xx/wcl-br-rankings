@@ -92,5 +92,7 @@ class PGClient:
         query = """
         INSERT INTO data_characters(id, name, guild, realm, region, faction, "class", is_blacklisted)
         VALUES (%(id)s, %(name)s, %(guild)s, %(realm)s, %(region)s, %(faction)s, %(class)s, %(is_blacklisted)s)
+        ON CONFLICT (id)
+        DO NOTHING
         """
         self.__run_batch_insert_query(query, characters)
