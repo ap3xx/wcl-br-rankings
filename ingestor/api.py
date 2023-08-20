@@ -2,16 +2,17 @@ import os
 
 import requests
 
-WCL_API_KEY = os.getenv("WCL_API_KEY")
-
 class WCLApiClient:
 
     __API_BASE_URL = "https://classic.warcraftlogs.com/v1"
 
+    def __init__(self):
+        self.__api_key = os.getenv("WCL_API_KEY")
+
     def __request_api(self, endpoint: str, params: dict = None):
         if not params:
             params = dict()
-        params["api_key"] = WCL_API_KEY
+        params["api_key"] = self.__api_key
         res = requests.get(f"{self.__API_BASE_URL}/{endpoint}", params=params)
         if res.status_code > 299:
             raise Exception(f"Something happened: {res.content}")

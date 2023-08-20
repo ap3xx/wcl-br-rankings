@@ -1,5 +1,4 @@
-import json
-
+import os
 from collections import defaultdict
 
 from db import PGClient
@@ -7,12 +6,13 @@ from log import get_logger
 
 class IngestionConfig:
 
-    def __init__(self):
+    def __init__(self, pg_client: PGClient, guild_name: str):
         get_logger().info("Initializing configurations...")
-        self.__db = PGClient()
+        self.__db = pg_client
+        self.__guild_name = guild_name
         self.__load_encounters_conf()
         self.__load_specs_conf()
-        self.__load_guilds_database()
+        self.__load_guilds_conf()
         self.__load_characters_database()
         self.__load_processed_reports()
         self.__load_processed_parses()
@@ -33,27 +33,30 @@ class IngestionConfig:
         for s in self.__db.list_specs():
             self.classes_and_specs[s["class"]].append(s["name"])
 
-    def __load_guilds_database(self):
+    def __load_guilds_conf(self):
         get_logger().debug("Loading guilds conf...")
         self.guilds = {
             g["name"]: g
-            for g in self.__db.list_guilds()
+            for g in self.__db.list_guilds(self.__guild_name)
         }
 
     def __load_characters_database(self):
         get_logger().debug("Loading characters database...")
         self.known_characters = {
             c["id"]: c
-            for c in self.__db.list_characters()
+            for c in self.__db.list_characters(self.__guild_name)
         }
 
     def __load_processed_reports(self):
         get_logger().debug("Loading already processed reports...")
-        self.processed_reports_ids = self.__db.list_report_ids()
+        self.processed_reports = {
+            r["id"]: r
+            for r in self.__db.list_reports(self.__guild_name)
+        }
 
     def __load_processed_parses(self):
         get_logger().debug("Loading already processed parses...")
         self.processed_parses = defaultdict(lambda: defaultdict(dict))
-        for p in self.__db.list_processed_parses():
+        for p in self.__db.list_processed_parses(self.__guild_name):
             self.processed_parses[p["encounter_id"]][p["character_id"]][p["spec"]] = p["percentile"]
 

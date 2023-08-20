@@ -1,3 +1,5 @@
+from sys import argv
+
 from api import WCLApiClient
 from cfg import IngestionConfig
 from db import PGClient
@@ -7,15 +9,21 @@ from ingest import WCLBrazilIngestor
 
 def main():
     get_logger().info("Started processing...")
-    get_logger().info("Loading configs...")
-    cfg = IngestionConfig()
-    get_logger().info("Initializing WCL Api Client...")
-    api_client = WCLApiClient()
+
+    guild_name = None
+    if len(argv) > 1:
+        guild_name = argv[1]
+        get_logger().info(f"Processing single guild: {guild_name}")\
+
     get_logger().info("Initializing PGSQL Client...")
     pg_client = PGClient()
+    get_logger().info("Loading configs...")
+    cfg = IngestionConfig(pg_client, guild_name)
+    get_logger().info("Initializing WCL Api Client...")
+    api_client = WCLApiClient()
     get_logger().info("Initializing Ingestor...")
     WCLBrazilIngestor(cfg, api_client, pg_client).extract_and_transform() \
-                       .load()
+                                                 .load()
     get_logger().info("Finished processing...")
 
 
