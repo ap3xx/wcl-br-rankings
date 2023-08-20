@@ -51,10 +51,13 @@ body {
     background-color: #222e3c
 }
 
+.content-dark-translucent {
+    background-color: #222e3ccb
+}
+
 .card-compact {
     max-height: 440px;
     overflow: auto;
-    background-color: #222e3ccb
 }
 
 .safe-width {
