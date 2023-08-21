@@ -52,7 +52,8 @@ class WCLBrazilIngestor:
                         continue
 
                     report = self.__fetch_report(ranking["reportID"], self.__cfg.guilds[character["guild"]])
-                    if not report or ranking["fightID"] not in report["fights"]:
+                    fight_id = str(ranking["fightID"])
+                    if not report or fight_id not in report["fights"]:
                         get_logger().debug("Report or fight not in guilds reports list! Skipping ranking...")
                         continue
 
@@ -69,11 +70,13 @@ class WCLBrazilIngestor:
                         "zone_id": zone_id,
                         "encounter": ranking["encounterName"],
                         "encounter_id": ranking["encounterID"],
-                        "duration": self.__reports[character["guild"]][ranking["reportID"]]["fights"]
-                                                        [ranking["fightID"]]["duration"],
+                        "duration":
+                            self.__reports[character["guild"]][ranking["reportID"]]["fights"][fight_id]["duration"],
                         "percentile": ranking["percentile"],
                         "dps": ranking["total"],
                         "ilvl": ranking["ilvlKeyOrPatch"],
+                        "report_id": ranking["reportID"],
+                        "report_fight_id": ranking["fightID"],
                         "date": report["date"],
                     })
 
@@ -115,7 +118,7 @@ class WCLBrazilIngestor:
         if report_id in self.__cfg.processed_reports and \
            self.__cfg.processed_reports[report_id]["fights"]:
             report = self.__cfg.processed_reports[report_id]
-            self.__reports[guild["name"]][report_id]
+            self.__reports[guild["name"]][report_id] = report
             return report
 
         try:
@@ -141,7 +144,7 @@ class WCLBrazilIngestor:
             }
             for fight in report_info["fights"]:
                 if fight.get("kill", False) and fight.get("size") == 25:
-                    report["fights"][fight["id"]] = {
+                    report["fights"][str(fight["id"])] = {
                         "duration": (fight["end_time"] - fight["start_time"]) / 1000
                     }
 
@@ -166,15 +169,17 @@ class WCLBrazilIngestor:
         self.__reports = dict()
         for guild_name, guild in self.__cfg.guilds.items():
             self.__reports[guild_name] = dict()
-            self.__fetch_reports_by_guild(guild_name, guild)
+            if guild["fetch_enabled"]:
+                self.__fetch_reports_by_guild(guild_name, guild)
 
     def __load_characters(self):
         get_logger().info("Loading characters...")
         self.__characters = dict()
         self.__characters.update(self.__cfg.known_characters)
         for guild_name, guild in self.__cfg.guilds.items():
-            guild_new_characters = self.__fetch_new_characters_by_guild(guild_name, guild)
-            self.__characters.update(guild_new_characters)
+            if guild["fetch_enabled"]:
+                guild_new_characters = self.__fetch_new_characters_by_guild(guild_name, guild)
+                self.__characters.update(guild_new_characters)
 
     def __load_parses(self):
         get_logger().info("Loading characters parses...")

@@ -5,7 +5,14 @@
                 {% for player in players %}
                 <tr >
                     <td class="col-md-1">{{ loop.index }} </td>
-                    <td class="col-md-4"><img src="./static/{{ player.class_icon }}" class="class-icon">&nbsp;&nbsp; {{ player.name }}</td>
+                    <td class="col-md-4">
+                        <img src="./static/{{ player.class_icon }}" class="class-icon">&nbsp;&nbsp;
+                        <a class="class-{{ player.class }}"
+                           href="https://classic.warcraftlogs.com/character/{{ player.region }}/{{ player.realm }}/{{ player.name }}"
+                           target="_blank">
+                           {{ player.name }}
+                        </a>
+                    </td>
                     <td class="col-md-4 text-end faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
                     <td class="col-md-3 text-end mono parse-{{ player.parse_color }}">{{ "%.2f"|format(player.avg_parse) }}</td>
                 </tr>

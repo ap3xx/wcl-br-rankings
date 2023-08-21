@@ -1,3 +1,4 @@
+/* GENERAL CSS */
 body {
     background-image: url("img/bg.png");
     background-repeat: no-repeat;
@@ -6,6 +7,34 @@ body {
     color: #d3d5d8;
 }
 
+h1, h2, .h1 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.content-dark {
+    background-color: #222e3c
+}
+
+.content-dark-translucent {
+    background-color: #222e3ccb
+}
+
+.card-compact {
+    max-height: 440px;
+    overflow: auto;
+}
+
+.safe-width {
+    min-width: 750px;
+    width: 100%;
+}
+
+/* WoW COLORS CSS */
 .faction-alliance {
     color: #6699ff;
 }
@@ -47,22 +76,91 @@ body {
     border-radius: 5px;
 }
 
-.content-dark {
-    background-color: #222e3c
+.class-DeathKnight {
+    color: #c41f3b;
 }
 
-.content-dark-translucent {
-    background-color: #222e3ccb
+.class-Druid {
+    color: #ff7d0a;
 }
 
-.card-compact {
-    max-height: 440px;
-    overflow: auto;
+.class-Hunter {
+    color: #abd473;
 }
 
-.safe-width {
-    min-width: 750px;
-    width: 100%;
+.class-Mage {
+    color: #69ccf0;
+}
+
+.class-Paladin {
+    color: #f58cba;
+}
+
+.class-Priest {
+    color: #fff;
+}
+
+.class-Rogue {
+    color: #fff569;
+}
+
+.class-Shaman {
+    color: #2459ff;
+}
+
+.class-Warlock {
+    color: #9482c9;
+}
+
+.class-Warrior {
+    color: #c79c6e;
+}
+
+.class-DeathKnight:hover {
+    color: #eb4561;
+}
+
+.class-Druid:hover {
+    color: #ffa330;
+}
+
+.class-Hunter:hover {
+    color: #d1fa99;
+}
+
+.class-Mage:hover {
+    color: #8ff2ff;
+}
+
+.class-Paladin:hover {
+    color: #ffb3e0;
+}
+
+.class-Priest:hover {
+    color: #d9d9d9;
+}
+
+.class-Rogue:hover {
+    color: #ffff8f;
+}
+
+.class-Shaman:hover {
+    color: #4a80ff;
+}
+
+.class-Warlock:hover {
+    color: #b8a8f0;
+}
+
+.class-Warrior:hover {
+    color: #edc294;
+}
+
+.dps {
+    color: lightgoldenrodyellow;
+}
+.dps:hover {
+    color: #ffff8f;
 }
 
 /* Bootstrap overrides */

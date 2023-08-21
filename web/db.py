@@ -22,7 +22,8 @@ class PGClient:
     def list_top_dps_by_encounter(self, encounter_id):
         query = f"""
         SELECT
-            "character_id", "name", guild, realm, region, faction, "class", spec, encounter_id, dps, duration
+            "character_id", "name", guild, realm, region, faction, "class", spec, encounter_id, dps, duration,
+            report_id, report_fight_id
         FROM data_parses
         WHERE encounter_id = {encounter_id}
         """
