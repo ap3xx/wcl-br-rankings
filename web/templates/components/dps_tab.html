@@ -5,9 +5,28 @@
                 {% for player in players %}
                 <tr >
                     <td class="col-md-1">{{ loop.index }}</td>
-                    <td class="col-md-4"><img src="./static/{{ player.class_icon }}" class="class-icon">&nbsp;&nbsp; {{ player.name }}</td>
-                    <td class="col-md-4 text-end faction-{{ player.faction }}">{{ player.guild }} ({{ player.server_region }})</td>
-                    <td class="col-md-3 text-end mono">{{ "%.2f"|format(player.dps) }} <i class="fa-solid fa-clock"></i> {{ player.duration_formated }}</td>
+                    <td class="col-md-4">
+                        <img src="./static/{{ player.class_icon }}" class="class-icon">&nbsp;&nbsp;
+                        <a class="class-{{ player.class }}"
+                            href="https://classic.warcraftlogs.com/character/{{ player.region }}/{{ player.realm }}/{{ player.name }}"
+                            target="_blank">
+                            {{ player.name }}
+                        </a>
+                    </td>
+                    <td class="col-md-4 faction-{{ player.faction }}">
+                        <a class="faction-{{ player.faction }}"
+                            href="https://classic.warcraftlogs.com/guild/{{ player.region }}/{{ player.realm }}/{{ player.guild }}"
+                            target="_blank">
+                            {{ player.guild }} ({{ player.server_region }})
+                        </a>
+                    </td>
+                    <td class="col-md-3 text-end mono">
+                        <a class="dps"
+                           href="https://classic.warcraftlogs.com/reports/{{ player.report_id }}#fight={{ player.report_fight_id }}&type=damage-done"
+                           target="_blank">
+                            {{ "%.2f"|format(player.dps) }} <i class="fa-solid fa-clock"></i> {{ player.duration_formated }}
+                        </a>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -76,15 +76,16 @@ class PGClient:
     def upsert_parses(self, parses):
         query = """
         INSERT INTO data_parses(
-            character_id, name, "class", spec, guild, realm, region, faction, zone, zone_id,
-            encounter, encounter_id, duration, percentile, dps, ilvl, "date")
-        VALUES (%(character_id)s, %(name)s, %(class)s, %(spec)s, %(guild)s, %(realm)s, %(region)s,
+            character_id, name, "class", spec, guild, guild_id, realm, region, faction, zone, zone_id,
+            encounter, encounter_id, duration, percentile, dps, ilvl, "date", report_id, report_fight_id)
+        VALUES (%(character_id)s, %(name)s, %(class)s, %(spec)s, %(guild)s, %(guild_id)s, %(realm)s, %(region)s,
                 %(faction)s, %(zone)s, %(zone_id)s, %(encounter)s, %(encounter_id)s, %(duration)s, %(percentile)s,
-                %(dps)s, %(ilvl)s, %(date)s)
+                %(dps)s, %(ilvl)s, %(date)s, %(report_id)s, %(report_fight_id)s)
         ON CONFLICT (character_id, encounter_id, spec)
         DO UPDATE
         SET duration = EXCLUDED.duration, percentile = EXCLUDED.percentile, dps = EXCLUDED.dps,
-            ilvl = EXCLUDED.ilvl, "date" = EXCLUDED."date"
+            ilvl = EXCLUDED.ilvl, "date" = EXCLUDED."date", report_id = EXCLUDED.report_id,
+            report_fight_id = EXCLUDED.report_fight_id
         """
         self.__run_batch_insert_query(query, parses)
 
