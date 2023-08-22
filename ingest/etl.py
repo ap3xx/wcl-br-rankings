@@ -2,17 +2,18 @@ import json
 from datetime import datetime, timedelta
 
 from api import WCLApiClient
-from cfg import IngestionConfig
+from cfg import Config
 from db import PGClient
 from log import get_logger
 
 
-class WCLBrazilIngestor:
+class ETL:
 
-    def __init__(self, cfg: IngestionConfig, api_client: WCLApiClient, db: PGClient):
+    def __init__(self, cfg: Config, api_client: WCLApiClient, db_client: PGClient, historical_run: bool):
         self.__cfg = cfg
         self.__api_client = api_client
-        self.__db = db
+        self.__db_client = db_client
+        self.__historical_run = historical_run
 
     def __fetch_character_parses(self, character: dict):
         get_logger().debug(
@@ -83,7 +84,8 @@ class WCLBrazilIngestor:
 
 
         except Exception as e:
-            get_logger().error(f"Something happened: {str(e)}")
+            get_logger().error(f"Something when fetching rankings for: {character['name']}")
+            get_logger().error(f"Error: {str(e)}")
 
         get_logger().info(f"Found {len(character_rankings)} parses for "
                           f"character {character['name']} {character['realm']}-{character['region']}")
@@ -149,15 +151,18 @@ class WCLBrazilIngestor:
                         "duration": (fight["end_time"] - fight["start_time"]) / 1000
                     }
 
-            get_logger().info(f"Fetched report {report_id} for guild {guild['name']}")
+            get_logger().debug(f"Fetched report {report_id} for guild {guild['name']}")
             self.__reports[guild["name"]][report_id] = report
             return report
         except Exception as e:
-            get_logger().error(f"Something happened when fetching reports: {str(e)}")
+            get_logger().error(f"Something happened when fetching report {report_id}")
+            get_logger().error(f"Error: {str(e)}")
             return None
 
     def __fetch_reports_by_guild(self, guild_name: str, guild: dict):
-        start_date = (datetime.now() - timedelta(days=5)).timestamp() * 1000
+        get_logger().info(f"Fetching reports for: {guild['name']}")
+        DELTA = 14 if self.__historical_run else 5
+        start_date = (datetime.now() - timedelta(days=DELTA)).timestamp() * 1000
         late_guild_reports = self.__api_client.get_guild_reports(
             guild_name, guild["realm"], guild["region"], params={"start": start_date}
         )
@@ -171,7 +176,12 @@ class WCLBrazilIngestor:
         for guild_name, guild in self.__cfg.guilds.items():
             self.__reports[guild_name] = dict()
             if guild["fetch_enabled"]:
-                self.__fetch_reports_by_guild(guild_name, guild)
+                try:
+                    self.__fetch_reports_by_guild(guild_name, guild)
+                    get_logger().info(f"{len(self.__reports[guild_name])} new reports for {guild['name']} !")
+                except Exception as e:
+                    get_logger().error(f"Could not fetch reports for guild {guild_name}")
+                    get_logger().error(f"Error: {str(e)}")
 
     def __load_characters(self):
         get_logger().info("Loading characters...")
@@ -200,11 +210,11 @@ class WCLBrazilIngestor:
                     report["fights"] = json.dumps(report["fights"])
                     self.new_reports.append(report)
         get_logger().info(f"Saving {len(self.new_reports)} reports")
-        self.__db.upsert_reports(self.new_reports)
+        self.__db_client.upsert_reports(self.new_reports)
 
     def __save_parses(self):
         get_logger().info(f"Saving {len(self.__parses)} parses...")
-        self.__db.upsert_parses(self.__parses)
+        self.__db_client.upsert_parses(self.__parses)
 
     def __save_characters(self):
         get_logger().info("Preparing to save characters...")
@@ -213,7 +223,7 @@ class WCLBrazilIngestor:
             if character_id not in self.__cfg.known_characters:
                 self.new_characters.append(character)
         get_logger().info(f"Saving {len(self.new_characters)} characters...")
-        self.__db.insert_characters(self.new_characters)
+        self.__db_client.insert_characters(self.new_characters)
 
     def extract_and_transform(self):
         get_logger().info("Extracting and transforming data...")

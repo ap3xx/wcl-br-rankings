@@ -1,15 +1,15 @@
-INGESTOR_PROJECT=wcl-br-ingestor
+INGEST_IMAGE=wcl-br-rankings-ingest
 
-build-ingestor:
-	docker build -t $(INGESTOR_PROJECT) .
+build-ingest:
+	docker build -t $(INGEST_IMAGE) .
 
-run-ingestor:
-	docker stop $(INGESTOR_PROJECT) || true
-	docker rm $(INGESTOR_PROJECT) || true
-	docker run -d --env-file ./.env --name $(INGESTOR_PROJECT) $(INGESTOR_PROJECT)
+run-ingest:
+	docker stop $(INGEST_IMAGE) || true
+	docker rm $(INGEST_IMAGE) || true
+	docker run -d --env-file ./.env --name $(INGEST_IMAGE) $(INGEST_IMAGE)
 
-logs-ingestor:
-	docker logs ${INGESTOR_PROJECT} -f
+logs-ingest:
+	docker logs ${INGEST_IMAGE} -f
 
 clean-web:
 	rm -rf docs
