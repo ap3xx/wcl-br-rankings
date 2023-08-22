@@ -40,7 +40,19 @@ a {
 }
 
 .faction-horde {
-    color: red;
+    color: #e02929;
+}
+
+.faction-alliance:hover {
+    color: #e02929;
+}
+
+.faction-horde:hover {
+    color: #6699ff;
+}
+
+.parse:hover {
+    color: white;
 }
 
 .parse-gold {

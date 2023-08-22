@@ -65,6 +65,7 @@ class WCLBrazilIngestor:
                         "realm": character["realm"],
                         "region": character["region"],
                         "guild": character["guild"],
+                        "guild_id": self.__cfg.guilds[character["guild"]]["id"],
                         "faction": character["faction"],
                         "zone": zone["name"],
                         "zone_id": zone_id,

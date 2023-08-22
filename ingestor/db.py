@@ -76,9 +76,9 @@ class PGClient:
     def upsert_parses(self, parses):
         query = """
         INSERT INTO data_parses(
-            character_id, name, "class", spec, guild, realm, region, faction, zone, zone_id,
+            character_id, name, "class", spec, guild, guild_id, realm, region, faction, zone, zone_id,
             encounter, encounter_id, duration, percentile, dps, ilvl, "date", report_id, report_fight_id)
-        VALUES (%(character_id)s, %(name)s, %(class)s, %(spec)s, %(guild)s, %(realm)s, %(region)s,
+        VALUES (%(character_id)s, %(name)s, %(class)s, %(spec)s, %(guild)s, %(guild_id)s, %(realm)s, %(region)s,
                 %(faction)s, %(zone)s, %(zone_id)s, %(encounter)s, %(encounter_id)s, %(duration)s, %(percentile)s,
                 %(dps)s, %(ilvl)s, %(date)s, %(report_id)s, %(report_fight_id)s)
         ON CONFLICT (character_id, encounter_id, spec)
