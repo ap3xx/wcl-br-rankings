@@ -1,6 +1,8 @@
 import logging
 import os
+import sys
 import time
+from datetime import datetime
 
 
 def config_log(level: str) -> logging.Logger:
@@ -11,10 +13,15 @@ def config_log(level: str) -> logging.Logger:
 
     logger = logging.getLogger(__name__)
     logger.setLevel(level)
-    channel = logging.StreamHandler()
 
-    channel.setFormatter(formatter)
-    logger.addHandler(channel)
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+
+    logfile_path = os.getenv("LOGFILE_PATH", "/opt/logs")
+    file_handler = logging.FileHandler(f"{logfile_path}/{datetime.now().strftime('%Y%m%d%H%M')}.log")
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
 
     return logger
 
