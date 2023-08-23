@@ -1,26 +1,28 @@
-INGESTOR_PROJECT=wcl-br-ingestor
+INGEST_IMAGE=wcl-br-rankings-ingest
 
-build-ingestor:
-	docker build -t $(INGESTOR_PROJECT) .
+ingest-build:
+	docker build -t $(INGEST_IMAGE) .
 
-run-ingestor:
-	docker stop $(INGESTOR_PROJECT) || true
-	docker rm $(INGESTOR_PROJECT) || true
-	docker run -d --env-file ./.env --name $(INGESTOR_PROJECT) $(INGESTOR_PROJECT)
+ingest-run: ingest-build
+	docker stop $(INGEST_IMAGE) || true
+	docker rm $(INGEST_IMAGE) || true
+	docker run \
+		--env-file ./.env \
+		--volume $(shell pwd)/.logs:/opt/logs \
+		--volume $(shell pwd)/.backup:/opt/backup \
+		--name $(INGEST_IMAGE) \
+		$(INGEST_IMAGE)
 
-logs-ingestor:
-	docker logs ${INGESTOR_PROJECT} -f
-
-clean-web:
+web-clean:
 	rm -rf docs
 
-build-web:
+web-build:
 	python3 web/app.py build
 
-build-web-fake:
+web-build-fake:
 	python3 web/app.py build fake
 
-publish-web:
+web-publish:
 	@echo "Moving to gh-docs branch"
 	git fetch -p
 	git checkout gh-docs
@@ -35,4 +37,6 @@ publish-web:
 	git commit -m "Publish new version: $$(date +%Y%m%d%H%M%S)"
 	git push origin gh-docs
 	git checkout main
+
+ingest-and-publish: ingest-build ingest-run web-clean web-publish
 

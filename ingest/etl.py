@@ -1,18 +1,27 @@
+import csv
 import json
+import os
 from datetime import datetime, timedelta
+from time import sleep
 
 from api import WCLApiClient
-from cfg import IngestionConfig
+from cfg import Config
 from db import PGClient
 from log import get_logger
 
 
-class WCLBrazilIngestor:
+class ETL:
 
-    def __init__(self, cfg: IngestionConfig, api_client: WCLApiClient, db: PGClient):
+    def __init__(
+        self, cfg: Config, api_client: WCLApiClient, db_client: PGClient, historical_run: bool,
+        sleep_time: int = 300, sleep_delta: int = 100
+    ):
         self.__cfg = cfg
         self.__api_client = api_client
-        self.__db = db
+        self.__db_client = db_client
+        self.__historical_run = historical_run
+        self.__sleep_time = sleep_time
+        self.__sleep_delta = sleep_delta
 
     def __fetch_character_parses(self, character: dict):
         get_logger().debug(
@@ -83,7 +92,8 @@ class WCLBrazilIngestor:
 
 
         except Exception as e:
-            get_logger().error(f"Something happened: {str(e)}")
+            get_logger().error(f"Something when fetching rankings for: {character['name']}")
+            get_logger().error(f"Error: {str(e)}")
 
         get_logger().info(f"Found {len(character_rankings)} parses for "
                           f"character {character['name']} {character['realm']}-{character['region']}")
@@ -149,15 +159,18 @@ class WCLBrazilIngestor:
                         "duration": (fight["end_time"] - fight["start_time"]) / 1000
                     }
 
-            get_logger().info(f"Fetched report {report_id} for guild {guild['name']}")
+            get_logger().debug(f"Fetched report {report_id} for guild {guild['name']}")
             self.__reports[guild["name"]][report_id] = report
             return report
         except Exception as e:
-            get_logger().error(f"Something happened when fetching reports: {str(e)}")
+            get_logger().error(f"Something happened when fetching report {report_id}")
+            get_logger().error(f"Error: {str(e)}")
             return None
 
     def __fetch_reports_by_guild(self, guild_name: str, guild: dict):
-        start_date = (datetime.now() - timedelta(days=5)).timestamp() * 1000
+        DELTA = 14 if self.__historical_run else 5
+        get_logger().info(f"Fetching reports for: {guild['name']}. Delta: {DELTA} days")
+        start_date = (datetime.now() - timedelta(days=DELTA)).timestamp() * 1000
         late_guild_reports = self.__api_client.get_guild_reports(
             guild_name, guild["realm"], guild["region"], params={"start": start_date}
         )
@@ -171,7 +184,12 @@ class WCLBrazilIngestor:
         for guild_name, guild in self.__cfg.guilds.items():
             self.__reports[guild_name] = dict()
             if guild["fetch_enabled"]:
-                self.__fetch_reports_by_guild(guild_name, guild)
+                try:
+                    self.__fetch_reports_by_guild(guild_name, guild)
+                    get_logger().info(f"{len(self.__reports[guild_name])} new reports for {guild['name']} !")
+                except Exception as e:
+                    get_logger().error(f"Could not fetch reports for guild {guild_name}")
+                    get_logger().error(f"Error: {str(e)}")
 
     def __load_characters(self):
         get_logger().info("Loading characters...")
@@ -185,35 +203,66 @@ class WCLBrazilIngestor:
     def __load_parses(self):
         get_logger().info("Loading characters parses...")
         self.__parses = list()
-        for _, character in self.__characters.items():
-            character_parses = self.__fetch_character_parses(character)
+        for index, character in enumerate(self.__characters.values()):
+            character_parses =  self.__fetch_character_parses(character)
             if character_parses:
                 self.__parses.extend(character_parses)
+            if (index + 1) % self.__sleep_delta == 0:
+                get_logger().info(f"Fetched {index + 1} character parses. Waiting {int(self.__sleep_time / 60)} minutes...")
+                sleep(self.__sleep_time)
 
-    def __save_reports(self):
-        get_logger().info("Preparing to save reports...")
-        self.new_reports = list()
+    def __prepare_data(self):
+        get_logger().info("Preparing reports...")
+        self.__reports_to_save = list()
         for _, reports in self.__reports.items():
             for report_id, report in reports.items():
                 if report_id not in self.__cfg.processed_reports or \
                    not self.__cfg.processed_reports[report_id]["fights"]:
                     report["fights"] = json.dumps(report["fights"])
-                    self.new_reports.append(report)
-        get_logger().info(f"Saving {len(self.new_reports)} reports")
-        self.__db.upsert_reports(self.new_reports)
+                    self.__reports_to_save.append(report)
+
+        get_logger().info("Preparing characters...")
+        self.__characters_to_save = list()
+        for character_id, character in self.__characters.items():
+            if character_id not in self.__cfg.known_characters:
+                self.__characters_to_save.append(character)
+
+
+    def __backup_data(self):
+        backup_path = os.getenv("BACKUP_PATH", "/opt/backup")
+        timestamp = datetime.now().strftime("%Y%m%d%H%M")
+        get_logger().info("Backuping data...")
+        if self.__parses:
+            get_logger().info("Backuping parses...")
+            with open(f"{backup_path}/{timestamp}_parses.csv", "w") as fout:
+                field_names = list(self.__parses[0].keys())
+                writer = csv.DictWriter(fout, fieldnames=field_names)
+                writer.writerows(self.__parses)
+        if self.__reports_to_save:
+            get_logger().info("Backuping reports...")
+            with open(f"{backup_path}/{timestamp}_reports.csv", "w") as fout:
+                field_names = list(self.__reports_to_save[0].keys())
+                writer = csv.DictWriter(fout, fieldnames=field_names)
+                writer.writerows(self.__reports_to_save)
+        if self.__characters_to_save:
+            get_logger().info("Backuping characters...")
+            with open(f"{backup_path}/{timestamp}_characters.csv", "w") as fout:
+                field_names = list(self.__characters_to_save[0].keys())
+                writer = csv.DictWriter(fout, fieldnames=field_names)
+                writer.writerows(self.__characters_to_save)
+
+
+    def __save_reports(self):
+        get_logger().info(f"Saving {len(self.__reports_to_save)} reports")
+        self.__db_client.upsert_reports(self.__reports_to_save)
 
     def __save_parses(self):
         get_logger().info(f"Saving {len(self.__parses)} parses...")
-        self.__db.upsert_parses(self.__parses)
+        self.__db_client.upsert_parses(self.__parses)
 
     def __save_characters(self):
-        get_logger().info("Preparing to save characters...")
-        self.new_characters = list()
-        for character_id, character in self.__characters.items():
-            if character_id not in self.__cfg.known_characters:
-                self.new_characters.append(character)
-        get_logger().info(f"Saving {len(self.new_characters)} characters...")
-        self.__db.insert_characters(self.new_characters)
+        get_logger().info(f"Saving {len(self.__characters_to_save)} characters...")
+        self.__db_client.insert_characters(self.__characters_to_save)
 
     def extract_and_transform(self):
         get_logger().info("Extracting and transforming data...")
@@ -224,6 +273,8 @@ class WCLBrazilIngestor:
 
     def load(self):
         get_logger().info("Loading data...")
+        self.__prepare_data()
+        self.__backup_data()
         self.__save_reports()
         self.__save_parses()
         self.__save_characters()

@@ -2,10 +2,10 @@ FROM python:3.8.10-slim-buster
 
 RUN mkdir -p /app
 
-COPY ingestor-requirements.txt /var
-RUN pip install -r /var/ingestor-requirements.txt
+COPY ingest-requirements.txt /var
+RUN pip install -r /var/ingest-requirements.txt
 
-ADD ingestor /app
+ADD ingest /app
 WORKDIR /app
 
-CMD python3 main.py
+CMD python3 app.py
