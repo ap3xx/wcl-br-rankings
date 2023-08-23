@@ -8,8 +8,8 @@ ingest-run: ingest-build
 	docker rm $(INGEST_IMAGE) || true
 	docker run \
 		--env-file ./.env \
-		--volume ./.logs:/opt/logs \
-		--volume ./.backup:/opt/backup \
+		--volume $(shell pwd)/.logs:/opt/logs \
+		--volume $(shell pwd)/.backup:/opt/backup \
 		--name $(INGEST_IMAGE) \
 		$(INGEST_IMAGE)
 

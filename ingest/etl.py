@@ -229,7 +229,7 @@ class ETL:
 
 
     def __backup_data(self):
-        backup_path = os.getenv("BACKUP_PATH", "/opt/backups")
+        backup_path = os.getenv("BACKUP_PATH", "/opt/backup")
         timestamp = datetime.now().strftime("%Y%m%d%H%M")
         get_logger().info("Backuping data...")
         if self.__parses:
