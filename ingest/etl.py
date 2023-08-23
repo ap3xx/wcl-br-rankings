@@ -60,12 +60,6 @@ class ETL:
                         get_logger().debug(f"Not condidering spec {ranking['spec']} for class {ranking['class']}")
                         continue
 
-                    report = self.__fetch_report(ranking["reportID"], self.__cfg.guilds[character["guild"]])
-                    fight_id = str(ranking["fightID"])
-                    if not report or fight_id not in report["fights"]:
-                        get_logger().debug("Report or fight not in guilds reports list! Skipping ranking...")
-                        continue
-
                     character_rankings.append({
                         "character_id": character["id"],
                         "name": character["name"],
@@ -80,14 +74,13 @@ class ETL:
                         "zone_id": zone_id,
                         "encounter": ranking["encounterName"],
                         "encounter_id": ranking["encounterID"],
-                        "duration":
-                            self.__reports[character["guild"]][ranking["reportID"]]["fights"][fight_id]["duration"],
+                        "duration": int(ranking["duration"]) / 1000,
                         "percentile": ranking["percentile"],
                         "dps": ranking["total"],
                         "ilvl": ranking["ilvlKeyOrPatch"],
                         "report_id": ranking["reportID"],
                         "report_fight_id": ranking["fightID"],
-                        "date": report["date"],
+                        "date": datetime.fromtimestamp(int(ranking["startTime"]) / 1000),
                     })
 
 
@@ -123,15 +116,6 @@ class ETL:
         return guild_characters
 
     def __fetch_report(self, report_id: str, guild: dict):
-        if report_id in self.__reports[guild["name"]]:
-            return self.__reports[guild["name"]][report_id]
-
-        if report_id in self.__cfg.processed_reports and \
-           self.__cfg.processed_reports[report_id]["fights"]:
-            report = self.__cfg.processed_reports[report_id]
-            self.__reports[guild["name"]][report_id] = report
-            return report
-
         try:
             report_info = self.__api_client.get_report_info(report_id)
             characters = {
@@ -151,13 +135,7 @@ class ETL:
                 "region": guild["region"],
                 "faction": guild["faction"],
                 "characters": characters,
-                "fights": dict(),
             }
-            for fight in report_info["fights"]:
-                if fight.get("kill", False) and fight.get("size") == 25:
-                    report["fights"][str(fight["id"])] = {
-                        "duration": (fight["end_time"] - fight["start_time"]) / 1000
-                    }
 
             get_logger().debug(f"Fetched report {report_id} for guild {guild['name']}")
             self.__reports[guild["name"]][report_id] = report
@@ -216,9 +194,7 @@ class ETL:
         self.__reports_to_save = list()
         for _, reports in self.__reports.items():
             for report_id, report in reports.items():
-                if report_id not in self.__cfg.processed_reports or \
-                   not self.__cfg.processed_reports[report_id]["fights"]:
-                    report["fights"] = json.dumps(report["fights"])
+                if report_id not in self.__cfg.processed_reports:
                     self.__reports_to_save.append(report)
 
         get_logger().info("Preparing characters...")
@@ -254,7 +230,7 @@ class ETL:
 
     def __save_reports(self):
         get_logger().info(f"Saving {len(self.__reports_to_save)} reports")
-        self.__db_client.upsert_reports(self.__reports_to_save)
+        self.__db_client.insert_reports(self.__reports_to_save)
 
     def __save_parses(self):
         get_logger().info(f"Saving {len(self.__parses)} parses...")

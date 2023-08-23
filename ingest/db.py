@@ -49,12 +49,12 @@ class PGClient:
         response = self.__run_select_query(query)
         return [char_row for char_row in response]
 
-    def list_reports(self, guild_name):
-        query = "SELECT * FROM data_reports"
+    def list_report_ids(self, guild_name):
+        query = "SELECT id FROM data_reports"
         if guild_name:
             query += f" WHERE guild = '{guild_name}'"
         response = self.__run_select_query(query)
-        return [report_row for report_row in response]
+        return [report_row["id"] for report_row in response]
 
     def list_processed_parses(self, guild_name):
         query = "SELECT encounter_id, character_id, spec, percentile FROM data_parses"
@@ -63,13 +63,10 @@ class PGClient:
         response = self.__run_select_query(query)
         return [parse_row for parse_row in response]
 
-    def upsert_reports(self, reports):
+    def insert_reports(self, reports):
         query = """
-        INSERT INTO data_reports(id, guild, title, "date", realm, region, faction, fights)
-        VALUES (%(id)s, %(guild)s, %(title)s, %(date)s, %(realm)s, %(region)s, %(faction)s, %(fights)s)
-        ON CONFLICT (id)
-        DO UPDATE
-        SET fights = EXCLUDED.fights
+        INSERT INTO data_reports(id, guild, title, "date", realm, region, faction)
+        VALUES (%(id)s, %(guild)s, %(title)s, %(date)s, %(realm)s, %(region)s, %(faction)s)
         """
         self.__run_batch_insert_query(query, reports)
 

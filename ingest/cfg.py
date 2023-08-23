@@ -49,10 +49,7 @@ class Config:
 
     def __load_processed_reports(self):
         get_logger().debug("Loading already processed reports...")
-        self.processed_reports = {
-            r["id"]: r
-            for r in self.__db_client.list_reports(self.__guild_name)
-        }
+        self.processed_reports = self.__db_client.list_report_ids(self.__guild_name)
 
     def __load_processed_parses(self):
         get_logger().debug("Loading already processed parses...")
