@@ -1,5 +1,6 @@
 import logging
 import os
+import sys
 import time
 
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
@@ -12,7 +13,7 @@ def config_log(level: str) -> logging.Logger:
 
     logger = logging.getLogger(__name__)
     logger.setLevel(level)
-    channel = logging.StreamHandler()
+    channel = logging.StreamHandler(sys.stdout)
 
     channel.setFormatter(formatter)
     logger.addHandler(channel)
