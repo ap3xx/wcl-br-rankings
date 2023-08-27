@@ -1,13 +1,20 @@
 INGEST_IMAGE=wcl-br-rankings-ingest
 
+
 ingest-prepare:
 	mkdir -p .logs
 	mkdir -p .backup
+	test -d venv || virtualenv venv
+	. venv/bin/activate; pip install -r ingest-requirements.txt
+	touch venv/_EXISTS
 
-ingest-build:
+ingest-run: 
+	python3 ingest/app.py
+
+ingest-build-docker:
 	docker build -t $(INGEST_IMAGE) .
 
-ingest-run: ingest-build
+ingest-run-docker: ingest-build
 	docker stop $(INGEST_IMAGE) || true
 	docker rm $(INGEST_IMAGE) || true
 	docker run \
@@ -16,25 +23,22 @@ ingest-run: ingest-build
 		--volume $(shell pwd)/.backup:/opt/backup \
 		--name $(INGEST_IMAGE) \
 		$(INGEST_IMAGE)
-
+	
 web-prepare:
 	test -d venv || virtualenv venv
 	. venv/bin/activate; pip install -r web-requirements.txt
 	touch venv/_EXISTS
 
-web-check-venv:
-	test -f venv/_EXISTS
-
 web-clean:
 	rm -rf docs
 
-web-build: web-check-venv
+web-build: 
 	python3 web/app.py build
 
-web-build-fake: web-check-venv
+web-build-fake: venv-activate
 	python3 web/app.py build fake
 
-web-publish: web-check-venv
+web-publish: 
 	@echo "Moving to gh-docs branch"
 	git fetch -p
 	git checkout gh-docs
@@ -50,5 +54,7 @@ web-publish: web-check-venv
 	git push origin gh-docs
 	git checkout main
 
-ingest-and-publish: ingest-build ingest-run web-clean web-publish
+ingest-and-publish: ingest-run web-clean web-publish
+
+ingest-and-publish-docker: ingest-build-docker ingest-run-docker web-clean web-publish
 
