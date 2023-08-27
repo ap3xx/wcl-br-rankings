@@ -1,5 +1,9 @@
 INGEST_IMAGE=wcl-br-rankings-ingest
 
+ingest-prepare:
+	mkdir -p .logs
+	mkdir -p .backup
+
 ingest-build:
 	docker build -t $(INGEST_IMAGE) .
 
@@ -13,16 +17,24 @@ ingest-run: ingest-build
 		--name $(INGEST_IMAGE) \
 		$(INGEST_IMAGE)
 
+web-prepare:
+	test -d venv || virtualenv venv
+	. venv/bin/activate; pip install -r web-requirements.txt
+	touch venv/_EXISTS
+
+web-check-venv:
+	test -f venv/_EXISTS
+
 web-clean:
 	rm -rf docs
 
-web-build:
+web-build: web-check-venv
 	python3 web/app.py build
 
-web-build-fake:
+web-build-fake: web-check-venv
 	python3 web/app.py build fake
 
-web-publish:
+web-publish: web-check-venv
 	@echo "Moving to gh-docs branch"
 	git fetch -p
 	git checkout gh-docs

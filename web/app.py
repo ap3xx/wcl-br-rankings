@@ -130,7 +130,7 @@ def index():
     get_logger().info("Rendering website...")
     return render_template(
         'index.html',
-        last_update=datetime.now().strftime("%d/%m/%Y"),
+        last_update=datetime.now().strftime("%d/%m/%Y %H:%M"),
         fights=list(top_dps.keys()),
         top_dps=top_dps,
         classes=list(top_parses.keys()),
