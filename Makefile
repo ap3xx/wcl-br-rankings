@@ -50,5 +50,5 @@ web-publish: web-check-venv
 	git push origin gh-docs
 	git checkout main
 
-ingest-and-publish: web-check-venv ingest-build ingest-run web-clean web-publish
+ingest-and-publish: ingest-build ingest-run web-clean web-publish
 
